@@ -1,0 +1,77 @@
+{
+  "suite": "0.14 playability: unit and constructed regression",
+  "passed": 0,
+  "total": 14,
+  "results": [
+    {
+      "name": "持屏候选排除镂金石，仍保留洞泉声果位入口",
+      "pass": false,
+      "error": "The expression evaluated to a falsy value:\n\n  assert(!r.valid().includes('gold'))\n"
+    },
+    {
+      "name": "持屏洞泉声不空耗法力，其他器物照常获得助击",
+      "pass": false,
+      "error": "Expected values to be strictly equal:\n\n78 !== 100\n"
+    },
+    {
+      "name": "适配提示说明持屏限制和谷风引火前提，不改构筑",
+      "pass": false,
+      "error": "r.choiceFit is not a function"
+    },
+    {
+      "name": "主修只接受已学有效主动神通，并与手动互斥",
+      "pass": false,
+      "error": "r.setPrimary is not a function"
+    },
+    {
+      "name": "主修优先于满级久候神通，紧急防御仍可插队",
+      "pass": false,
+      "error": "r.setPrimary is not a function"
+    },
+    {
+      "name": "主修缺蓝时蓄法，够蓝后实际施放；冷却中不囤蓝",
+      "pass": false,
+      "error": "r.setPrimary is not a function"
+    },
+    {
+      "name": "主修无目标时不阻塞其他技能；手动施法不抹掉自动蓄法",
+      "pass": false,
+      "error": "r.setPrimary is not a function"
+    },
+    {
+      "name": "地图事件按自然时钟出现，暂停和选卡冻结倒计时",
+      "pass": false,
+      "error": "Cannot read properties of undefined (reading 'status')"
+    },
+    {
+      "name": "同种子同位置事件一致，未触发事件不消耗刷怪随机序列",
+      "pass": false,
+      "error": "a.updateFieldEvent is not a function"
+    },
+    {
+      "name": "接近才出守卫；实体池不足不会生成半组守卫",
+      "pass": false,
+      "error": "r.updateFieldEvent is not a function"
+    },
+    {
+      "name": "真实击杀三名守卫只奖励一次重抽，不以对象消失冒充击杀",
+      "pass": false,
+      "error": "r.updateFieldEvent is not a function"
+    },
+    {
+      "name": "到期或主动放弃不扣资源、不发奖励，已惊动守卫继续留场",
+      "pass": false,
+      "error": "r.updateFieldEvent is not a function"
+    },
+    {
+      "name": "事件到期边界的击杀不发迟到奖励，终阵之后不补事件",
+      "pass": false,
+      "error": "r.updateFieldEvent is not a function"
+    },
+    {
+      "name": "结算保存主修与事件，重开清空；继续无尽不重复事件",
+      "pass": false,
+      "error": "r.setPrimary is not a function"
+    }
+  ]
+}

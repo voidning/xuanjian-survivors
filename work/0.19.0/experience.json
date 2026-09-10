@@ -1,0 +1,47 @@
+{
+  "suite": "playtest presentation and action regression",
+  "passed": 10,
+  "total": 10,
+  "results": [
+    {
+      "name": "presentation does not change offers, RNG, resources or learned skills",
+      "pass": true
+    },
+    {
+      "name": "every learnable skill and gift retains a cost/condition and complete detail without undefined",
+      "pass": true
+    },
+    {
+      "name": "screen shows ineffective spring strengthening and no false damage synergy",
+      "pass": true
+    },
+    {
+      "name": "visible limitations retain dusk enemy restoration, lethal boundary and life permanent cost",
+      "pass": true
+    },
+    {
+      "name": "card mastery delta matches actual rain follow and spring charges",
+      "pass": true
+    },
+    {
+      "name": "dusk attempted outside field explains failure without cost; inside uses real blink",
+      "pass": true
+    },
+    {
+      "name": "manual waiting reports missing target before suggesting mana; primary shows exact shortfall",
+      "pass": true
+    },
+    {
+      "name": "limited HUD retains primary, manual and dusk with full-catalog access",
+      "pass": true
+    },
+    {
+      "name": "growth distinguishes actual new fruit and ordinary mastery without adding a reward",
+      "pass": true
+    },
+    {
+      "name": "life exhausted/cooling attempts have readable feedback and never spend extra life",
+      "pass": true
+    }
+  ]
+}

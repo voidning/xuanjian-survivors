@@ -1,0 +1,40 @@
+/* Visual-only brush feedback. Uses simulation time; no random draws or combat changes. */
+(function(root){'use strict';
+function effect(c,run,f,line,oval,label,reduced){
+ if(!['inkImpact','inkFall','sword','bow','mastery','fruit','bossArrival','bossDefeat'].includes(f.kind))return false;
+ const q=Math.min(1,f.age/f.life),fade=1-q;c.save();c.globalAlpha*=fade;
+ if(['mastery','fruit','bossArrival','bossDefeat'].includes(f.kind)){
+  const hostile=f.kind==='bossArrival'||f.kind==='bossDefeat',col=hostile?'#9a6958':f.dao==='渌水'?'#648e89':'#a38c4f';
+  const open=reduced?1:Math.min(1,q*4),r=f.r*(.65+.35*open),turn=reduced?0:q*.12;
+  c.globalAlpha=hostile?.75*fade:Math.min(1,q*7)*fade;
+  for(let i=0;i<6;i++){const a=i*Math.PI/3+turn,x=f.x+Math.cos(a)*r,y=f.y+Math.sin(a)*r*.55;c.save();c.translate(x,y);c.rotate(a);line([[-7,-4],[7,-4],[7,4],[-7,4],[-7,-4]],col,1.2,.65);c.restore();}
+  if(f.dao==='渌水'){for(let i=0;i<3;i++)oval(f.x,f.y,r*(1-i*.18),r*.45*(1-i*.18),col,true,1);}
+  else{c.strokeStyle=col;c.lineWidth=1.1;c.beginPath();for(let i=0;i<=6;i++){const a=i*Math.PI/3,x=f.x+Math.cos(a)*r,y=f.y+Math.sin(a)*r*.55;if(i)c.lineTo(x,y);else c.moveTo(x,y);}c.stroke();}
+  label(f.title||'五法相参',f.x,f.y-85,col,f.kind==='fruit'?17:13);
+  if(f.kind==='bossArrival')label('蓄势入场',f.x,f.y+25,col,11);
+  c.restore();return true;
+ }
+ if(f.kind==='inkImpact'){
+  const a=f.angle||0,length=reduced?8:7+q*10;
+  for(let i=0;i<3;i++){const angle=a+(i-1)*.9,r=length*(i===1?1:.7);line([[f.x+Math.cos(angle)*3,f.y+Math.sin(angle)*3],[f.x+Math.cos(angle)*r,f.y+Math.sin(angle)*r]],i===1?'#254c49':'#a48f5d',i===1?2.6:1.5);}
+ }
+ if(f.kind==='inkFall'){
+  const n=reduced?3:7,spread=reduced?.25:1-Math.pow(1-q,3);
+  for(let i=0;i<n;i++){const a=(f.seed||0)*1.71+i*2.399,r=f.r*(.3+spread)*(i%2?.75:1),x=f.x+Math.cos(a)*r,y=f.y-22+Math.sin(a)*r*.7+q*7;line([[x,y],[x+Math.cos(a)*Math.max(2,7*(1-q)),y+Math.sin(a)*4]],i%3?'#66716a':'#a5ada0',i%2?1:2);}
+  oval(f.x,f.y,12+q*5,3,'#bfc6ba');
+ }
+ if(f.kind==='sword'){
+  const aim=f.angle||0,sweep=reduced?1:Math.min(1,q*4),r=f.r,begin=-1.05,end=begin+sweep*2.25;
+  c.translate(f.x,f.y);c.rotate(aim);c.beginPath();c.arc(0,0,r,begin,end);c.arc(0,0,r-8,end,begin,true);c.closePath();c.fillStyle='#72aca1';c.globalAlpha=fade*.40;c.fill();c.globalAlpha=fade;
+  c.beginPath();c.strokeStyle='#315f5b';c.lineWidth=2;c.arc(0,0,r,begin,end);c.stroke();
+  c.beginPath();c.strokeStyle='#f0f7e7';c.lineWidth=1.1;c.arc(0,0,r-2,begin+.04,end);c.stroke();
+  if(!reduced){c.beginPath();c.strokeStyle='#709a90';c.lineWidth=.8;c.globalAlpha=fade*.5;c.arc(0,0,r-13,begin+.1,end);c.stroke();}
+ }
+ if(f.kind==='bow'){
+  const a=f.angle||0;c.translate(f.x,f.y-20);c.rotate(a);
+  for(const side of [-1,1])line([[8,side*6],[18+q*12,side*(10+q*8)],[26+q*12,side*(7+q*8)]],'#67878b',1.1,.7);
+ }
+ c.restore();return true;
+}
+root.XJMotion={effect};
+})(window);

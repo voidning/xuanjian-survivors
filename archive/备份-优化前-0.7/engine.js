@@ -1,0 +1,185 @@
+/* Deterministic simulation: no DOM, renderer, network, or wall clock. */
+(function(root){'use strict';
+const W=3200,H=2200,clamp=(x,a,b)=>Math.max(a,Math.min(b,x)),dist=(a,b)=>Math.hypot(a.x-b.x,a.y-b.y);
+const SKILLS=[
+{"id": "angler", "name": "溪上翁", "dao": "坎水", "role": "诱敌 · 聚群", "grade": "S", "nature": "命神通", "gradeNote": "以幻饵改变敌群去向，为范围神通与贯穿攻击聚敌。", "desc": "26 法力，冷却 10 秒；在近处敌群投下幻饵，诱使最多 24 名敌人趋近，打断当前攻势。受伤会缩短诱引；精英与首领更快清醒。"},
+{"id": "peril", "name": "位从险", "dao": "坎水", "role": "收束 · 陷敌", "grade": "S", "nature": "命神通", "gradeNote": "展开山川险境，将敌人收向中心、迟滞其移动。", "desc": "28 法力，冷却 11 秒；在敌群展开险地，收束并短暂停住敌人，域内持续迟缓。优先落在已有幻饵处；精英与首领较难牵动。不直接造成伤害。"},
+{id:'thunder',name:'靖平敕',dao:'玄雷',role:'近强远弱 · 荡清',desc:'28 法力；敌近 175 时释放周身雷霆，越近伤害与震退越强，打断冲锋或射击前摇。冷却 8 秒。'},
+{id:'gold',name:'镂金石',dao:'庚金',role:'淬炼 · 破护',desc:'普攻附加贯穿锐气，命中削去敌人护持。取得后每五次击杀淬炼一层，上限六层；强化提高锐气与穿透。'},
+{id:'armor',name:'天金胄',dao:'庚金',role:'金胄 · 承伤',desc:'20 法力；凝出可承受多次打击的金胄，持续 7 秒，冷却 11 秒；消耗甲量吸收伤害。等级提高承伤量。'},
+{id:'flame',name:'雉离行',dao:'真火',role:'吐焰 · 炎行',desc:'18 法力；向近敌吐出持续扇形真火，灼伤范围内敌人；喷焰时移动加快。等级扩大焰幅与持续时间。冷却 7 秒。'},
+{id:'gate',name:'谒天门',dao:'明阳',role:'召兵 · 镇守',desc:'26 法力；冷却 9 秒；召出金甲，追击近敌。等级增加甲兵数量与镇压伤害。'},
+{id:'body',name:'君蹈危',dao:'明阳',role:'蹈危 · 脱围复伤',desc:'受近敌合围时随敌势增强伤害与抵御，尤善承受小额纠缠伤；成功脱围后逐渐恢复此战部分伤势。'},
+{id:'edict',name:'帝观元',dao:'明阳',role:'号令 · 协同',desc:'14 法力；冷却 8 秒；在前方展开令域。令域使敌人受普通攻击时遭追加打击，并把甲兵召回域内。等级扩大令域。'},
+{id:'dusk',name:'赤断镞',dao:'明阳',role:'记伤 · 挪移',desc:'20 法力；血漠记录自身在域内部分实际伤势，离域或收术后返还。敌人也会留下部分伤势；E 域内挪移，8 法力。'},
+{id:'light',name:'天下明',dao:'明阳',role:'六合 · 禁闭',desc:'26 法力；冷却 8 秒；六合光禁闭周敌、消解敌弹。有谒天门时强化甲兵。等级延长禁闭。'},
+{id:'rain',name:'清夕雨',dao:'渌水',role:'青雨 · 磨阵',desc:'22 法力；在密集敌群处降下青雨，雨中反复受伤并被磨去护持；冷却 9 秒。'},
+{"id": "spring", "name": "洞泉声", "dao": "渌水", "role": "泉动 · 助击", "desc": "22 法力，冷却 7 秒；引泉势加持接下来四次普攻，每击额外伤害并贯穿一名敌人。"},
+{"id": "muddle", "name": "如重浊", "dao": "渌水", "role": "惑心 · 乱阵", "desc": "20 法力，冷却 9 秒；浊光惑乱近处敌群，打断当前攻势，令其短暂背离自己移动。"},
+{"id": "conceal", "name": "丑癸藏", "dao": "渌水", "role": "藏匿 · 脱身", "desc": "18 法力，冷却 10 秒；近敌逼近时藏匿，敌人暂时追向你留下的位置；已发出的攻击仍然危险。"},
+{"id": "dew", "name": "洗劫露", "dao": "渌水", "role": "洗劫 · 解困", "desc": "22 法力，冷却 9 秒；遭地面法区逼近或迟缓时发动，清除周边法区与迟缓，短时抵御地面伤害。"}
+];
+const SKILL_GRADES={"light": {"grade": "S", "nature": "命神通", "gradeNote": "六合控场：扩大禁闭与消弹范围，提高伤害和禁闭时间。"}, "spring": {"grade": "S", "nature": "命、身兼具", "gradeNote": "泉势助击：四次加持，提高每击追加伤害；渌水果位增至五次。"}, "dew": {"grade": "S", "nature": "", "gradeNote": "洗劫解困：扩大清除范围，延长护行并缩短冷却。"}, "thunder": {"grade": "S", "nature": "", "gradeNote": "贴身荡清：扩大雷域，提高近强远弱的伤害上限。"}, "gate": {"grade": "A", "nature": "术神通", "gradeNote": "召兵协战，配合天下明强化甲兵。"}, "body": {"grade": "A", "nature": "身神通", "gradeNote": "合围时增强自身，脱围后恢复部分战伤。"}, "edict": {"grade": "A", "nature": "术神通", "gradeNote": "令域追加打击，统合普攻与甲兵。"}, "dusk": {"grade": "A", "nature": "术神通", "gradeNote": "记伤与挪移，依赖进出血漠的时机。"}, "gold": {"grade": "A", "nature": "", "gradeNote": "随击杀淬炼，强化普攻与破护。"}, "muddle": {"grade": "A", "nature": "", "gradeNote": "打断敌势，以惑心扰乱追击。"}, "rain": {"grade": "B", "nature": "", "gradeNote": "持续磨阵与破护。"}, "conceal": {"grade": "B", "nature": "", "gradeNote": "短时藏匿，改变敌人追踪位置。"}, "armor": {"grade": "B", "nature": "", "gradeNote": "稳定承伤，补足生存能力。"}, "flame": {"grade": "B", "nature": "", "gradeNote": "扇形持续伤害，喷焰时加快移动。"}};
+SKILLS.forEach(s=>Object.assign(s,SKILL_GRADES[s.id]));
+const RECIPE={id:'mingyang',name:'明阳果位',ids:['gate','body','edict','dusk','light'],verified:true};
+const RECIPES=[RECIPE,{id:'lushui',name:'渌水果位',ids:['spring','muddle','conceal','rain','dew'],verified:true}];
+const ITEMS=[{id:'sword',name:'青尺剑',desc:'自动剑光，近距离横扫。空格：16 法力，扫开周身敌弹并斩击；冷却 5 秒。适合聚怪破围。'}, {id:'bow',name:'青乌弓',desc:'自动射箭，较远距离点杀。空格：22 法力，灌注锐气，沿近敌方向贯穿；冷却 4 秒。适合拉距排线。'}, {id:'spear',name:'杜若枪',action:'灌雷突刺',cost:22,cd:5,desc:'自动直线突刺，同时刺中前方最多两敌；距离介于剑弧与弓箭之间。空格：22 法力，灌雷贯穿并短暂震退敌人；冷却 5 秒。适合侧移排线。'}];
+const GIFTS=[
+{id:'whale',name:'重海长鲸',role:'深蓄法力 · 持续施法',desc:'法力上限 100 → 160，基础法力回复 7 → 13 / 秒。适合多道耗法神通持续运转。'},
+{id:'life',name:'竭命功成',role:'燃寿搏命 · 手动爆发',desc:'Q：耗 1 格寿元，回复 80 法力，6 秒内伤害 +85%；冷却 12 秒。每局 8 格寿元，不能恢复。'},
+{id:'sparrow',name:'长空危雀',role:'见血悍勇 · 腾挪反击',desc:'平时移动 +6%；实际受伤后，5 秒内移动 +20%、伤害 +25%。再次受伤只刷新时长，不叠加。'},
+{id:'sunseal',name:'明彰日月',role:'破敌得法 · 以战助修',desc:'击败精英回复 45 法力，额外获得 18 经验；击败首领回复 90 法力，额外获得 45 经验。更适合主动追剿强敌，不提供平时回复。'}];
+const ENEMY_NAMES=['围攻者','冲锋者','远射者','布阵者','护持者','重甲者','执阵首领','掠阵双刃','执鼓召使','封路符师','光幡使','链镰牵手','逐风猎犬'];
+const ELITE_NAMES=['裂刃头目','连锋先锋','散射猎手','双阵咒师','护阵统领','震地力士','','回斩双刃','催阵鼓主','六符封路使','列光幡主','锁阵镰主','裂风獒'];
+const ENEMY_GUIDE=[
+['围攻者','成群追击，靠近后造成接触伤害。','裂刃头目：靠近时蓄势横扫，离开橙圈可避开。'],
+['冲锋者','沿预警路径冲锋，蓄势后不再追踪。','连锋先锋：第一冲后再次蓄势，发起第二次冲锋。'],
+['远射者','保持距离，蓄势后射出直线飞弹。','散射猎手：一次射出五枚扇形飞弹，可从间隙穿过。'],
+['布阵者','在你前方铺设带预警的地面危险。','双阵咒师：同时在前进方向两侧布阵。'],
+['护持者','为附近同伴提供减伤，青雨或绕过减伤的攻击可破护。','护阵统领：护持范围更广，并周期性治疗附近同伴。'],
+['重甲者','正面耐打，蓄势后重击面前区域。','震地力士：重击后原地留下第二次震地预警。'],
+['掠阵双刃','从侧面绕近，锁定方向后短距离扑斩。','回斩双刃：扑斩落点追加一次带预警的回斩。'],
+['执鼓召使','停在远处击鼓，召来有限数量的围攻者；优先击败可切断增援。','催阵鼓主：一次最多召三名，其中一名冲锋者；同时在场最多五名随从。'],
+['封路符师','沿横线布置四处符区，中间留通道；橙圈亮起后才伤人。','六符封路使：扩大到六处符区，仍保留中央通道。'],
+['光幡使','持高幡远射三道光芒；沿紫色预警的间隙侧移。','列光幡主：五道光芒扇射，射后横移换位。'],
+['链镰牵手','沿橙色窄道甩镰；命中后牵近并短暂迟缓，蓄势后不再追踪。','锁阵镰主：射程更长、牵扯更远；空镰后有收势空档。'],
+['逐风猎犬','四足绕侧逼近，俯身蓄势后沿直线扑咬。','裂风獒：扑击更快恢复，落点追加一次有预警的撕咬。'],
+['执阵首领','直线冲锋后释放阵眼和环形飞弹；击败后继续生存。','每三分钟出现一位，现存首领未死时不会重复补充。']
+];
+function rng(seed){let a=seed>>>0;return()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return((t^t>>>14)>>>0)/4294967296;};}
+class Pool{constructor(max){this.max=max;this.slots=Array.from({length:max},()=>({active:false}));this.cursor=0;this.peak=0;this.count=0;}
+add(data){for(let n=0;n<this.max;n++){let i=(this.cursor+n)%this.max,o=this.slots[i];if(!o.active){for(const k of Object.keys(o))delete o[k];Object.assign(o,data,{active:true});this.cursor=(i+1)%this.max;this.count++;this.peak=Math.max(this.peak,this.count);return o;}}return null;}
+remove(o){if(o.active){o.active=false;this.count--;}}
+forEach(fn){for(const o of this.slots)if(o.active)fn(o);} list(){return this.slots.filter(o=>o.active);}}
+class Run{
+constructor(seed=1,item='sword'){this.seed=seed>>>0;this.random=rng(seed);this.item=ITEMS.some(i=>i.id===item)?item:'sword';this.state='running';this.t=0;this.level=1;this.xp=0;this.skills={};this.fruit=false;this.fruits={};this.fruitAt=null;this.gift=null;this.life=8;this.rerolls=0;this.choices=[];this.choiceKind=null;this.pending=[];this.log=[];this.kills=0;this.elites=0;this.bosses=0;this.attacks=0;this.totalDamage=0;this.damageTaken=0;this.xpPicked=0;this.spent=0;this.extraPower=0;this.vigor=0;this.precision=0;this.p={x:1600,y:1100,hp:100,mp:100,dir:1,vx:1,vy:0,move:false,inv:0,body:0,guard:0,slow:0,danger:0,cast:0,pressure:0,battleWounds:0,escape:0,armor:0,armorTime:0,recoil:0,weaponAt:-10,weaponLife:.3,aim:0};this.enemies=new Pool(160);this.bullets=new Pool(240);this.drops=new Pool(110);this.zones=new Pool(36);this.allies=new Pool(8);this.fx=new Pool(120);this.cool={attack:.25,item:0,life:0,blink:0,gate:1,body:0,edict:2,dusk:3,light:4,pure:5,mountain:2,fruit:0};this.autoItem=true;this.packIndex=0;this.spawnTimer=0;this.eliteAt=42;this.bossAt=180;this.eventAt=125;this.wave=1;this.giftPending=false;this.message='走位聚怪 · 武器自动施放 · R 切换手动';this.msgUntil=8;this.nextId=1;this.temperKills=0;this.healed=0;this.viewport={w:1200,h:800};this.telemetry={spawns:0,despawned:0,dropMerged:0,autoShots:0,itemUses:0,lifeUses:0,blinkUses:0,enemyShots:0,charges:0,hazards:0};}
+get maxHP(){return 100+this.vigor*4;}get maxMP(){return this.gift==='whale'?160:100;}get regen(){return (this.gift==='whale'?13:7)+Math.min(5,(this.level-1)*.3);}get need(){return Math.floor(6+this.level*3+Math.pow(this.level,1.85));}get power(){return (1+this.extraPower*.025)*(this.cool.burst>0?1.85:1)*(this.gift==='sparrow'&&this.cool.brave>0?1.25:1)*(1+this.p.pressure*(.15+.05*this.lv('body')));}lv(id){return this.skills[id]||0;}
+notice(s){this.message=s;this.msgUntil=this.t+5;}
+get itemDef(){return ITEMS.find(i=>i.id===this.item)||ITEMS[0];}
+get moveFactor(){return (this.gift==='sparrow'?(this.cool.brave>0?1.20:1.06):1)*(this.cool.cloud>0?1.35:1)*(this.cool.flameMove>0?1.15:1);}
+heal(n){if(this.state!=='running'||this.p.hp<=0)return 0;const actual=Math.min(n,this.maxHP-this.p.hp);this.p.hp+=actual;this.healed+=actual;return actual;}
+spend(n){if(this.p.mp+1e-8<n)return false;this.p.mp-=n;this.spent+=n;return true;}
+recipe(id='mingyang'){const r=RECIPES.find(r=>r.id===id);return !!r&&r.verified&&r.ids.every(id=>this.lv(id)>=1);}
+opening(){this.openChoice('opening');const pools=[['gate','light'],['spring','rain'],['gold'],['thunder'],['flame']];this.choices=[];for(let i=0;i<3;i++){const n=Math.floor(this.random()*pools.length),pool=pools.splice(n,1)[0];this.choices.push(pool[Math.floor(this.random()*pool.length)]);}}
+
+valid(){let a=SKILLS.filter(s=>this.lv(s.id)<3).map(s=>s.id);if(this.level>=4||a.length<3){if(this.vigor<10)a.push('vigor');if(this.extraPower<12)a.push('power');if(this.precision<8)a.push('reach');for(const id of ['heal','mana','ward'])if(a.length<3)a.push(id);}return a;}
+offer(dao=null){let pool=this.valid();if(dao){const d=pool.filter(id=>SKILLS.find(s=>s.id===id)?.dao===dao);if(d.length>=3)pool=d;}
+const out=[];for(let n=0;n<3;n++){const groups=[...new Set(pool.map(id=>SKILLS.find(s=>s.id===id)?.dao||'基础'))];const group=groups[Math.floor(this.random()*groups.length)],options=pool.filter(id=>(SKILLS.find(s=>s.id===id)?.dao||'基础')===group);const id=options[Math.floor(this.random()*options.length)];out.push(id);pool.splice(pool.indexOf(id),1);}return out;}
+openChoice(kind='upgrade',dao=null){this.state='choice';this.choiceKind=kind;this.choiceDao=dao;this.choices=kind==='gift'?GIFTS.map(s=>s.id):this.offer(dao);}
+choose(index){if(this.state!=='choice'||!Number.isInteger(index)||index<0||index>=this.choices.length)return false;let id=this.choices[index];if(this.choiceKind==='gift'){if(this.gift)return false;this.gift=id;this.p.mp=Math.min(this.maxMP,this.p.mp+35);this.log.push({t:this.t,type:'gift',id});}else{if(!this.valid().includes(id))return false;if(SKILLS.some(s=>s.id===id)){this.skills[id]=this.lv(id)+1;this.cool[id]=Math.min(this.cool[id]||0,.4);}else if(id==='vigor'){this.vigor++;this.p.hp=Math.min(this.maxHP,this.p.hp+15);}else if(id==='power')this.extraPower++;else if(id==='reach')this.precision++;else if(id==='heal'){this.p.hp=Math.min(this.maxHP,this.p.hp+40);this.cool.healBuff=(this.cool.healBuff||0)+20;}else if(id==='mana'){this.p.mp=this.maxMP;this.cool.item=0;this.cool.manaBuff=(this.cool.manaBuff||0)+20;}else if(id==='ward')this.p.guard+=3;this.p.mp=Math.min(this.maxMP,this.p.mp+20);this.effect('growth',this.p.x,this.p.y,90,.7);this.log.push({t:this.t,type:this.choiceKind,id,level:this.lv(id)});}
+for(const r of RECIPES)if(!this.fruits[r.id]&&this.recipe(r.id)){this.fruits[r.id]=true;if(r.id==='mingyang'){this.fruit=true;this.fruitAt=this.t;}this.notice(r.name+' · 五法相参，联动已成');this.effect('fruit',this.p.x,this.p.y,240,2);}
+if(this.log.length>512)this.log.splice(0,this.log.length-512);this.choices=[];this.state='running';this.nextChoice();return true;}
+reroll(){if(this.state!=='choice'||['gift','opening'].includes(this.choiceKind)||this.rerolls<=0)return false;this.rerolls--;this.choices=this.offer(this.choiceDao);return true;}
+nextChoice(){if(this.state!=='running')return;if(this.giftPending&&!this.gift){this.giftPending=false;this.openChoice('gift');return;}if(this.pending.length){this.openChoice('event',this.pending.shift());return;}if(this.xp>=this.need){const n=this.need;this.xp-=n;this.level++;this.openChoice();}}
+getXP(n){this.xp+=n;this.xpPicked+=n;}
+pause(){if(this.state==='running'){this.state='paused';return true;}if(this.state==='paused'){this.state='running';return true;}return false;}
+end(reason='主动结束'){if(this.state==='ended')return;this.state='ended';this.result={reason,time:this.t,kills:this.kills,elites:this.elites,bosses:this.bosses,skills:{...this.skills},fruit:this.fruit,fruits:{...this.fruits},gift:this.gift,item:this.item,seed:this.seed,level:this.level,life:this.life};}
+effect(kind,x,y,r=20,life=.35,extra={}){return this.fx.add({kind,x,y,r,age:0,life,...extra});}
+nearest(from=this.p,range=Infinity){let out=null,best=range;this.enemies.forEach(e=>{if(e.born>0)return;let d=dist(e,from);if(d<best){out=e;best=d;}});return out;}
+cluster(range=500,radius=120){const es=this.enemies.list().filter(e=>e.born<=0&&dist(e,this.p)<range);let best=null,score=-1;const stride=Math.max(1,Math.ceil(es.length/18));for(let i=0;i<es.length;i+=stride){const e=es[i];let n=0;for(const q of es)if(dist(e,q)<radius)n+=q.boss?3:q.elite?2:1;if(n>score){score=n;best=e;}}return best;}
+autoItemUse(){if(!this.autoItem||this.cool.item>0)return;const cost=(this.itemDef.cost??(this.item==='sword'?16:22));if(this.p.mp<cost+12)return;let ready=false;const close=this.nearest(this.p,145);if(this.item==='sword')ready=!!close;if(this.item==='bow')ready=!!this.nearest(this.p,600);if(this.item==='spear')ready=!!this.nearest(this.p,310);if(this.item==='rings'){const e=this.cluster(480,120);if(e){let n=0;this.enemies.forEach(q=>{if(q.born<=0&&dist(q,e)<120&&!(q.root>0))n++;});ready=n>=2||e.elite||e.boss;}}if(this.item==='lamp')ready=!!this.nearest(this.p,220);if(this.item==='screen')ready=this.bullets.list().some(b=>b.enemy&&b.kind==='metal'&&!(b.held>0)&&dist(b,this.p)<260);if(ready)this.itemUse();}
+get battlePhase(){const q=this.t%65;return q>=51?'喘息拾取':q<18?'追击聚群':q<35?'侧翼夹击':'阵线压迫';}
+spawnPack(){this.wave=Math.floor(this.t/65)+1;const phase=this.battlePhase;if(phase==='喘息拾取'){this.spawnTimer=1;return;}
+const stage=this.t%65,side=Math.floor(stage/18);if(this.formationKey!==this.wave*10+side){this.formationKey=this.wave*10+side;this.formationAngle=this.random()*Math.PI*2;}
+// A moving front, two flanks, then a mixed line. Never an unavoidable full circle.
+const unlocked=this.t<18?[0]:this.t<45?[0,1]:this.t<70?[0,1,2,12]:this.t<105?[0,1,2,7,12]:this.t<135?[0,1,2,3,7,8,12,10]:[0,1,2,3,4,5,7,8,9,10,11,12];
+const roster=stage<18?[0,0,0,12,7,1]:stage<35?[1,0,7,12,1,11,2]:[2,0,3,4,10,5,8,9,11];
+const size=Math.min(9,3+Math.floor(this.t/75)),radius=this.t<20?410:Math.max(470,Math.min(850,Math.hypot(this.viewport.w,this.viewport.h)/2+40));
+for(let i=0;i<size;i++){const flank=stage>=18&&stage<35?(i%2?1:-1)*.8:0,a=this.formationAngle+flank+(i-(size-1)/2)*.13+(this.random()-.5)*.12;let x=clamp(this.p.x+Math.cos(a)*radius,80,W-80),y=clamp(this.p.y+Math.sin(a)*radius,80,H-80);if(dist({x,y},this.p)<280){x=clamp(this.p.x-Math.cos(a)*radius,80,W-80);y=clamp(this.p.y-Math.sin(a)*radius,80,H-80);}const wanted=roster[(this.packIndex+i)%roster.length],type=unlocked.includes(wanted)?wanted:0;this.spawn(type,false,x,y);}
+this.packIndex++;this.spawnTimer=Math.max(1.15,2.6-this.t*.0018)*(stage>=35?1.1:1);}
+
+spawn(type=0,elite=false,x,y){if(this.enemies.count>=this.enemies.max)return null;if(x===undefined){let a=this.random()*Math.PI*2;const radius=Math.max(540,Math.min(980,Math.hypot(this.viewport.w,this.viewport.h)/2+100));x=clamp(this.p.x+Math.cos(a)*radius,80,W-80);y=clamp(this.p.y+Math.sin(a)*radius,80,H-80);if(dist({x,y},this.p)<330){x=clamp(this.p.x-Math.cos(a)*radius,80,W-80);y=clamp(this.p.y-Math.sin(a)*radius,80,H-80);}}
+const boss=type===6,factor=1+Math.min(3,this.t/300)+Math.max(0,this.t-900)/1200;let hp=([25,46,34,45,65,125,1200,40,72,56,48,78,32][type])*factor*(elite?3.4:1);let e=this.enemies.add({id:this.nextId++,type,elite,boss,title:elite?ELITE_NAMES[type]:ENEMY_NAMES[type],x,y,hp,max:hp,r:boss?25:type===5?20:12,speed:[63,72,48,43,46,33,45,90,37,42,46,57,108][type],cd:.6+this.random()*1.6,phase:'move',timer:0,ax:0,ay:0,stun:0,slow:0,mark:0,hit:0,born:1.1,shield:false,contact:0});if(e)this.telemetry.spawns++;return e;}
+addDrop(x,y,value){let near=null;this.drops.forEach(d=>{if(!near&&dist(d,{x,y})<45)near=d;});if(near){near.value+=value;this.telemetry.dropMerged++;return;}if(this.drops.count>=this.drops.max){let best=Infinity;this.drops.forEach(d=>{let dd=dist(d,{x,y});if(dd<best){best=dd;near=d;}});near.value+=value;this.telemetry.dropMerged++;return;}this.drops.add({x,y,value});}
+hit(e,n,ignore=false){if(!e.active||e.born>0)return;let damage=n*this.power*(e.shield&&!(e.exposed>0)&&!ignore?.4:1)*(e.type===5&&!ignore?.6:1);const actual=Math.min(e.hp,damage);this.zones.forEach(z=>{if(z.kind==='dusk'&&dist(e,z)<z.r){if(!z.wounds)z.wounds=new Map();z.wounds.set(e.id,(z.wounds.get(e.id)||0)+actual*(.18+.06*this.lv('dusk')));}});if(!e.numberAt||this.t>=e.numberAt){this.effect('number',e.x,e.y-45,0,.65,{text:String(Math.ceil(actual))});e.numberAt=this.t+.3;}if(actual>0&&e.lured>0)e.lured=Math.max(0,e.lured-.25);e.hp-=damage;e.hit=.13;this.totalDamage+=damage;if(e.hp<=0){this.enemies.remove(e);this.kills++;if(this.lv('gold'))this.temperKills=Math.min(30,this.temperKills+1);this.addDrop(e.x,e.y,e.boss?95:e.elite?22:e.summoned?1:e.type===5||e.type===8?4:2);this.effect('hit',e.x,e.y,18,.28);if(e.elite||e.boss){this.rerolls+=e.boss?2:1;this.elites+=e.elite?1:0;this.bosses+=e.boss?1:0;this.p.hp=Math.min(this.maxHP,this.p.hp+(e.boss?24:10));if(this.gift==='sunseal'){const mp=e.boss?90:45,xp=e.boss?45:18;this.p.mp=Math.min(this.maxMP,this.p.mp+mp);this.getXP(xp);this.effect('sunseal',e.x,e.y,75,.9);}if(!this.gift)this.giftPending=true;this.notice(e.boss?'首领击败 · 重抽次数 +2 · 战斗继续':'精英击败 · 重抽次数 +1');if(this.gift==='sunseal')this.notice('明彰日月 · 法力 +'+(e.boss?90:45)+' · 经验 +'+(e.boss?45:18));}}}
+hurt(n,ground=false){if(this.p.inv>0||this.state!=='running')return false;if(ground&&(this.cool.cloud>0||this.cool.dewWard>0))return false;
+if(ground&&this.p.guard>0){this.p.guard--;this.p.inv=.3;this.effect('pure',this.p.x,this.p.y,55);return false;}
+// 蹈危 withstands repeated lesser wounds better than a heavy burst; no one-hit immunity.
+n*=1+Math.min(.35,Math.max(0,this.t-90)/1000);
+if(this.lv('body'))n*=1-this.p.pressure*(n<20?.10+.025*this.lv('body'):.025+.01*this.lv('body'));
+if(this.p.armorTime>0&&this.p.armor>0){const absorbed=Math.min(this.p.armor,n);this.p.armor-=absorbed;n-=absorbed;this.effect('armorHit',this.p.x,this.p.y,32,.25);}
+if(n<=0){this.p.inv=.18;return false;}const actual=Math.min(this.p.hp,n);this.p.hp-=actual;this.p.recoil=.18;this.damageTaken+=actual;
+if(this.lv('body')&&this.p.pressure>0){this.p.battleWounds=Math.min(45,this.p.battleWounds+actual*(.2+.08*this.lv('body')));this.p.escape=0;}
+this.zones.forEach(z=>{if(z.kind==='dusk'&&dist(z,this.p)<z.r)z.playerWound=(z.playerWound||0)+actual*(.18+.06*this.lv('dusk'));});
+if(this.gift==='sparrow')this.cool.brave=5;this.p.inv=.65;this.effect('hurt',this.p.x,this.p.y,35,.25);if(this.p.hp<=0)this.end('身死道消');return true;}
+
+area(x,y,r,n,stun=0,ignore=false){this.enemies.forEach(e=>{if(dist(e,{x,y})<r+e.r){this.hit(e,n,ignore);e.stun=Math.max(e.stun,stun);if(stun>0){let d=dist(e,{x,y})||1;e.x=clamp(e.x+(e.x-x)/d*18,60,W-60);e.y=clamp(e.y+(e.y-y)/d*18,60,H-60);}}});}
+shoot(x,y,tx,ty,damage=18,enemy=false,pierce=0,speed=520,life=1.25,color='arrow'){const d=Math.hypot(tx-x,ty-y)||1;return this.bullets.add({x,y,vx:(tx-x)/d*speed,vy:(ty-y)/d*speed,damage,enemy,pierce,life,r:enemy?5:4,kind:color,hitIds:new Set()});}
+itemUse(){if(this.state!=='running'||this.cool.item>0)return false;const id=this.item,def=this.itemDef;let target=this.nearest(this.p,id==='sword'?180:id==='spear'?340:700);if(id==='rings')target=this.cluster(600,120)||target;if(!target&&id!=='screen'){this.notice('目标太远，请靠近后使用');return false;}if(['screen','lamp'].includes(id)&&this.zones.count>=this.zones.max)return false;const cost=def.cost??(id==='sword'?16:22);if(!this.spend(cost)){this.notice('法力不足 · 普通攻击不受影响');return false;}this.cool.item=def.cd??(id==='sword'?5:4);this.p.cast=.4;this.p.weaponAt=this.t;this.p.weaponLife=.42;this.p.aim=Math.atan2(target.y-this.p.y,target.x-this.p.x);this.telemetry.itemUses++;
+if(id==='sword'){this.area(this.p.x,this.p.y,155,48,.35,true);this.bullets.forEach(b=>{if(b.enemy&&dist(b,this.p)<170)this.bullets.remove(b);});this.effect('sword',this.p.x,this.p.y,155,.4);}
+if(id==='spear'){this.thrust(target,340,34,64,24,.65,true,'spearThunder');}
+if(id==='bow'){this.shoot(this.p.x,this.p.y,target.x,target.y,85,false,12,850,1.3,'pierce');this.effect('bow',this.p.x,this.p.y,35,.25);}
+if(id==='rings'){this.enemies.forEach(e=>{if(dist(e,target)<120&&e.born<=0){e.root=2.4;e.phase='move';e.cd=Math.max(1,e.cd);this.effect('bind',e.x,e.y,22,2.4);}});this.effect('rings',target.x,target.y,120,.5);}
+if(id==='screen')this.zones.add({kind:'screen',x:this.p.x,y:this.p.y,r:170,life:4,age:0,tick:0});
+if(id==='lamp')this.zones.add({kind:'fire',x:this.p.x+(target.x-this.p.x)/(dist(target,this.p)||1)*105,y:this.p.y+(target.y-this.p.y)/(dist(target,this.p)||1)*105,r:125,life:3.5,age:0,tick:0});
+return true;}
+giftUse(){return this.gift==='life'?this.lifeUse():false;}
+lifeUse(){if(this.state!=='running'||this.gift!=='life'||this.life<=0||this.cool.life>0)return false;this.life--;this.p.mp=Math.min(this.maxMP,this.p.mp+80);this.cool.burst=6;this.cool.life=12;this.telemetry.lifeUses++;this.effect('life',this.p.x,this.p.y,90,.6);return true;}
+blink(){if(this.state!=='running'||!this.lv('dusk')||this.cool.blink>0)return false;let z=this.zones.list().find(z=>z.kind==='dusk'&&dist(z,this.p)<z.r);if(!z||!this.spend(8))return false;const old={x:this.p.x,y:this.p.y};this.p.x=clamp(this.p.x+this.p.vx*180,65,W-65);this.p.y=clamp(this.p.y+this.p.vy*180,65,H-65);const dd=dist(z,this.p);if(dd>z.r){this.p.x=z.x+(this.p.x-z.x)/dd*(z.r-5);this.p.y=z.y+(this.p.y-z.y)/dd*(z.r-5);}this.skillSignal?.('dusk','血漠挪移 · 法力 −8');this.cool.blink=2.8;this.p.inv=.45;this.telemetry.blinkUses++;this.effect('blink',old.x,old.y,25,.4,{tx:this.p.x,ty:this.p.y});if(this.fruit){this.allies.forEach(a=>{a.x=this.p.x+(this.random()-.5)*90;a.y=this.p.y+(this.random()-.5)*90;a.cd=0;});this.area(this.p.x,this.p.y,95,35,.7,true);}return true;}
+step(dt,input={}){if(this.state!=='running')return;dt=clamp(dt,0,.05);this.t+=dt;for(const k in this.cool)this.cool[k]=Math.max(0,this.cool[k]-dt);for(const k of ['inv','slow','cast','recoil'])this.p[k]=Math.max(0,this.p[k]-dt);this.p.mp=Math.min(this.maxMP,this.p.mp+(this.regen+(this.cool.manaBuff>0?4:0))*dt);if(this.cool.healBuff>0)this.heal(dt);this.p.armorTime=Math.max(0,this.p.armorTime-dt);if(!this.p.armorTime)this.p.armor=0;
+let vx=input.x||0,vy=input.y||0,len=Math.hypot(vx,vy);this.p.move=len>0;if(len){vx/=len;vy/=len;this.p.vx=vx;this.p.vy=vy;this.p.x=clamp(this.p.x+vx*180*this.moveFactor*(this.p.slow>0?.66:1)*dt,65,W-65);this.p.y=clamp(this.p.y+vy*180*this.moveFactor*(this.p.slow>0?.66:1)*dt,65,H-65);if(vx)this.p.dir=vx>0?1:-1;}if(input.item)this.itemUse();if(input.life)this.giftUse();if(input.blink)this.blink();
+this.spawnTimer-=dt;if(this.spawnTimer<=0)this.spawnPack();
+if(this.t>=this.eliteAt){const pool=this.t<70?[1,2,7]:this.t<105?[1,2,7,12]:this.t<135?[0,1,2,3,7,8,10,12]:[0,1,2,3,4,5,7,8,9,10,11,12];const elite=this.spawn(pool[Math.floor(this.random()*pool.length)],true);this.eliteAt+=elite?Math.max(40,62-this.t/35):3;if(elite&&this.t>=100){for(let j=0;j<2;j++){const a=j*Math.PI+.6;this.spawn(j===0&&this.t>150?4:0,false,clamp(elite.x+Math.cos(a)*60,80,W-80),clamp(elite.y+Math.sin(a)*60,80,H-80));}}if(elite)this.notice(this.gift?'精英来袭 · 击败可获得重抽次数':'精英来袭 · 击败可选择箓气并获得重抽次数');}
+if(this.t>=this.bossAt){if(!this.enemies.list().some(e=>e.boss)){if(this.enemies.count>=159){const e=this.enemies.list().find(e=>!e.elite);if(e)this.enemies.remove(e);}this.spawn(6);this.notice('执阵首领 · 躲直线冲锋，避开阵眼');}this.bossAt+=180;}
+if(this.t>=this.eventAt){this.pending.push(null);this.eventAt+=185;this.notice('额外参悟');}
+let nearest=this.nearest(this.p,(this.item==='bow'?510:this.item==='spear'?235:375)+this.precision*12);if(nearest&&this.cool.attack<=0)this.autoAttack(nearest);
+this.updateSkills(dt,this.item==='spear'?this.nearest(this.p,500):nearest);this.autoItemUse();this.updateEnemies(dt);this.updateBullets(dt);this.updateZones(dt);this.updateAllies(dt);
+this.drops.forEach(d=>{let dis=dist(d,this.p);if(dis<(this.t%65>51?190:115)+this.precision*7){if(dis<17){this.getXP(d.value);this.drops.remove(d);}else{const speed=260+Math.min(100,d.value*2);d.x+=(this.p.x-d.x)/dis*speed*dt;d.y+=(this.p.y-d.y)/dis*speed*dt;}}});this.fx.forEach(f=>{f.age+=dt;if(f.age>=f.life)this.fx.remove(f);});if(this.state==='running')this.nextChoice();}
+autoAttack(target){this.cool.attack=this.item==='bow'?.57:this.item==='rings'?.62:.51;this.p.cast=.18;this.p.weaponAt=this.t;this.p.weaponLife=this.item==='bow'?.32:this.item==='spear'?.28:.30;this.p.aim=Math.atan2(target.y-this.p.y,target.x-this.p.x);this.telemetry.autoShots++;this.attacks++;
+if(this.item==='spear'){this.cool.attack=.60;const spring=this.cool.springPower>0&&(this.springCharges||0)>0;if(spring)this.springCharges--;const gold=this.lv('gold'),bonus=gold?3+gold*3+Math.floor(this.temperKills/5)*2:0;this.thrust(target,235+this.precision*12,16,26+bonus+(spring?10+this.lv('spring')*8:0),2+gold+(spring?1:0),0,false,spring?'spearSpring':gold?'spearGold':'spear',gold>0);return;}
+const gold=this.lv('gold'),tempered=Math.floor(this.temperKills/5),fire=this.item==='lamp';
+const spring=this.cool.springPower>0&&(this.springCharges||0)>0;if(spring)this.springCharges--;
+const damage=(spring?10+this.lv('spring')*8:0)+(this.item==='bow'?23:this.item==='rings'?17:this.item==='screen'?18:20)+(gold?3+gold*3+tempered*2:0);
+const b=this.shoot(this.p.x,this.p.y,target.x,target.y,damage,false,(gold?gold:0)+(spring?1:0),560,1.1,fire?'flameBolt':gold?'gold':this.item==='rings'?'ringBolt':'arrow');if(b){if(spring){b.kind='springBolt';this.effect('spring',this.p.x,this.p.y,38,.35);}b.breakGuard=gold>0;b.bind=this.item==='rings'?.3:0;b.fire=fire;}
+if(this.item==='sword'&&dist(this.p,target)<120){this.area(this.p.x,this.p.y,110,11);this.effect('sword',this.p.x,this.p.y,110,.23);}if(target.mark>0){this.hit(target,10+6*this.lv('edict'),true);this.effect('edictHit',target.x,target.y,25,.3);}}
+thrust(target,length,width,damage,maxHits,stun=0,ignore=false,kind='spear',breakGuard=false){
+const dx=target.x-this.p.x,dy=target.y-this.p.y,d=Math.hypot(dx,dy),ux=d>.001?dx/d:this.p.vx,uy=d>.001?dy/d:this.p.vy;
+const targets=this.enemies.list().filter(e=>{const x=e.x-this.p.x,y=e.y-this.p.y,along=x*ux+y*uy;return e.born<=0&&along>=0&&along<=length+e.r&&Math.abs(x*uy-y*ux)<width+e.r;}).sort((a,b)=>dist(a,this.p)-dist(b,this.p)).slice(0,maxHits);
+for(const e of targets){const mark=e.mark>0&&kind!=='spearThunder';if(breakGuard)e.exposed=3;this.hit(e,damage,ignore);if(e.active){if(stun){e.stun=Math.max(e.stun,stun);e.phase='move';e.cd=Math.max(e.cd,.8);e.x=clamp(e.x+ux*18,65,W-65);e.y=clamp(e.y+uy*18,65,H-65);}if(mark)this.hit(e,10+6*this.lv('edict'),true);}}
+this.effect(kind,this.p.x,this.p.y,length,.23,{tx:this.p.x+ux*length,ty:this.p.y+uy*length,width});
+}
+updateSkills(dt,nearest){/* Added in content batch. */}
+updateEnemies(dt){const supporters=this.enemies.list().filter(s=>s.type===4&&s.born<=0&&s.stun<=0);this.enemies.forEach(e=>{if(e.ttl!==undefined){e.ttl-=dt;if(e.ttl<=0){this.enemies.remove(e);return;}}e.hit=Math.max(0,e.hit-dt);e.mark=Math.max(0,e.mark-dt);e.slow=Math.max(0,e.slow-dt);e.contact=Math.max(0,e.contact-dt);e.exposed=Math.max(0,(e.exposed||0)-dt);e.root=Math.max(0,(e.root||0)-dt);e.lured=Math.max(0,(e.lured||0)-dt);if(e.born>0){e.born-=dt;return;}if(e.stun>0){e.stun-=dt;return;}if(e.root>0)return;if(dist(e,this.p)>1500&&!e.boss&&!e.elite){this.enemies.remove(e);this.telemetry.despawned++;return;}e.shield=supporters.some(s=>s!==e&&dist(s,e)<(s.elite?210:140));if(e.confused>0){e.confused-=dt;const d=dist(e,this.p)||1;e.x=clamp(e.x+(e.x-this.p.x)/d*e.speed*dt,65,W-65);e.y=clamp(e.y+(e.y-this.p.y)/d*e.speed*dt,65,H-65);return;}if(e.lured>0){const dx=e.lureX-e.x,dy=e.lureY-e.y,d=Math.hypot(dx,dy)||1;if(d>18){const step=Math.min(d-18,e.speed*(e.slow>0?.35:1)*dt);e.x=clamp(e.x+dx/d*step,65,W-65);e.y=clamp(e.y+dy/d*step,65,H-65);}if(dist(e,this.p)<e.r+14&&e.contact<=0){this.hurt(e.boss?22:9);e.contact=.8;}return;}const aim=this.cool.hidden>0&&this.lastSeen?this.lastSeen:this.p;let dx=aim.x-e.x,dy=aim.y-e.y,d=Math.hypot(dx,dy)||1;let speed=e.speed*(e.elite?1.12:1)*(1+Math.min(.25,Math.max(0,this.t-60)/1600))*(e.slow>0?.35:1);e.cd-=dt;
+if(e.phase==='warn'){
+e.timer-=dt;if(e.timer<=0){
+if([1,6,7,12].includes(e.type)){e.phase='dash';e.timer=e.type===7?.36:e.type===12?.38:.65;this.telemetry.charges++;}
+else if(e.type===2){const count=e.elite?5:1;for(let j=0;j<count;j++){const a=Math.atan2(e.ay,e.ax)+(j-(count-1)/2)*.18;this.shoot(e.x,e.y,e.x+Math.cos(a),e.y+Math.sin(a),12+Math.min(8,this.t/120),true,0,215+Math.min(65,this.t/12),3.5,'metal');this.telemetry.enemyShots++;}e.phase='move';e.cd=2.6;}
+else if(e.type===10){const count=e.elite?5:3;for(let j=0;j<count;j++){const a=Math.atan2(e.ay,e.ax)+(j-(count-1)/2)*.22;this.shoot(e.x,e.y,e.x+Math.cos(a),e.y+Math.sin(a),16,true,0,260,2.8,'radiance');this.telemetry.enemyShots++;}e.phase='move';e.cd=e.elite?2.8:3.3;e.evade=.65;}
+else if(e.type===11){const length=e.elite?360:300,dx=this.p.x-e.x,dy=this.p.y-e.y,along=dx*e.ax+dy*e.ay,across=Math.abs(dx*e.ay-dy*e.ax);this.effect('enemyHook',e.x,e.y,length,.32,{tx:e.x+e.ax*length,ty:e.y+e.ay*length});if(along>=0&&along<=length+13&&across<30&&this.hurt(e.elite?24:18)){const pull=Math.min(e.elite?95:65,Math.max(0,along-65));this.p.x=clamp(this.p.x-e.ax*pull,65,W-65);this.p.y=clamp(this.p.y-e.ay*pull,65,H-65);this.p.slow=.8;}e.phase='move';e.cd=e.elite?3.8:4.6;}
+else if(e.type===0||e.type===5){const r=e.type===5?76:65,x=e.x+e.ax*55,y=e.y+e.ay*55;this.areaEnemy(x,y,r,e.type===5?28:16);if(e.type===5&&e.elite)this.hazard(x,y,95,.9,1.6);e.phase='move';e.cd=3;}
+else if(e.type===8){const live=this.enemies.list().filter(q=>q.summoner===e.id).length,n=Math.min(e.elite?3:2,(e.elite?5:3)-live);for(let j=0;j<n;j++){const a=e.id+j*Math.PI*2/Math.max(1,n),q=this.spawn(e.elite&&j===0?1:0,false,clamp(e.x+Math.cos(a)*85,80,W-80),clamp(e.y+Math.sin(a)*85,80,H-80));if(q){q.summoner=e.id;q.summoned=true;q.ttl=40;}}this.effect('drum',e.x,e.y,100,.5);e.phase='move';e.cd=8;}
+else if(e.type===9){for(const q of e.wallPoints||[])this.hazard(q.x,q.y,33,.35,3.7);e.wallPoints=null;e.phase='move';e.cd=7;}
+}return;}
+if(e.phase==='dash'){
+const dashSpeed=e.type===7?440:e.type===12?500:480,dashStep=Math.min(dt,Math.max(0,e.timer));e.x=clamp(e.x+e.ax*dashSpeed*dashStep,65,W-65);e.y=clamp(e.y+e.ay*dashSpeed*dashStep,65,H-65);e.timer-=dt;
+if(dist(e,this.p)<e.r+13)this.hurt(e.boss?27:e.type===7?15:e.type===12?17:20);
+if(e.timer<=0){e.phase='move';e.cd=e.boss?3:e.type===7?2.8:e.type===12?(e.elite?2.4:3.2):3.8;if(e.boss)this.bossRing(e);if(e.type===7&&e.elite)this.hazard(e.x,e.y,56,.85,1.5);if(e.type===12&&e.elite)this.hazard(e.x,e.y,52,.9,1.45);
+if(e.type===1&&e.elite&&!e.followup&&!(this.cool.hidden>0)){e.followup=true;e.phase='warn';e.timer=.85;const nd=dist(e,this.p)||1;e.ax=(this.p.x-e.x)/nd;e.ay=(this.p.y-e.y)/nd;}else e.followup=false;}
+return;}
+if(!(this.cool.hidden>0)){
+if(([1,6].includes(e.type)&&d<440||e.type===7&&d<175||e.type===12&&d<235)&&e.cd<=0){e.phase='warn';e.timer=e.boss?1.15:e.type===7?.75:e.type===12?.85:.95;e.ax=dx/d;e.ay=dy/d;return;}
+if(e.type===10&&e.cd<=0&&d<610){e.phase='warn';e.timer=1.1;e.ax=dx/d;e.ay=dy/d;return;}
+if(e.type===11&&e.cd<=0&&d<(e.elite?360:300)){e.phase='warn';e.timer=1.05;e.ax=dx/d;e.ay=dy/d;return;}
+if(e.type===2&&e.cd<=0&&d<570){e.phase='warn';e.timer=.8;e.ax=dx/d;e.ay=dy/d;return;}
+if(e.type===3&&e.cd<=0&&d<580){const x=this.p.x+this.p.vx*45,y=this.p.y+this.p.vy*45;if(e.elite){this.hazard(x-this.p.vy*85,y+this.p.vx*85,65,1.3,3.8);this.hazard(x+this.p.vy*85,y-this.p.vx*85,65,1.3,3.8);}else this.hazard(x,y,65,1.3,3.8);e.cd=4.2;}
+if((e.type===5||e.type===0&&e.elite)&&d<115&&e.cd<=0){e.phase='warn';e.timer=e.type===5?1.25:.85;e.ax=dx/d;e.ay=dy/d;return;}
+if(e.type===8&&d<650&&e.cd<=0){e.phase='warn';e.timer=1.4;return;}
+if(e.type===9&&d<600&&e.cd<=0&&this.zones.count<24){e.phase='warn';e.timer=1.25;const vx=this.p.vx,vy=this.p.vy,x=clamp(this.p.x+vx*90,65,W-65),y=clamp(this.p.y+vy*90,65,H-65);e.wallPoints=(e.elite?[-3,-2,-1,1,2,3]:[-2,-1,1,2]).map(n=>({x:x-vy*n*85,y:y+vx*n*85})).filter(q=>q.x>=65&&q.x<=W-65&&q.y>=65&&q.y<=H-65);return;}
+}
+if(e.type===4&&e.elite&&e.cd<=0){this.enemies.forEach(q=>{if(q!==e&&q.born<=0&&dist(q,e)<210)q.hp=Math.min(q.max,q.hp+6);});this.effect('mend',e.x,e.y,210,.7);e.cd=5;}
+let move=1;if(e.type===2||e.type===10)move=d<230?-1:d>350?1:0;if(e.type===11)move=d<185?-1:d>255?1:0;if([3,8,9].includes(e.type))move=d<270?-1:d>410?1:0;if(e.type===4)move=d<200?-.4:1;
+let ux=dx/d,uy=dy/d;if((e.type===7||e.type===12)&&d>175&&d<520){const side=e.id%2?1:-1;ux=(dx/d*.7-dy/d*.72*side);uy=(dy/d*.7+dx/d*.72*side);}
+if(e.type===10&&e.evade>0){e.evade-=dt;ux=-dy/d*(e.id%2?1:-1);uy=dx/d*(e.id%2?1:-1);move=1;}
+e.x=clamp(e.x+ux*speed*move*dt,65,W-65);e.y=clamp(e.y+uy*speed*move*dt,65,H-65);if(dist(e,this.p)<e.r+14&&e.contact<=0){this.hurt(e.boss?22:e.type===5?18:9);e.contact=.8;}
+
+});}
+hazard(x,y,r=65,warn=1.2,life=3.8){if(this.zones.count>=30)return;this.zones.add({kind:'hazard',x:clamp(x,65,W-65),y:clamp(y,65,H-65),r,warn,life,age:0,tick:0});this.telemetry.hazards++;}
+bossRing(e){let phase=Math.floor(this.t/180)%3;for(let j=0;j<4+phase;j++){let a=j*Math.PI*2/(4+phase);this.hazard(this.p.x+Math.cos(a)*140,this.p.y+Math.sin(a)*140,55,1.5,3);}for(let j=0;j<8;j++){const a=j*Math.PI/4;this.shoot(e.x,e.y,e.x+Math.cos(a),e.y+Math.sin(a),14,true,0,190,3);} }
+areaEnemy(x,y,r,n){this.effect('impact',x,y,r,.5);if(dist({x,y},this.p)<r+10)this.hurt(n,true);}
+updateBullets(dt){this.bullets.forEach(b=>{if(b.held>0){b.held=Math.max(0,b.held-dt);return;}b.x+=b.vx*dt;b.y+=b.vy*dt;b.life-=dt;if(b.life<=0||b.x<20||b.x>W-20||b.y<20||b.y>H-20){this.bullets.remove(b);return;}if(b.enemy){if(dist(b,this.p)<15){this.hurt(b.damage);this.bullets.remove(b);}}else this.enemies.forEach(e=>{if(b.active&&e.born<=0&&!b.hitIds.has(e.id)&&dist(b,e)<e.r+b.r+3){b.hitIds.add(e.id);if(b.breakGuard)e.exposed=3;if(b.bind){e.root=Math.max(e.root||0,b.bind);}this.hit(e,b.damage*(b.fire?this.firePower():1),b.kind==='pierce');this.effect('hit',b.x,b.y,12,.22);if(b.pierce--<=0)this.bullets.remove(b);}});});}
+updateZones(dt){this.zones.forEach(z=>{z.age+=dt;z.tick-=dt;if(z.kind==='hazard'){if(z.age>z.warn&&dist(z,this.p)<z.r){if(this.hurt(13,true))this.p.slow=1.2;}}if(z.age>=z.life)this.zones.remove(z);});}
+updateAllies(dt){}
+summary(){return {t:this.t,state:this.state,level:this.level,kills:this.kills,elites:this.elites,bosses:this.bosses,hp:this.p.hp,mp:this.p.mp,xp:this.xp,skills:{...this.skills},fruit:this.fruit,fruits:{...this.fruits},fruitAt:this.fruitAt,gift:this.gift,life:this.life,damageTaken:this.damageTaken,healed:this.healed,spent:this.spent,temperKills:this.temperKills,entities:{enemies:this.enemies.count,bullets:this.bullets.count,drops:this.drops.count,zones:this.zones.count,fx:this.fx.count},telemetry:{...this.telemetry}};}
+}
+const api={Run,SKILLS,RECIPE,RECIPES,ITEMS,GIFTS,ENEMY_NAMES,ENEMY_GUIDE,Pool,rng,W,H,dist,clamp};root.XJ=api;if(typeof module!=='undefined')module.exports=api;
+})(typeof globalThis!=='undefined'?globalThis:this);

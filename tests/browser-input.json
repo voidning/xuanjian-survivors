@@ -1,0 +1,509 @@
+{
+  "shortTap": {
+    "t": 11.916969999999946,
+    "state": "running",
+    "level": 1,
+    "kills": 5,
+    "elites": 0,
+    "bosses": 0,
+    "hp": 100,
+    "mp": 100,
+    "xp": 0,
+    "skills": {},
+    "fruit": false,
+    "fruitAt": null,
+    "gift": null,
+    "life": 8,
+    "damageTaken": 0,
+    "spent": 0,
+    "entities": {
+      "enemies": 9,
+      "bullets": 1,
+      "drops": 5,
+      "zones": 0,
+      "fx": 2
+    },
+    "telemetry": {
+      "spawns": 14,
+      "despawned": 0,
+      "dropMerged": 0,
+      "autoShots": 12,
+      "itemUses": 0,
+      "lifeUses": 0,
+      "blinkUses": 0,
+      "enemyShots": 0,
+      "charges": 0,
+      "hazards": 0
+    },
+    "x": 1603.0203999999999,
+    "y": 1100,
+    "camera": {
+      "x": 1603.020399999999,
+      "y": 1100
+    },
+    "choices": []
+  },
+  "paused": {
+    "t": 11.983439999999947,
+    "state": "paused",
+    "level": 1,
+    "kills": 5,
+    "elites": 0,
+    "bosses": 0,
+    "hp": 100,
+    "mp": 100,
+    "xp": 0,
+    "skills": {},
+    "fruit": false,
+    "fruitAt": null,
+    "gift": null,
+    "life": 8,
+    "damageTaken": 0,
+    "spent": 0,
+    "entities": {
+      "enemies": 9,
+      "bullets": 1,
+      "drops": 5,
+      "zones": 0,
+      "fx": 2
+    },
+    "telemetry": {
+      "spawns": 14,
+      "despawned": 0,
+      "dropMerged": 0,
+      "autoShots": 12,
+      "itemUses": 0,
+      "lifeUses": 0,
+      "blinkUses": 0,
+      "enemyShots": 0,
+      "charges": 0,
+      "hazards": 0
+    },
+    "x": 1603.0203999999999,
+    "y": 1100,
+    "camera": {
+      "x": 1603.020399999999,
+      "y": 1100
+    },
+    "choices": []
+  },
+  "pausedAfterInput": {
+    "t": 11.983439999999947,
+    "state": "paused",
+    "level": 1,
+    "kills": 5,
+    "elites": 0,
+    "bosses": 0,
+    "hp": 100,
+    "mp": 100,
+    "xp": 0,
+    "skills": {},
+    "fruit": false,
+    "fruitAt": null,
+    "gift": null,
+    "life": 8,
+    "damageTaken": 0,
+    "spent": 0,
+    "entities": {
+      "enemies": 9,
+      "bullets": 1,
+      "drops": 5,
+      "zones": 0,
+      "fx": 2
+    },
+    "telemetry": {
+      "spawns": 14,
+      "despawned": 0,
+      "dropMerged": 0,
+      "autoShots": 12,
+      "itemUses": 0,
+      "lifeUses": 0,
+      "blinkUses": 0,
+      "enemyShots": 0,
+      "charges": 0,
+      "hazards": 0
+    },
+    "x": 1603.0203999999999,
+    "y": 1100,
+    "camera": {
+      "x": 1603.020399999999,
+      "y": 1100
+    },
+    "choices": []
+  },
+  "resumed": {
+    "t": 12.283499999999941,
+    "state": "running",
+    "level": 1,
+    "kills": 5,
+    "elites": 0,
+    "bosses": 0,
+    "hp": 100,
+    "mp": 86.10042000000001,
+    "xp": 0,
+    "skills": {},
+    "fruit": false,
+    "fruitAt": null,
+    "gift": null,
+    "life": 8,
+    "damageTaken": 0,
+    "spent": 16,
+    "entities": {
+      "enemies": 9,
+      "bullets": 1,
+      "drops": 5,
+      "zones": 0,
+      "fx": 1
+    },
+    "telemetry": {
+      "spawns": 14,
+      "despawned": 0,
+      "dropMerged": 0,
+      "autoShots": 12,
+      "itemUses": 1,
+      "lifeUses": 0,
+      "blinkUses": 0,
+      "enemyShots": 0,
+      "charges": 0,
+      "hazards": 0
+    },
+    "x": 1603.0203999999999,
+    "y": 1100,
+    "camera": {
+      "x": 1603.020399999999,
+      "y": 1100
+    },
+    "choices": []
+  },
+  "pickup": {
+    "t": 38.3499799999999,
+    "state": "choice",
+    "level": 2,
+    "kills": 34,
+    "elites": 0,
+    "bosses": 0,
+    "hp": 82,
+    "mp": 100,
+    "xp": 0,
+    "skills": {},
+    "fruit": false,
+    "fruitAt": null,
+    "gift": null,
+    "life": 8,
+    "damageTaken": 18,
+    "spent": 16,
+    "entities": {
+      "enemies": 10,
+      "bullets": 1,
+      "drops": 19,
+      "zones": 0,
+      "fx": 3
+    },
+    "telemetry": {
+      "spawns": 44,
+      "despawned": 0,
+      "dropMerged": 7,
+      "autoShots": 63,
+      "itemUses": 1,
+      "lifeUses": 0,
+      "blinkUses": 0,
+      "enemyShots": 0,
+      "charges": 5,
+      "hazards": 0
+    },
+    "x": 1421.2547593978702,
+    "y": 1299.662565215261,
+    "camera": {
+      "x": 1421.2547593978709,
+      "y": 1299.6625652152604
+    },
+    "choices": [
+      "dusk",
+      "body",
+      "pure"
+    ]
+  },
+  "choiceResumed": {
+    "t": 38.633329999999894,
+    "state": "running",
+    "level": 2,
+    "kills": 34,
+    "elites": 0,
+    "bosses": 0,
+    "hp": 82,
+    "mp": 81.86682999999996,
+    "xp": 0,
+    "skills": {
+      "dusk": 1
+    },
+    "fruit": false,
+    "fruitAt": null,
+    "gift": null,
+    "life": 8,
+    "damageTaken": 18,
+    "spent": 36,
+    "entities": {
+      "enemies": 10,
+      "bullets": 1,
+      "drops": 19,
+      "zones": 1,
+      "fx": 1
+    },
+    "telemetry": {
+      "spawns": 44,
+      "despawned": 0,
+      "dropMerged": 7,
+      "autoShots": 63,
+      "itemUses": 1,
+      "lifeUses": 0,
+      "blinkUses": 0,
+      "enemyShots": 0,
+      "charges": 5,
+      "hazards": 0
+    },
+    "x": 1421.2547593978702,
+    "y": 1299.662565215261,
+    "camera": {
+      "x": 1421.2547593978709,
+      "y": 1299.6625652152604
+    },
+    "choices": []
+  },
+  "actions": {
+    "t": 49.59989999999955,
+    "state": "choice",
+    "level": 2,
+    "kills": 48,
+    "elites": 1,
+    "bosses": 0,
+    "hp": 83,
+    "mp": 88.51633999999986,
+    "xp": 32,
+    "skills": {
+      "dusk": 1
+    },
+    "fruit": false,
+    "fruitAt": null,
+    "gift": null,
+    "life": 8,
+    "damageTaken": 27,
+    "spent": 56,
+    "entities": {
+      "enemies": 10,
+      "bullets": 0,
+      "drops": 27,
+      "zones": 1,
+      "fx": 3
+    },
+    "telemetry": {
+      "spawns": 58,
+      "despawned": 0,
+      "dropMerged": 7,
+      "autoShots": 85,
+      "itemUses": 1,
+      "lifeUses": 0,
+      "blinkUses": 0,
+      "enemyShots": 0,
+      "charges": 11,
+      "hazards": 0
+    },
+    "x": 1421.2547593978702,
+    "y": 1299.662565215261,
+    "camera": {
+      "x": 1421.2547593978709,
+      "y": 1299.6625652152604
+    },
+    "choices": [
+      "whale",
+      "life"
+    ]
+  },
+  "reroll": {
+    "t": 49.59989999999955,
+    "state": "choice",
+    "level": 3,
+    "kills": 48,
+    "elites": 1,
+    "bosses": 0,
+    "hp": 83,
+    "mp": 100,
+    "xp": 8,
+    "skills": {
+      "dusk": 1
+    },
+    "fruit": false,
+    "fruitAt": null,
+    "gift": "life",
+    "life": 8,
+    "damageTaken": 27,
+    "spent": 56,
+    "entities": {
+      "enemies": 10,
+      "bullets": 0,
+      "drops": 27,
+      "zones": 1,
+      "fx": 3
+    },
+    "telemetry": {
+      "spawns": 58,
+      "despawned": 0,
+      "dropMerged": 7,
+      "autoShots": 85,
+      "itemUses": 1,
+      "lifeUses": 0,
+      "blinkUses": 0,
+      "enemyShots": 0,
+      "charges": 11,
+      "hazards": 0
+    },
+    "x": 1421.2547593978702,
+    "y": 1299.662565215261,
+    "camera": {
+      "x": 1421.2547593978709,
+      "y": 1299.6625652152604
+    },
+    "choices": [
+      "gate",
+      "edict",
+      "body"
+    ]
+  },
+  "life": {
+    "t": 49.76660999999953,
+    "state": "running",
+    "level": 3,
+    "kills": 49,
+    "elites": 1,
+    "bosses": 0,
+    "hp": 83,
+    "mp": 59.166970000000006,
+    "xp": 8,
+    "skills": {
+      "dusk": 1,
+      "gate": 1
+    },
+    "fruit": false,
+    "fruitAt": null,
+    "gift": "life",
+    "life": 7,
+    "damageTaken": 27,
+    "spent": 98,
+    "entities": {
+      "enemies": 9,
+      "bullets": 0,
+      "drops": 27,
+      "zones": 1,
+      "fx": 7
+    },
+    "telemetry": {
+      "spawns": 58,
+      "despawned": 0,
+      "dropMerged": 8,
+      "autoShots": 85,
+      "itemUses": 2,
+      "lifeUses": 1,
+      "blinkUses": 0,
+      "enemyShots": 0,
+      "charges": 11,
+      "hazards": 0
+    },
+    "x": 1421.2547593978702,
+    "y": 1299.662565215261,
+    "camera": {
+      "x": 1421.2547593978709,
+      "y": 1299.6625652152604
+    },
+    "choices": []
+  },
+  "final": {
+    "t": 59.26656999999883,
+    "state": "ended",
+    "level": 3,
+    "kills": 60,
+    "elites": 1,
+    "bosses": 0,
+    "hp": 83,
+    "mp": 59.949229999999964,
+    "xp": 8,
+    "skills": {
+      "dusk": 1,
+      "gate": 1
+    },
+    "fruit": false,
+    "fruitAt": null,
+    "gift": "life",
+    "life": 7,
+    "damageTaken": 27,
+    "spent": 144,
+    "entities": {
+      "enemies": 7,
+      "bullets": 1,
+      "drops": 37,
+      "zones": 1,
+      "fx": 1
+    },
+    "telemetry": {
+      "spawns": 67,
+      "despawned": 0,
+      "dropMerged": 9,
+      "autoShots": 97,
+      "itemUses": 2,
+      "lifeUses": 1,
+      "blinkUses": 0,
+      "enemyShots": 0,
+      "charges": 13,
+      "hazards": 0
+    },
+    "x": 1421.2547593978702,
+    "y": 1299.662565215261,
+    "camera": {
+      "x": 1421.2547593978709,
+      "y": 1299.6625652152604
+    },
+    "choices": []
+  },
+  "restart": {
+    "t": 0,
+    "state": "paused",
+    "level": 1,
+    "kills": 0,
+    "elites": 0,
+    "bosses": 0,
+    "hp": 100,
+    "mp": 100,
+    "xp": 0,
+    "skills": {},
+    "fruit": false,
+    "fruitAt": null,
+    "gift": null,
+    "life": 8,
+    "damageTaken": 0,
+    "spent": 0,
+    "entities": {
+      "enemies": 0,
+      "bullets": 0,
+      "drops": 0,
+      "zones": 0,
+      "fx": 0
+    },
+    "telemetry": {
+      "spawns": 0,
+      "despawned": 0,
+      "dropMerged": 0,
+      "autoShots": 0,
+      "itemUses": 0,
+      "lifeUses": 0,
+      "blinkUses": 0,
+      "enemyShots": 0,
+      "charges": 0,
+      "hazards": 0
+    },
+    "x": 1600,
+    "y": 1100,
+    "camera": {
+      "x": 1600,
+      "y": 1100
+    },
+    "choices": []
+  }
+}

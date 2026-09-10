@@ -1,0 +1,304 @@
+{
+  "new": {
+    "all": {
+      "n": 40,
+      "formed": 29,
+      "won": 10,
+      "medianFruit": 226.5,
+      "fruitRange": [
+        101.8,
+        373.6
+      ],
+      "diedUnformed": 11,
+      "fiveWithoutFruit": [
+        {
+          "route": "mingyang",
+          "item": "spear",
+          "seed": 907,
+          "strategy": "route",
+          "fiveAt": 104.7,
+          "time": 164.7,
+          "skills": {
+            "gate": 1,
+            "muddle": 1,
+            "body": 2,
+            "edict": 1,
+            "dew": 3,
+            "dusk": 1,
+            "light": 1,
+            "rain": 1
+          }
+        },
+        {
+          "route": "lushui",
+          "item": "sword",
+          "seed": 42,
+          "strategy": "balanced",
+          "fiveAt": 226.8,
+          "time": 232.25,
+          "skills": {
+            "rain": 2,
+            "gold": 1,
+            "conceal": 2,
+            "muddle": 1,
+            "light": 2,
+            "spring": 1,
+            "dew": 1
+          }
+        },
+        {
+          "route": "lushui",
+          "item": "bow",
+          "seed": 907,
+          "strategy": "balanced",
+          "fiveAt": 306.7,
+          "time": 309.9,
+          "skills": {
+            "rain": 2,
+            "dew": 2,
+            "conceal": 2,
+            "thunder": 1,
+            "fragrance": 1,
+            "gold": 1,
+            "armor": 1,
+            "light": 1,
+            "muddle": 1,
+            "spring": 1
+          }
+        },
+        {
+          "route": "lushui",
+          "item": "thunderseal",
+          "seed": 907,
+          "strategy": "balanced",
+          "fiveAt": 252.75,
+          "time": 291.7,
+          "skills": {
+            "rain": 2,
+            "flame": 1,
+            "gold": 2,
+            "conceal": 2,
+            "dew": 1,
+            "spring": 2,
+            "gate": 1,
+            "muddle": 1
+          }
+        }
+      ],
+      "maxDrought": 6,
+      "skippedForTraining": 27
+    },
+    "mingyang_route": {
+      "n": 10,
+      "formed": 8,
+      "won": 5,
+      "medianFruit": 163.825,
+      "fruitRange": [
+        103.35,
+        251.7
+      ],
+      "diedUnformed": 2,
+      "fiveWithoutFruit": [
+        {
+          "route": "mingyang",
+          "item": "spear",
+          "seed": 907,
+          "strategy": "route",
+          "fiveAt": 104.7,
+          "time": 164.7,
+          "skills": {
+            "gate": 1,
+            "muddle": 1,
+            "body": 2,
+            "edict": 1,
+            "dew": 3,
+            "dusk": 1,
+            "light": 1,
+            "rain": 1
+          }
+        }
+      ],
+      "maxDrought": 6,
+      "skippedForTraining": 0
+    },
+    "mingyang_balanced": {
+      "n": 10,
+      "formed": 6,
+      "won": 4,
+      "medianFruit": 260.075,
+      "fruitRange": [
+        202.3,
+        373.6
+      ],
+      "diedUnformed": 4,
+      "fiveWithoutFruit": [],
+      "maxDrought": 4,
+      "skippedForTraining": 15
+    },
+    "lushui_route": {
+      "n": 10,
+      "formed": 9,
+      "won": 0,
+      "medianFruit": 211.3,
+      "fruitRange": [
+        101.8,
+        233.15
+      ],
+      "diedUnformed": 1,
+      "fiveWithoutFruit": [],
+      "maxDrought": 6,
+      "skippedForTraining": 0
+    },
+    "lushui_balanced": {
+      "n": 10,
+      "formed": 6,
+      "won": 1,
+      "medianFruit": 252.05,
+      "fruitRange": [
+        223.7,
+        299.45
+      ],
+      "diedUnformed": 4,
+      "fiveWithoutFruit": [
+        {
+          "route": "lushui",
+          "item": "sword",
+          "seed": 42,
+          "strategy": "balanced",
+          "fiveAt": 226.8,
+          "time": 232.25,
+          "skills": {
+            "rain": 2,
+            "gold": 1,
+            "conceal": 2,
+            "muddle": 1,
+            "light": 2,
+            "spring": 1,
+            "dew": 1
+          }
+        },
+        {
+          "route": "lushui",
+          "item": "bow",
+          "seed": 907,
+          "strategy": "balanced",
+          "fiveAt": 306.7,
+          "time": 309.9,
+          "skills": {
+            "rain": 2,
+            "dew": 2,
+            "conceal": 2,
+            "thunder": 1,
+            "fragrance": 1,
+            "gold": 1,
+            "armor": 1,
+            "light": 1,
+            "muddle": 1,
+            "spring": 1
+          }
+        },
+        {
+          "route": "lushui",
+          "item": "thunderseal",
+          "seed": 907,
+          "strategy": "balanced",
+          "fiveAt": 252.75,
+          "time": 291.7,
+          "skills": {
+            "rain": 2,
+            "flame": 1,
+            "gold": 2,
+            "conceal": 2,
+            "dew": 1,
+            "spring": 2,
+            "gate": 1,
+            "muddle": 1
+          }
+        }
+      ],
+      "maxDrought": 3,
+      "skippedForTraining": 12
+    }
+  },
+  "baseline": {
+    "all": {
+      "n": 40,
+      "formed": 33,
+      "won": 8,
+      "medianFruit": 126.35,
+      "fruitRange": [
+        59.45,
+        306.7
+      ],
+      "diedUnformed": 7,
+      "fiveWithoutFruit": [],
+      "maxDrought": 6,
+      "skippedForTraining": 19
+    },
+    "mingyang_route": {
+      "n": 10,
+      "formed": 9,
+      "won": 2,
+      "medianFruit": 125.75,
+      "fruitRange": [
+        59.45,
+        182.75
+      ],
+      "diedUnformed": 1,
+      "fiveWithoutFruit": [],
+      "maxDrought": 6,
+      "skippedForTraining": 0
+    },
+    "mingyang_balanced": {
+      "n": 10,
+      "formed": 6,
+      "won": 2,
+      "medianFruit": 130.425,
+      "fruitRange": [
+        107.9,
+        202.3
+      ],
+      "diedUnformed": 4,
+      "fiveWithoutFruit": [],
+      "maxDrought": 4,
+      "skippedForTraining": 10
+    },
+    "lushui_route": {
+      "n": 10,
+      "formed": 9,
+      "won": 3,
+      "medianFruit": 105.65,
+      "fruitRange": [
+        79.65,
+        154.25
+      ],
+      "diedUnformed": 1,
+      "fiveWithoutFruit": [],
+      "maxDrought": 6,
+      "skippedForTraining": 0
+    },
+    "lushui_balanced": {
+      "n": 10,
+      "formed": 9,
+      "won": 1,
+      "medianFruit": 226.8,
+      "fruitRange": [
+        102.85,
+        306.7
+      ],
+      "diedUnformed": 1,
+      "fiveWithoutFruit": [],
+      "maxDrought": 3,
+      "skippedForTraining": 9
+    }
+  },
+  "pairedFormed": {
+    "n": 29,
+    "medianDelay": 81.2,
+    "range": [
+      0.0,
+      239.10000000000002
+    ],
+    "note": "Not causal isolation: changed selections/offers/RNG/combat/XP/events and survival differ."
+  }
+}

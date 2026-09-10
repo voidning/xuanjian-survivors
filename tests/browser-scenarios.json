@@ -1,0 +1,66 @@
+[
+  {
+    "name": "升级弹层显示",
+    "pass": true
+  },
+  {
+    "name": "选择中时间和位置冻结",
+    "pass": true
+  },
+  {
+    "name": "真实 DOM 选择按钮恢复战斗",
+    "pass": true
+  },
+  {
+    "name": "五法加异道，选择后激活果位",
+    "pass": true
+  },
+  {
+    "name": "UI 展示果位",
+    "pass": true
+  },
+  {
+    "name": "受箓 DOM 选择独立",
+    "pass": true
+  },
+  {
+    "name": "Q 对应动作有限耗寿",
+    "pass": true
+  },
+  {
+    "name": "寿元耗尽不能施放",
+    "pass": true
+  },
+  {
+    "name": "首领死亡后继续十秒",
+    "pass": true
+  },
+  {
+    "name": "死亡结算 DOM",
+    "pass": true
+  },
+  {
+    "name": "同种重开清空状态",
+    "pass": true
+  },
+  {
+    "name": "暂停按钮生效",
+    "pass": true
+  },
+  {
+    "name": "主动结束结算",
+    "pass": true
+  },
+  {
+    "name": "重新选器物",
+    "pass": true
+  },
+  {
+    "name": "器物更换须重开",
+    "pass": true
+  },
+  {
+    "name": "静音开关状态",
+    "pass": true
+  }
+]

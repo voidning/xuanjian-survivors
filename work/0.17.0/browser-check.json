@@ -1,0 +1,41 @@
+{
+  "method": "normal entry short smoke + constructed browser fruit choices/rendering; not twelve-minute human play",
+  "normal": {
+    "state": "running",
+    "canvas": true
+  },
+  "checks": [
+    {
+      "dao": "mingyang",
+      "stage": "five only",
+      "text": "明阳果位 5/5 · 待一法三重\n五法齐备 · 任一同参修至三重成果位"
+    },
+    {
+      "dao": "mingyang",
+      "formed": true
+    },
+    {
+      "dao": "lushui",
+      "stage": "five only",
+      "text": "渌水果位 5/5 · 待一法三重\n五法齐备 · 任一同参修至三重成果位"
+    },
+    {
+      "dao": "lushui",
+      "formed": true
+    },
+    {
+      "reducedMedia": true
+    },
+    {
+      "mobileOverflow": false
+    },
+    {
+      "guide": {
+        "mastery": true,
+        "general": true,
+        "rain": true
+      }
+    }
+  ],
+  "errors": []
+}

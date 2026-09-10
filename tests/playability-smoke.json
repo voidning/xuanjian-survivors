@@ -1,0 +1,145 @@
+{
+  "method": "10 input-driven normal simulations, not human play or full 12-minute runs; no injected HP/XP/skills",
+  "runs": [
+    {
+      "item": "sword",
+      "seed": 42,
+      "time": 150,
+      "hp": 100,
+      "level": 9,
+      "kills": 161,
+      "fieldEvent": {
+        "site": "stele",
+        "status": "completed",
+        "kills": 3
+      },
+      "primary": null
+    },
+    {
+      "item": "sword",
+      "seed": 907,
+      "time": 150,
+      "hp": 87.6,
+      "level": 9,
+      "kills": 163,
+      "fieldEvent": {
+        "site": "pine",
+        "status": "completed",
+        "kills": 3
+      },
+      "primary": "gate"
+    },
+    {
+      "item": "bow",
+      "seed": 42,
+      "time": 150,
+      "hp": 73.4,
+      "level": 9,
+      "kills": 172,
+      "fieldEvent": {
+        "site": "stele",
+        "status": "completed",
+        "kills": 3
+      },
+      "primary": "gate"
+    },
+    {
+      "item": "bow",
+      "seed": 907,
+      "time": 150,
+      "hp": 90,
+      "level": 9,
+      "kills": 177,
+      "fieldEvent": {
+        "site": "pine",
+        "status": "completed",
+        "kills": 3
+      },
+      "primary": "gate"
+    },
+    {
+      "item": "spear",
+      "seed": 42,
+      "time": 150,
+      "hp": 82.5,
+      "level": 9,
+      "kills": 160,
+      "fieldEvent": {
+        "site": "pine",
+        "status": "completed",
+        "kills": 3
+      },
+      "primary": null
+    },
+    {
+      "item": "spear",
+      "seed": 907,
+      "time": 150,
+      "hp": 79.8,
+      "level": 9,
+      "kills": 174,
+      "fieldEvent": {
+        "site": "pine",
+        "status": "completed",
+        "kills": 3
+      },
+      "primary": "gate"
+    },
+    {
+      "item": "thunderseal",
+      "seed": 42,
+      "time": 150,
+      "hp": 81.3,
+      "level": 9,
+      "kills": 175,
+      "fieldEvent": {
+        "site": "stele",
+        "status": "completed",
+        "kills": 3
+      },
+      "primary": "gate"
+    },
+    {
+      "item": "thunderseal",
+      "seed": 907,
+      "time": 150,
+      "hp": 56.4,
+      "level": 9,
+      "kills": 175,
+      "fieldEvent": {
+        "site": "stele",
+        "status": "completed",
+        "kills": 3
+      },
+      "primary": "gate"
+    },
+    {
+      "item": "screen",
+      "seed": 42,
+      "time": 150,
+      "hp": 73.6,
+      "level": 9,
+      "kills": 164,
+      "fieldEvent": {
+        "site": "pine",
+        "status": "completed",
+        "kills": 3
+      },
+      "primary": "gate"
+    },
+    {
+      "item": "screen",
+      "seed": 907,
+      "time": 150,
+      "hp": 104,
+      "level": 9,
+      "kills": 159,
+      "fieldEvent": {
+        "site": "pine",
+        "status": "completed",
+        "kills": 3
+      },
+      "primary": "gate"
+    }
+  ]
+}

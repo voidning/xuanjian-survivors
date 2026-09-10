@@ -1,0 +1,116 @@
+/* Playtest polish: existing paper palette, legible decision hierarchy. */
+#panel .decision-card{display:flex;flex-direction:column;align-items:stretch;gap:10px;cursor:default;overflow:visible;padding:20px;min-width:0;animation:none}
+#panel .decision-card:hover{transform:none;background:#f8f4e9;border-color:#6d8978}
+#panel .decision-card strong{font-size:24px;letter-spacing:1px;padding-right:26px}
+#panel .decision-card small{font-size:13px;line-height:1.6;padding-right:40px}
+#panel .decision-card p{margin:0;font-size:15px;line-height:1.6}
+#panel .decision-card .decision-purpose{color:#24473d;min-height:48px}
+.decision-cost{font-size:13px;line-height:1.6;color:#4d563e;font-weight:600}
+.decision-condition{font-size:13px;line-height:1.6;color:#526254}
+#panel .decision-card .decision-gain{color:#295e51;font-size:14px;border-left:3px solid #63866b;padding:7px 10px;background:#e7eddf}
+.decision-relation{font-size:13px;line-height:1.6;color:#365e54}
+.decision-details{margin-top:auto;border-top:1px solid #cecbb6;padding-top:9px;font-size:13px}
+.decision-details summary{cursor:pointer;padding:4px 0;color:#59654f}
+#panel .decision-details p{font-size:13px;line-height:1.75;margin:8px 0}
+.choose-card{width:100%;font-size:15px;background:#2f594b;color:#fff4d6;border-color:#55705b;padding:11px;min-height:44px}
+.choose-card:hover{background:#436d58;color:#fff}.choose-card:disabled{cursor:wait}
+.route-strip{background:#e5e9da;border-left:3px solid #6b856d;padding:9px 13px;margin:12px 0;display:grid;gap:7px}
+.route-strip div{display:flex;gap:14px;flex-wrap:wrap;align-items:baseline}.route-strip b{font-size:14px;color:#2c5343}.route-strip span{font-size:13px;color:#485d50}
+#panel .choice-lead{margin:8px 0 12px;font-size:15px}.choice-support{font-size:14px;padding-top:8px}.choice-support p{font-size:13px!important}
+.casting-row{display:flex;gap:20px;justify-content:space-between;padding:9px 0;border-bottom:1px solid #d5d5c4;font-size:14px;line-height:1.6}.casting-row b{font-weight:500}.casting-row span{color:#476955}.casting-status{margin:15px 0}
+#panel>.toolbar{margin:14px 0}.manual-settings,.casting-status{padding:10px 0}.manual-settings summary,.casting-status summary{font-size:14px;cursor:pointer}
+.primary-help{font-size:14px!important;line-height:1.7!important}.primary-picker{font-size:15px}.primary-picker select{font-size:15px;max-width:100%}
+#panel .book-purpose{display:block;white-space:normal;color:#526854;font:13px/1.65 system-ui;margin-top:5px}
+.bookdetail summary{padding:11px 0}.bookdetail summary strong{font-size:16px}.bookdetail p,.path-missing,.path-effect p{font-size:14px!important}.book-section-note{font-size:14px!important}.path-group{min-width:0}
+#panel .fit-note{font-size:13px;line-height:1.65}
+/* Front door: readable equipment cards instead of miniature descriptions. */
+.at-title #panel .title-intro{font-size:16px;line-height:1.8;margin-bottom:12px}.title-content{padding-top:4vh;max-width:1180px}
+.at-title #panel h2{font-size:clamp(44px,5vw,66px);margin:12px 0}.at-title .mode-picker{margin-bottom:5px}.at-title .mode-picker label,.at-title .mode-picker select{font-size:14px}
+.armory-heading{margin-top:9px}.armory-heading small{font-size:13px}
+.at-title .itemcards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));max-width:1020px;overflow:visible;gap:12px}
+.at-title #panel .itemcards .card{min-height:222px;padding:12px 10px;min-width:0;gap:5px}
+.at-title #panel .itemcards small{font:13px/1.5 system-ui;color:#695634}.at-title #panel .itemcards .desc{font:14px/1.7 system-ui;color:#405447;max-width:none}.at-title #panel .itemcards strong{font-size:20px}.weapon-copy{gap:7px}
+.at-title #panel .entry-help{font:14px/1.8 system-ui;color:#3d5648;margin:10px 0}.at-title #panel .fineprint,.title-help,.title-help summary{font-size:13px}.title-records .journal>summary,.title-records .preferences>summary{font-size:14px}
+/* Battle: one line of relevant guidance, one compact row of live skills. */
+header{min-width:0;padding:10px 13px 10px 62px}h1{font-size:17px}h1 span{font-size:11px}#bars{width:218px}#bars label,#bars label b{font-size:13px}#topRight{max-width:300px}#clock small{font-size:12px}#objective{font-size:13px}#stats{font-size:12px;margin-bottom:7px}nav button{font-size:13px}
+#skillChips{display:flex;gap:7px;flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;max-width:min(850px,100%);max-height:none;padding:3px 0}
+#skillChips .chip{flex:0 0 auto;min-height:48px;padding:7px 10px;text-align:left;border-bottom:2px solid #9a9a69;box-shadow:none;font-size:13px;background:#29483feb}
+#skillChips .skill-live b{font:600 14px/1.4 'Songti SC',serif}#skillChips .skill-live small{font-size:12px;max-width:215px;white-space:nowrap}
+#resources{display:inline-block;font-size:13px;padding:4px 8px;line-height:1.4}#actions{display:flex;gap:6px;flex-wrap:wrap}#actions button{font-size:13px;padding:8px 11px;min-height:40px}
+.footline{align-items:center;gap:9px;flex-wrap:wrap}#help{display:block;font-size:14px;line-height:1.6;padding:5px 8px;max-width:440px;text-align:left}#experience span{font-size:12px}
+#skillFeedback,body.has-field-event #skillFeedback{top:280px;width:240px;max-height:180px;right:20px}.dusk-readout{font-size:13px}.dusk-readout small{font-size:12px}
+#fieldEvent{max-width:270px}#fieldEvent b,#fieldEvent span,#fieldEvent small{font-size:12px}#notice{font-size:14px;max-width:480px;line-height:1.6;top:166px;padding:9px 14px}
+.debrief .run-tactics,.debrief .casting-summary{display:none}.debrief small{font-size:13px}.death-note p{font-size:15px!important}.score span{font-size:13px}.run-story{font-size:15px!important}
+@media(max-width:1000px){.at-title .itemcards{grid-template-columns:repeat(3,minmax(0,1fr));max-width:760px}.at-title #panel .itemcards .card{min-height:205px}#panel .cards:not(.giftcards){gap:10px}#panel .decision-card{padding:16px}#bossbar{top:160px}}
+@media(max-width:680px){.at-title .itemcards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.at-title #panel .itemcards .card{min-height:220px}.title-content{padding:22px 18px}.at-title #panel .itemcards .desc{font-size:14px}.at-title #panel .itemcards small{font-size:13px}.at-title #panel .title-intro{font-size:15px}.at-title .scene-caption{display:none}.cards:not(.itemcards),.giftcards{grid-template-columns:1fr!important}#panel .decision-card{padding:18px}#panel .decision-card .decision-purpose{min-height:0}#panel .decision-card strong{font-size:24px}#panel h2{font-size:28px;padding-right:0}.route-strip div{gap:3px;flex-direction:column}header{left:8px;top:8px;max-width:47%;padding:9px}h1{font-size:16px}h1 span{display:none}#bars{width:100%;gap:9px}#bars label,#bars label b{font-size:12px}#topRight{right:8px;top:8px;padding:9px;max-width:49%}#clock{font-size:22px}#clock small{display:none}#objective,#stats{font-size:12px}nav button{font-size:12px;padding:7px 5px}nav kbd{display:none}footer{bottom:12px;left:9px;right:9px}#skillChips .skill-live small{max-width:180px}#actions button{font-size:12px;min-height:40px;padding:8px}#help{font-size:13px;max-width:100%;margin:0}#resources{font-size:12px}#skillFeedback,body.has-field-event #skillFeedback{right:9px;top:276px;width:190px}#fieldEvent b,#fieldEvent span,#fieldEvent small{font-size:12px}#notice{top:175px;max-width:85%;font-size:13px}#bossbar{top:146px}.bookdetail summary{flex-wrap:wrap}.path-groups{grid-template-columns:1fr}.casting-row{gap:12px;font-size:13px}}
+@media(prefers-reduced-motion:reduce){.decision-card,.choose-card{animation:none!important;transition:none!important;transform:none!important}}.reduce-effects .decision-card,.reduce-effects .choose-card{animation:none!important;transition:none!important;transform:none!important}
+
+/* Six gifts remain comparable without squeezing their text. */
+@media(min-width:1001px){#panel .giftcards{grid-template-columns:repeat(3,minmax(0,1fr))}#panel .giftcards .decision-card{padding:16px;gap:8px}#panel .giftcards .decision-purpose{min-height:0}.giftcards .decision-details{margin-top:auto}}
+
+@media(max-width:680px){#bars>div{flex:1;min-width:0;width:auto}#bars label b{float:none;display:block;white-space:nowrap;line-height:1.5}#bars i{margin-top:3px}}
+
+/* Mountain encounters keep a single objective and a static, readable progress track. */
+.encounter-track{height:5px;background:#233f36;margin:5px 0;border:1px solid #a8b39b}.encounter-track i{height:100%;margin:0;background:#d7c185}.event-pause small{display:block;margin:8px 0;font-size:13px}.continuation-note{font-size:14px;line-height:1.7}#actions .action-ready{border-color:#dec784;box-shadow:inset 0 -3px #bda15b}#actions .action-active{border-color:#b78370;box-shadow:inset 0 -3px #b78370}
+body.has-field-event #skillFeedback{top:355px}
+@media(max-width:680px){body.has-field-event #skillFeedback{top:355px;width:176px}#fieldEvent{max-width:175px}#fieldEvent .encounter-track{margin:4px 0}}
+
+@media(max-width:680px){body.has-field-event #notice{left:8px;transform:none;max-width:172px;top:160px;padding:8px;box-sizing:border-box}body.has-field-event #skillFeedback{right:8px;width:160px}body.has-field-event #bossbar{top:270px}}
+
+/* Core loop: purpose before grade, compact pause-only guidance. */
+.decision-rating{font-size:12px;line-height:1.6;color:#66746a;display:block}.decision-rating .skill-grade{font-size:11px;padding:1px 4px;vertical-align:baseline}
+.loop-context,.loop-review{border-left:2px solid #a99b6d;padding:8px 14px;margin:14px 0;background:#e8ecdf55}.loop-context p,.loop-review p{margin:6px 0;line-height:1.7}.loop-context small{font-size:12px;color:#627166;line-height:1.7}
+
+/* Opening foundations: compare present effects and future uses at a glance. */
+#panel .opening-path .cards{grid-template-columns:repeat(auto-fit,minmax(185px,1fr));align-items:start}
+#panel .foundation-card{padding:15px;gap:7px}
+#panel .foundation-card strong{font-size:22px}
+#panel .foundation-card .decision-purpose{min-height:0;font-size:13px}
+#panel .foundation-card .foundation-future{font-size:14px;line-height:1.6;color:#365e54}
+.foundation-future span{display:block;font-size:12px;color:#727962;margin-bottom:3px}
+#panel .foundation-card .decision-details{padding-top:5px}
+#panel .foundation-card .choose-card{padding:8px}
+
+/* 0.26.1: one visible tradition, five aligned foundations. */
+.dao-tabs{display:flex;gap:12px;margin:18px 0 0}.dao-tabs button{flex:1;text-align:left;padding:12px 16px;font-size:19px;border-radius:0}.dao-tabs button[aria-selected="true"]{background:#2f594b;color:#fff4d6;border-color:#2f594b}.dao-tabs small{display:block;margin:4px 0 0;font-size:12px;color:inherit;opacity:.8}
+#panel:has(.dao-tabs){width:min(1160px,100%)}#panel .opening-path{padding-top:0;border-top:0}#panel .opening-path h3{margin:16px 0 10px}#panel .opening-path .cards{grid-template-columns:repeat(5,minmax(0,1fr));align-items:stretch;margin:10px 0}#panel .foundation-card{height:100%}#panel .foundation-card .decision-details{margin-top:auto}#panel .foundation-card .choose-card{margin-top:0}#panel .foundation-card .foundation-future{min-height:88px}
+@media(max-width:1000px){#panel .opening-path .cards{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:680px){#panel .opening-path .cards{grid-template-columns:1fr!important}.dao-tabs{position:sticky;top:0;z-index:2;background:#f2efe3;padding:5px 0}.dao-tabs button{font-size:17px;padding:10px}.dao-tabs small{font-size:11px}#panel .foundation-card .foundation-future{min-height:0}}
+
+/* 0.27: growth decisions first, diagnostics folded below. */
+.growth-status{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px;margin-top:14px}.growth-status span{color:#6b755e}.growth-five{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 16px}.growth-five>span{display:flex;gap:7px;align-items:center;padding:5px 9px;border:1px solid #c7cdbb;font-size:12px}.growth-five i{margin:0;height:auto;background:none;color:#8b9059;font-size:10px;letter-spacing:2px}
+#panel.growth-panel{width:min(1040px,100%);padding:24px 30px}#panel.growth-panel h2{font-size:28px;margin:10px 0}#panel.growth-panel .choice-lead{font-size:13px;margin:0 0 8px}#panel.growth-panel>.cards{margin:14px 0;align-items:stretch}#panel.growth-panel .decision-card{padding:16px;gap:9px;min-height:0}#panel.growth-panel .decision-card strong{font-size:23px}#panel.growth-panel .decision-card p{font-size:13px;min-height:0}#panel.growth-panel .decision-card .decision-cost,#panel.growth-panel .decision-relation{display:none}#panel.growth-panel .decision-details{margin-top:auto}#panel.growth-panel .toolbar{margin-top:12px}#panel.growth-panel .choice-support{border-top:1px solid #c7cdbb;margin-top:16px;padding-top:12px;font-size:13px}#panel.growth-panel .foundation-future span{display:inline;margin-right:6px}#panel.growth-panel .foundation-future{padding-top:6px}
+@media(max-width:680px){#panel.growth-panel{padding:18px}.growth-five>span{font-size:11px;padding:4px 6px}.growth-status{font-size:12px}}
+
+#panel.growth-panel .manifesting-card .decision-cost{display:block}
+/* 0.28: compact rest screen, full-screen realm celebrations. */
+#panel.pause-panel{width:min(850px,100%);padding:26px 30px}.pause-heading{display:flex;justify-content:space-between;align-items:center;gap:16px}.pause-heading h2{font-size:30px;margin:8px 0 12px;letter-spacing:4px}.pause-heading button{white-space:nowrap}.pause-meta{font-size:12px;color:#6c755e;margin:6px 0 18px}.pause-casting{border-block:1px solid #c9cdbb;padding:12px 0;margin-bottom:12px}.pause-casting h3{margin:0 0 12px;font-size:14px;letter-spacing:2px}.pause-selects{display:grid;grid-template-columns:1fr 1fr;gap:18px}.pause-selects .manual-picker{display:flex;flex-direction:column;align-items:stretch;gap:6px;font-size:13px}.pause-selects select{margin:0;width:100%}.pause-selects .primary-help{display:none}.pause-switches{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0}.pause-switches span{font-size:12px}.pause-casting details,.pause-options details{font-size:13px}.pause-casting details p{font-size:13px;margin:10px 0}.pause-options{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}.pause-options>details{padding:12px 0;border-bottom:1px solid #c9cdbb;margin:0}.pause-options>details[open]{grid-column:1/-1}.pause-options .preferences{border-top:0}.pause-panel .growth-status{margin-top:10px}.pause-panel .growth-five{margin-bottom:9px}
+#overlay.realm-overlay{background:rgba(10,29,29,.96);backdrop-filter:blur(10px);padding:0;z-index:1000;overflow:auto}
+#panel.realm-panel{--realm-gold:#d8bd79;--realm-pale:#f4e9c8;position:relative;width:100%;max-width:none;height:100%;max-height:none;min-height:540px;display:grid;place-items:center;overflow:hidden;padding:36px 20px;background:transparent;border:0;box-shadow:none;color:var(--realm-pale);border-radius:0;text-align:center}
+#panel.realm-panel[data-realm-dao="lushui"]{--realm-gold:#94c7bb;--realm-pale:#e0f1e8}#panel.realm-panel:after{content:'';position:absolute;inset:26px;writing-mode:initial;border:1px solid var(--realm-gold);opacity:.22;padding:0;pointer-events:none}
+.realm-art{position:absolute;width:min(78vh,690px);height:min(78vh,690px);left:50%;top:45%;transform:translate(-50%,-50%);pointer-events:none;color:var(--realm-gold);opacity:.52;animation:realm-unfold 1.8s cubic-bezier(.15,.65,.2,1) both}.realm-art svg{width:100%;height:100%;overflow:visible;fill:none;stroke:currentColor;stroke-width:1}.realm-orbit{opacity:.32}.orbit-1{stroke-dasharray:3 12}.orbit-2{stroke-width:2;opacity:.4}.orbit-3{stroke-dasharray:80 18;stroke-width:2}.realm-rays{opacity:.35}.realm-link{opacity:.3}.realm-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;max-width:800px;animation:realm-words 1.1s ease-out both}.realm-kicker{font:12px system-ui;letter-spacing:9px;color:var(--realm-gold);margin-bottom:24px}#panel.realm-panel h2{font:500 clamp(52px,7.5vw,96px)/1.35 'Songti SC','STSong',serif;letter-spacing:.18em;padding-left:.18em;color:var(--realm-pale);margin:0;text-shadow:0 0 30px #d8bd791f}.realm-caption{font:15px 'Songti SC',serif;letter-spacing:5px;color:var(--realm-gold);margin:18px 0 34px}.realm-earned{font-size:20px;border-block:1px solid #b6b08355;padding:13px 28px;letter-spacing:3px}.realm-earned span{font-size:13px;color:var(--realm-gold);margin-left:12px}.realm-progress{font-size:13px;line-height:1.9;color:#b8c7b5;margin:16px 0 32px}.realm-content #realmContinue{background:var(--realm-gold);color:#203b35;border:1px solid var(--realm-gold);border-radius:0;min-width:210px;padding:13px 25px;font-size:15px;letter-spacing:2px}.realm-content #realmContinue span{font-size:11px;margin-left:20px;letter-spacing:0}.realm-content small{margin:12px 0 0;color:#93a399;font-size:11px}.realm-panel[data-realm-tier="2"] .realm-art{opacity:.68}.realm-panel[data-realm-tier="3"] .realm-art{opacity:.85;width:min(88vh,790px);height:min(88vh,790px)}.realm-panel[data-realm-tier="3"] .realm-kicker{letter-spacing:12px}
+@keyframes realm-unfold{from{opacity:0;transform:translate(-50%,-50%) scale(.55) rotate(-18deg)}to{transform:translate(-50%,-50%) scale(1) rotate(0)}}@keyframes realm-words{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:680px){#panel.pause-panel{padding:20px}.pause-heading h2{font-size:26px}.pause-heading button{font-size:13px;padding:10px}.pause-selects{gap:12px}.pause-options{grid-template-columns:1fr}.realm-caption{font-size:13px;letter-spacing:3px}.realm-earned{font-size:18px}.realm-art{width:115vw;height:115vw}#panel.realm-panel:after{inset:14px}#panel.realm-panel{min-height:520px}.realm-panel[data-realm-tier="3"] .realm-art{width:130vw;height:130vw}}
+@media(prefers-reduced-motion:reduce){.realm-art,.realm-content{animation:none!important}}.reduce-effects .realm-art,.reduce-effects .realm-content{animation:none!important}
+.realm-panel .realm-caption,.realm-panel .realm-progress{color:#b9c9bb}
+.pause-selects{align-items:end}
+
+.dao-tabs{grid-template-columns:repeat(4,minmax(0,1fr))}@media(max-width:700px){.dao-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+#panel.realm-panel[data-realm-dao="lihuo"]{--realm-gold:#b57a42;--realm-pale:#f4d19b}#panel.realm-panel[data-realm-dao="duijin"]{--realm-gold:#879b9d;--realm-pale:#e0e9e3}
+
+/* First-run reading order: playstyle, immediate effect, then detailed numbers. */
+.path-advice{padding:10px 14px;margin:12px 0;background:#e5e9df;border-left:3px solid #476653;line-height:1.5}
+.path-advice p{margin:4px 0;font-size:14px}.path-advice small{color:#596451;font-size:12px}
+.starter-label{display:inline-block;align-self:flex-start;background:#e2e8d9;color:#35533d;font-size:12px;padding:3px 8px;margin:0 0 8px}
+.starter-card{border-color:#59715b}.foundation-card .decision-purpose{font-size:15px;line-height:1.6}
+@media(max-width:600px){.path-advice{padding:9px 11px}.path-advice p{font-size:13px}}
+@media(min-width:1001px){
+ #panel:has(.dao-tabs){padding:22px 28px}
+ #panel:has(.dao-tabs) h2{margin:10px 0;font-size:30px}
+ #panel:has(.dao-tabs) .dao-tabs{margin-top:10px}
+ #panel:has(.dao-tabs) .dao-tabs button{padding:8px 14px}
+ #panel:has(.dao-tabs) .path-advice{margin:10px 0;padding:8px 12px}
+ #panel .opening-path h3{margin:8px 0}
+ #panel .foundation-card{gap:6px;padding:13px}
+ #panel .foundation-card .foundation-future{min-height:70px}
+ #panel .foundation-card .starter-label{position:absolute;right:12px;top:48px;font-size:10px;padding:2px 4px}
+}

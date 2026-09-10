@@ -1,0 +1,546 @@
+{
+  "training": {
+    "suite": "0.16 cultivation logic and constructed regression",
+    "passed": 12,
+    "total": 12,
+    "results": [
+      {
+        "name": "5000 seed/weapon ordinary upgrades preserve two skills, one usable training; events preserve skills",
+        "pass": true
+      },
+      {
+        "name": "every training ranks through choose, leaves pool at cap, never creates a skill or fruit",
+        "pass": true
+      },
+      {
+        "name": "bow arrows actually hit separately at 40%, pierce/guard carry over and spring spends once",
+        "pass": true
+      },
+      {
+        "name": "sword existing sweep reaches wider area with matching effect radius",
+        "pass": true
+      },
+      {
+        "name": "spear hits four aligned enemies while default hits two; no range/damage inflation",
+        "pass": true
+      },
+      {
+        "name": "thunderseal acquires a distant target through normal step, unchanged single damage",
+        "pass": true
+      },
+      {
+        "name": "haste speeds actual auto-fire but leaves item/skill cooldown alone",
+        "pass": true
+      },
+      {
+        "name": "movement and mana regeneration apply to real step with low caps and stacking",
+        "pass": true
+      },
+      {
+        "name": "recovery restores only actual HP in running time; no life, revival, pause, or overheal",
+        "pass": true
+      },
+      {
+        "name": "growth does not consume or increase stored body/dusk wounds",
+        "pass": true
+      },
+      {
+        "name": "snapshots, standard-to-endless, restart and legacy archive remain separate",
+        "pass": true
+      },
+      {
+        "name": "cards and book show exact stage, costs, limits and no undefined across weapons",
+        "pass": true
+      }
+    ]
+  },
+  "refinement": {
+    "suite": "0.8 refinement",
+    "passed": 8,
+    "total": 8,
+    "results": [
+      {
+        "name": "手动神通不自动释放，F只施放指定神通并扣法力与冷却",
+        "pass": true
+      },
+      {
+        "name": "无敌情/缺法力/暂停不能手动，被动神通不能指定",
+        "pass": true
+      },
+      {
+        "name": "手动收束与幻饵联动，自动神通继续运行",
+        "pass": true
+      },
+      {
+        "name": "标准局720秒终阵，暂停冻结，不增普通敌群",
+        "pass": true
+      },
+      {
+        "name": "存活首领转为终阵，不重复生成",
+        "pass": true
+      },
+      {
+        "name": "终阵击败胜利、停止受伤、保留修为继续无尽及重开清空",
+        "pass": true
+      },
+      {
+        "name": "原有无尽局720秒后不转终阵，普通首领不结算",
+        "pass": true
+      },
+      {
+        "name": "S/A/B评级保持完整",
+        "pass": true
+      }
+    ]
+  },
+  "experience": {
+    "suite": "playtest presentation and action regression",
+    "passed": 10,
+    "total": 10,
+    "results": [
+      {
+        "name": "presentation does not change offers, RNG, resources or learned skills",
+        "pass": true
+      },
+      {
+        "name": "every learnable skill and gift retains a cost/condition and complete detail without undefined",
+        "pass": true
+      },
+      {
+        "name": "screen shows ineffective spring strengthening and no false damage synergy",
+        "pass": true
+      },
+      {
+        "name": "visible limitations retain dusk enemy restoration, lethal boundary and life permanent cost",
+        "pass": true
+      },
+      {
+        "name": "card mastery delta matches actual rain follow and spring charges",
+        "pass": true
+      },
+      {
+        "name": "dusk attempted outside field explains failure without cost; inside uses real blink",
+        "pass": true
+      },
+      {
+        "name": "manual waiting reports missing target before suggesting mana; primary shows exact shortfall",
+        "pass": true
+      },
+      {
+        "name": "limited HUD retains primary, manual and dusk with full-catalog access",
+        "pass": true
+      },
+      {
+        "name": "growth distinguishes actual new fruit and ordinary mastery without adding a reward",
+        "pass": true
+      },
+      {
+        "name": "life exhausted/cooling attempts have readable feedback and never spend extra life",
+        "pass": true
+      }
+    ]
+  },
+  "playability": {
+    "suite": "0.14 playability: unit and constructed regression",
+    "passed": 15,
+    "total": 15,
+    "results": [
+      {
+        "name": "持屏候选排除镂金石，仍保留洞泉声果位入口",
+        "pass": true
+      },
+      {
+        "name": "持屏满级池耗尽后仍有三个有效续航选项",
+        "pass": true
+      },
+      {
+        "name": "持屏洞泉声不空耗法力，其他器物照常获得助击",
+        "pass": true
+      },
+      {
+        "name": "适配提示说明持屏限制和谷风引火前提，不改构筑",
+        "pass": true
+      },
+      {
+        "name": "主修只接受已学有效主动神通，并与手动互斥",
+        "pass": true
+      },
+      {
+        "name": "主修优先于满级久候神通，紧急防御仍可插队",
+        "pass": true
+      },
+      {
+        "name": "主修缺蓝时蓄法，够蓝后实际施放；冷却中不囤蓝",
+        "pass": true
+      },
+      {
+        "name": "主修无目标时不阻塞其他技能；手动施法不抹掉自动蓄法",
+        "pass": true
+      },
+      {
+        "name": "地图事件按自然时钟出现，暂停和选卡冻结倒计时",
+        "pass": true
+      },
+      {
+        "name": "同种子同位置事件一致，未触发事件不消耗刷怪随机序列",
+        "pass": true
+      },
+      {
+        "name": "接近才出守卫；实体池不足不会生成半组守卫",
+        "pass": true
+      },
+      {
+        "name": "真实击杀三名守卫只奖励一次重抽，不以对象消失冒充击杀",
+        "pass": true
+      },
+      {
+        "name": "到期或主动放弃不扣资源、不发奖励，已惊动守卫继续留场",
+        "pass": true
+      },
+      {
+        "name": "事件到期边界的击杀不发迟到奖励，终阵之后不补事件",
+        "pass": true
+      },
+      {
+        "name": "结算保存主修与事件，重开清空；继续无尽不重复事件",
+        "pass": true
+      }
+    ]
+  },
+  "encounters": {
+    "suite": "0.15 mountain encounters: unit and constructed regression",
+    "passed": 18,
+    "total": 18,
+    "results": [
+      {
+        "name": "自然时钟先行囊后试阵，同一时间只有一个事件",
+        "pass": true
+      },
+      {
+        "name": "未触发场景选址不改变战斗随机序列",
+        "pass": true
+      },
+      {
+        "name": "拾取离圈清零；连续两秒奖励并只发一次",
+        "pass": true
+      },
+      {
+        "name": "据守离圈保留进度，增援有限，完成选择加重抽",
+        "pass": true
+      },
+      {
+        "name": "暂停及选卡冻结时钟、进度、敌人增援",
+        "pass": true
+      },
+      {
+        "name": "携物敌修远离玩家，迟缓、定身、诱引仍有效",
+        "pass": true
+      },
+      {
+        "name": "追击真实击杀发一次参悟和八额外经验；直接移除不发",
+        "pass": true
+      },
+      {
+        "name": "敌人池满不生成半组守卫，空位恢复后可触发",
+        "pass": true
+      },
+      {
+        "name": "上一事件守卫不能完成当前试阵",
+        "pass": true
+      },
+      {
+        "name": "到期边界或放弃不发迟到奖励，不额外扣资源",
+        "pass": true
+      },
+      {
+        "name": "死亡后不能补发机缘奖励",
+        "pass": true
+      },
+      {
+        "name": "十二分钟四次额外选择预算，无旧定时参悟叠加",
+        "pass": true
+      },
+      {
+        "name": "事件选卡复用缺项保底、重抽以及有效候选",
+        "pass": true
+      },
+      {
+        "name": "结算包含多次机缘历史，旧快照不会被续战修改",
+        "pass": true
+      },
+      {
+        "name": "无尽同一时段不重复刷事件；终阵关闭未完成机缘",
+        "pass": true
+      },
+      {
+        "name": "胜利续战保留技能、箓气、寿元与资源，死亡不能续战",
+        "pass": true
+      },
+      {
+        "name": "档案兼容旧事件并保留新机缘列表，清洗未知字段",
+        "pass": true
+      },
+      {
+        "name": "手动爆发就绪与生效反馈对应真实代价，暂停冻结",
+        "pass": true
+      }
+    ]
+  },
+  "logic": {
+    "suite": "logic + constructed simulation scenarios",
+    "passed": 24,
+    "total": 27,
+    "results": [
+      {
+        "name": "移动归一化、边界、原样例速度",
+        "pass": true
+      },
+      {
+        "name": "普通攻击零法力仍造成伤害",
+        "pass": true
+      },
+      {
+        "name": "经验需要拾取、升级三选一、战斗冻结并恢复",
+        "pass": true
+      },
+      {
+        "name": "1000 种子候选互异、满级排除、跨道统可选",
+        "pass": false,
+        "error": "The expression evaluated to a falsy value:\n\n  assert(other)\n"
+      },
+      {
+        "name": "同名只升级、三级封顶、无六槽上限",
+        "pass": true
+      },
+      {
+        "name": "指定五法、异道共存、器物箓气不算神通",
+        "pass": true
+      },
+      {
+        "name": "重抽只在成长扣除、不承诺变成缺项",
+        "pass": true
+      },
+      {
+        "name": "连升队列：每次选择后仍有升级则继续暂停",
+        "pass": true
+      },
+      {
+        "name": "受箓独立、一次性、重海不回血",
+        "pass": true
+      },
+      {
+        "name": "竭命有限代价、冷却、治疗不回寿元",
+        "pass": true
+      },
+      {
+        "name": "器物耗蓝与冷却、法力不足拒绝且不扣负",
+        "pass": true
+      },
+      {
+        "name": "青乌锐箭贯穿多个目标",
+        "pass": true
+      },
+      {
+        "name": "冲锋先锁方向预警，再突进，可横移规避",
+        "pass": true
+      },
+      {
+        "name": "远射蓄力后发射；射击前移动仍锁原方向",
+        "pass": true
+      },
+      {
+        "name": "地面预警不伤害，激活后伤害与迟缓",
+        "pass": true
+      },
+      {
+        "name": "护持者减伤，优先击杀解除保护",
+        "pass": true
+      },
+      {
+        "name": "重甲蓄力后落锤，可走出范围",
+        "pass": false,
+        "error": "Expected values to be strictly equal:\n\n'move' !== 'warn'\n"
+      },
+      {
+        "name": "首领奖励后继续，无 180 秒结束",
+        "pass": true
+      },
+      {
+        "name": "暂停不走时、不恢复资源，结束快照和重开清空",
+        "pass": true
+      },
+      {
+        "name": "伤害导致死亡，不继续拾取升级",
+        "pass": true
+      },
+      {
+        "name": "池容量和复用、经验总量合并守恒",
+        "pass": true
+      },
+      {
+        "name": "神通满级后仍给三种有效奖励",
+        "pass": true
+      },
+      {
+        "name": "天下明禁闭并消弹，谒天门联动甲兵",
+        "pass": true
+      },
+      {
+        "name": "仙无漏净地、东羽山凝滞",
+        "pass": false,
+        "error": "The expression evaluated to a falsy value:\n\n  assert(!r.zones.list().some(z=>z.kind==='hazard'))\n"
+      },
+      {
+        "name": "蹈危随合围压力加持，小伤抵御更优且无免伤盾",
+        "pass": true
+      },
+      {
+        "name": "赤断镞挪移有域/法力/冷却约束",
+        "pass": true
+      },
+      {
+        "name": "果位改变令域和挪移规则而非统一增伤",
+        "pass": true
+      }
+    ]
+  },
+  "expansion": {
+    "suite": "0.2 logic and constructed simulation",
+    "passed": 10,
+    "total": 19,
+    "results": [
+      {
+        "name": "规模与原著记录一一对应，类别不混入配方",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n19 !== 13\n\n    at /Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:8:89\n    at test (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:3:28)\n    at Object.<anonymous> (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:8:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+      },
+      {
+        "name": "靖平敕近强远弱、等近敌才施放、打断冲锋",
+        "pass": true
+      },
+      {
+        "name": "镂金石普攻带穿透与破护、击杀后淬炼有上限",
+        "pass": true
+      },
+      {
+        "name": "天金胄逐次承伤、溢出扣血、到期清甲",
+        "pass": true
+      },
+      {
+        "name": "雉离行定向吐焰：前方受伤、身后不受伤，等级与控火改变表现",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(Math.abs((10000-ea.hp)/(10000-eb.hp)-1.2)<.001)\n\n    at /Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:12:375\n    at test (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:3:28)\n    at Object.<anonymous> (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:12:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+      },
+      {
+        "name": "清夕雨持续磨护：初落不瞬间消盾，持续后普攻能接入",
+        "pass": true
+      },
+      {
+        "name": "潇重林疗伤有驻地要求，不恢复其他资源与寿元",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n50 !== 54\n\n    at /Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:14:134\n    at test (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:3:28)\n    at Object.<anonymous> (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:14:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+      },
+      {
+        "name": "君蹈危无近敌不凭空疗伤，脱围仅返还此战有限部分",
+        "pass": true
+      },
+      {
+        "name": "赤断镞不凭空伤敌、不爆炸，离域返还实际掉血的一分",
+        "pass": true
+      },
+      {
+        "name": "血漠不返还护甲挡住的伤害，也不能复活",
+        "pass": true
+      },
+      {
+        "name": "仙无漏连续降法只消灵力来袭，地面护行保留",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(!spirit.active)\n\n    at /Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:18:248\n    at test (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:3:28)\n    at Object.<anonymous> (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:18:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+      },
+      {
+        "name": "五种受箓一次择一，按键索引有效且不占神通",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n6 !== 5\n\n    at /Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:19:97\n    at test (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:3:28)\n    at Object.<anonymous> (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:19:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+      },
+      {
+        "name": "长空危雀实际伤血才悍勇，护甲与无敌不触发，暂停冻结",
+        "pass": true
+      },
+      {
+        "name": "行气吞灵驾雾付费免地面，非无敌、不可连发",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n7 !== 10\n\n    at /Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:21:70\n    at test (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:3:28)\n    at Object.<anonymous> (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:21:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+      },
+      {
+        "name": "谷风引火不授予火法，实际费用低于原价边界仍可施放",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:\n\n  assert(r.itemUse())\n\n    at /Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:22:97\n    at test (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:3:28)\n    at Object.<anonymous> (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:22:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+      },
+      {
+        "name": "坎金环群体束缚并终止冲锋，不伤害冒充重武器",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nundefined !== 2.4\n\n    at /Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:23:125\n    at test (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:3:28)\n    at Object.<anonymous> (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:23:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+      },
+      {
+        "name": "八面屏只定金属箭，离屏释放，无无条件全弹免疫",
+        "pass": true
+      },
+      {
+        "name": "六角盏加持真火且削金箭一次，不削灵力弹",
+        "pass": false,
+        "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n20 !== 8\n\n    at /Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:25:201\n    at test (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:3:28)\n    at Object.<anonymous> (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/fruit-upgrade/tests/expansion.cjs:25:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+      },
+      {
+        "name": "新状态结算与重开清空，所有新增神通仍可跨道",
+        "pass": true
+      }
+    ]
+  },
+  "fruit": {
+    "suite": "0.17 fruit: unit and constructed checks, not normal play",
+    "passed": 10,
+    "total": 10,
+    "results": [
+      {
+        "name": "five at one never forms; any route skill at three forms exactly once; off-route mastery/training does not count",
+        "pass": true
+      },
+      {
+        "name": "mastery first then fifth skill forms; independent routes can coexist",
+        "pass": true
+      },
+      {
+        "name": "cards distinguish fifth skill from actual formation and second-to-third mastery",
+        "pass": true
+      },
+      {
+        "name": "1000 seeds: full route mastery pity preserves two skills plus training and supplies a route upgrade",
+        "pass": true
+      },
+      {
+        "name": "general is a real six-second singleton with meaningful damage and no extra mana cost",
+        "pass": true
+      },
+      {
+        "name": "full ally pool still permits a general without overflow; ordinary light remains unchanged",
+        "pass": true
+      },
+      {
+        "name": "fruit rain multiplies radius duration and actual damage at all three levels including screen",
+        "pass": true
+      },
+      {
+        "name": "two seconds continuous rain breaks guard for three seconds after leaving; never removes innate armor or bullets",
+        "pass": true
+      },
+      {
+        "name": "overlap cannot double soak speed; leaving before two seconds resets it",
+        "pass": true
+      },
+      {
+        "name": "pause freezes fruit combat effects, restart resets, old saved fruit achievements survive import",
+        "pass": true
+      }
+    ]
+  }
+}

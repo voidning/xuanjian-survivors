@@ -1,0 +1,77 @@
+[
+  {
+    "path": "index.html",
+    "before": "d7af0b43649c8cd9ba94cbd4899583dcf1aa762d4b67fd4ff41345f9853a1b52",
+    "after": "114561483385123c9a7ada2f7d79340c49570651afdb2b77ef6072410fc419a7"
+  },
+  {
+    "path": "guide.html",
+    "before": "d795dc411a8812ab0268161fc117713ade695b64cd05924e600fa8ac4922d950",
+    "after": "28cc0467a459d41510edaba7ae80112d38d5ef95734b1427900e9f2513d018b0"
+  },
+  {
+    "path": "AGENTS.md",
+    "before": "daa0cd801e8767ec69ca66f294ad5fc6d1fbb9f81853881a9c009d072fe56cd6",
+    "after": "cadbb31d5bad334cb05beb932bc45802a9d6fd97712fe0edaf6fb1e317526f3b"
+  },
+  {
+    "path": "tests/rarity.cjs",
+    "before": null,
+    "after": "ffc18d620c80dba63d5ed0b4b50da4ddc68e3240458a400f2c9ce69d0674cb86"
+  },
+  {
+    "path": "tests/playability.cjs",
+    "before": "d750b947c798b13d2f8277c98a3119acf089261cff60e309c1590fbee81f0d1b",
+    "after": "1d64830fc1b514ac32c35cb25deb18fc793eafe38e61eb435ed95be008427eaf"
+  },
+  {
+    "path": "docs/操作说明.md",
+    "before": "a3c42cb8b3b582b5054e48f6366af59257eb3bf1d49155529ecb4af5a0f3b8fa",
+    "after": "15a95558e5618efb5e3ec7bec71824fb3528bd098ff39812e5a2c6ca9e086d29"
+  },
+  {
+    "path": "docs/原作设定与游戏表现对照.md",
+    "before": "623052a23fab427f95fc1efeabc3916b8e74b87768e5e4f085a595c00cb594d0",
+    "after": "c3ab5282da2946f7be553d4fdf75952627c18fcc1360ebeab8a89ed9a3807800"
+  },
+  {
+    "path": "docs/0.18.0-神通评级与稀有参悟.md",
+    "before": null,
+    "after": "d1b92ce0c771c5814c68ca68b7a8719035066c998daa4d461aec33eb0be80c62"
+  },
+  {
+    "path": "scripts/game.js",
+    "before": "9347cb659e62828db7ce8c6bcbab7fc073ff9eb61e0aa59b6f3441fb1aa6415e",
+    "after": "fdfb28ea2065ea5ca2b5f29945fb60c555bc3e2cb8a8a79cdec4333eb9d531dd"
+  },
+  {
+    "path": "scripts/guide.js",
+    "before": "f2f028beed024a96cee15c424a201c6a0013087724247a5611c25c165719a3aa",
+    "after": "e35957a385861e724b70cbde88014d4114a5a9601c34f84d380e0ca3823ae0b0"
+  },
+  {
+    "path": "scripts/experience-ui.js",
+    "before": "d0f7eead06a207a6aea1ab2062bfb4619ac6e620984e06e623eaec5015367dc5",
+    "after": "933930fa85bb3ea4eac87f79f4a3cfa409a91b4835577b247056314dd086b494"
+  },
+  {
+    "path": "scripts/playability-ui.js",
+    "before": "5b1f5608836c74b21f448c7542a58d868725fd61b83359d3962b7106f67c52e6",
+    "after": "a034a790b192409ce336e4023c02338035e5b384885f0a9805051feba47982c7"
+  },
+  {
+    "path": "scripts/run-systems.js",
+    "before": "0b25a5f77d750f3baea68c46a6add1faad6b91420f0bba42397171a429150e42",
+    "after": "55c4a93d241bc145156de97ff055c428217ce4082be1df6e7e58ed83638c5bef"
+  },
+  {
+    "path": "scripts/engine.js",
+    "before": "30ae863390d63dd56847e4a56ac36ce3e5dfe8064b7298a795cb016d595b2ce2",
+    "after": "44ebc49b3a435530df69f8c2875e5541517a1e7c0387f882911f16c29a84c81c"
+  },
+  {
+    "path": "scripts/field-event.js",
+    "before": "14920dee480ed474545275d90469337e8a79713e61ce62392cf201cdbfeb070d",
+    "after": "e944144632ff3e9593b930a3b5e686c293a2b25d40495766abee37a789868c81"
+  }
+]

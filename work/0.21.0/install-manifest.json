@@ -1,0 +1,72 @@
+[
+  {
+    "path": "index.html",
+    "before": "c75da292c7d8dc765374bfcb3c07c6711649a2734d8f9e28a7b3a4bfa974dd5a",
+    "after": "e54a66d0550fae428a8706f1545fa79199b0a0f4ac8a41b863f326eebae42f9c"
+  },
+  {
+    "path": "guide.html",
+    "before": "7f32de1e49e52b16d500c8ef600a64c394ef3e1f095409e0e575f86b876745b7",
+    "after": "480c1e64a9a37487b50c9e9569be6da583e307068ebdd35d4a1cafdcba6b0b8d"
+  },
+  {
+    "path": "tests/playability.cjs",
+    "before": "fa9afea46ce4e52631a6d5aa8ce736dceaf34f92fcb83359aeadfb6fd9967b0e",
+    "after": "67206d99c694efeaea10dfef00adbf4255b466ba920272ab104f8752847e2af4"
+  },
+  {
+    "path": "tests/dash.cjs",
+    "before": null,
+    "after": "528e4a54c7d4450f3acf667221ce5c87e89bcfbf60ce61f4de4b1061c4932618"
+  },
+  {
+    "path": "docs/设定资料库.json",
+    "before": "9ee1e73a757509596322dbc1b890065812c2db10bb956b2d645a1f1b774cd524",
+    "after": "07d063888bdbab35674b23e54ca7c78742837e9e1b248cc5bd8a0ab4d9b19ea8"
+  },
+  {
+    "path": "docs/操作说明.md",
+    "before": "395583cb66e88c0d4a317537ee645d70443c6e034e439771e51bfe146a36f9ca",
+    "after": "5110af1af8379ba8d54956319e9d60ee24d195dae4341a70c5a70137658a0faa"
+  },
+  {
+    "path": "docs/原作设定与游戏表现对照.md",
+    "before": "2f17750027f418ee561f8c3fc4a48569b81d657d0d334695e89b05a5dd38eeb8",
+    "after": "369d995ed45a3d69ccdccce5cbc46440321dd3447ece645435ac91b170ffd195"
+  },
+  {
+    "path": "docs/0.21.0-通用瞬移.md",
+    "before": null,
+    "after": "c83e1c7b4246a2636f22e4c679393c6b8777597eeebd8f1311e3bcbcf98625cc"
+  },
+  {
+    "path": "scripts/game.js",
+    "before": "10027860f09a0812279f645f78cb0cef5be6a181b91159ed48e7e3b0debb2867",
+    "after": "332f69649848c809b4de3e1323316aa7863f618b4dafe434298c4557f6254f3c"
+  },
+  {
+    "path": "scripts/guide.js",
+    "before": "f8588e94aac0fb37e30aa7e6e69491682bedb7b095316755a386d41c4c19707c",
+    "after": "5ef3d6a9b2fdd5ee22e476fc7d9dc2263f6e9057e4a5ea5599a2080e044243ca"
+  },
+  {
+    "path": "scripts/experience-ui.js",
+    "before": "4dde2ebf9618f514d5df0cf755c14259cd87922d092ab538a48bf975e1e3a023",
+    "after": "f7dce08091c3f60f5fb011180edd054467ae4a2f37fc5b9764e7878e7e73ac91"
+  },
+  {
+    "path": "scripts/lore.js",
+    "before": "6a692f934bba77ca977d8a5066509781600bd42a5a90a86f11cdb36a2edc1484",
+    "after": "521ed82a469693d22e089429a9d90d48252d20eaef427b1f608eeb337a00e022"
+  },
+  {
+    "path": "scripts/engine.js",
+    "before": "44ebc49b3a435530df69f8c2875e5541517a1e7c0387f882911f16c29a84c81c",
+    "after": "8ff66848114f4af6eb6126c25c02a744747f87fa0c4783edee853f038525d2b5"
+  },
+  {
+    "path": "scripts/field-event.js",
+    "before": "0b5c8f4c7b774377342895a7cf53d7ff6109413f4c26c37a2539fd429d65ef08",
+    "after": "39c250c139922a600989192f7a00262e527ae27770b2f31527a3c063b1e4ccce"
+  }
+]

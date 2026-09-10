@@ -1,0 +1,787 @@
+{
+  "kind": "构造性能压力测试：预置满技能、每步恢复气血；不证明可自然存活一小时。",
+  "simulatedSeconds": 3599.950000004331,
+  "wallSeconds": 6.342365333,
+  "steps": 72000,
+  "stepMs": {
+    "median": 0.07933299999967858,
+    "p95": 0.14474999999947613,
+    "p99": 0.3374579999999696,
+    "max": 39.43633300000056
+  },
+  "peaks": {
+    "enemies": 149,
+    "bullets": 44,
+    "drops": 110,
+    "zones": 31,
+    "allies": 6,
+    "fx": 78
+  },
+  "final": {
+    "t": 3599.950000004331,
+    "state": "running",
+    "level": 36,
+    "kills": 10379,
+    "elites": 54,
+    "bosses": 19,
+    "hp": 127,
+    "mp": 9.79999999999715,
+    "xp": 925,
+    "skills": {
+      "gate": 3,
+      "body": 3,
+      "edict": 3,
+      "dusk": 3,
+      "light": 3,
+      "pure": 3,
+      "mountain": 3
+    },
+    "fruit": true,
+    "fruitAt": null,
+    "gift": "whale",
+    "life": 8,
+    "damageTaken": 48369.477499999906,
+    "spent": 49386,
+    "entities": {
+      "enemies": 99,
+      "bullets": 9,
+      "drops": 110,
+      "zones": 12,
+      "fx": 1
+    },
+    "telemetry": {
+      "spawns": 10997,
+      "despawned": 519,
+      "dropMerged": 9482,
+      "autoShots": 5940,
+      "itemUses": 663,
+      "lifeUses": 0,
+      "blinkUses": 0,
+      "enemyShots": 20934,
+      "charges": 2425,
+      "hazards": 10918
+    }
+  },
+  "samples": [
+    {
+      "t": 0.05,
+      "entities": {
+        "enemies": 1,
+        "bullets": 0,
+        "drops": 0,
+        "zones": 0,
+        "fx": 0
+      },
+      "heap": 3854328,
+      "kills": 0
+    },
+    {
+      "t": 60.049999999998725,
+      "entities": {
+        "enemies": 6,
+        "bullets": 1,
+        "drops": 35,
+        "zones": 3,
+        "fx": 0
+      },
+      "heap": 5216688,
+      "kills": 59
+    },
+    {
+      "t": 120.04999999999532,
+      "entities": {
+        "enemies": 10,
+        "bullets": 3,
+        "drops": 40,
+        "zones": 4,
+        "fx": 2
+      },
+      "heap": 6428608,
+      "kills": 126
+    },
+    {
+      "t": 180.0500000000067,
+      "entities": {
+        "enemies": 19,
+        "bullets": 1,
+        "drops": 70,
+        "zones": 2,
+        "fx": 2
+      },
+      "heap": 6990256,
+      "kills": 186
+    },
+    {
+      "t": 240.05000000002033,
+      "entities": {
+        "enemies": 27,
+        "bullets": 4,
+        "drops": 84,
+        "zones": 2,
+        "fx": 1
+      },
+      "heap": 8550104,
+      "kills": 258
+    },
+    {
+      "t": 300.05000000003395,
+      "entities": {
+        "enemies": 37,
+        "bullets": 5,
+        "drops": 106,
+        "zones": 9,
+        "fx": 5
+      },
+      "heap": 9922872,
+      "kills": 334
+    },
+    {
+      "t": 360.0500000000476,
+      "entities": {
+        "enemies": 34,
+        "bullets": 6,
+        "drops": 110,
+        "zones": 3,
+        "fx": 0
+      },
+      "heap": 10257408,
+      "kills": 425
+    },
+    {
+      "t": 420.05000000006123,
+      "entities": {
+        "enemies": 36,
+        "bullets": 4,
+        "drops": 110,
+        "zones": 14,
+        "fx": 0
+      },
+      "heap": 9149776,
+      "kills": 530
+    },
+    {
+      "t": 480.00000000007486,
+      "entities": {
+        "enemies": 48,
+        "bullets": 4,
+        "drops": 110,
+        "zones": 9,
+        "fx": 2
+      },
+      "heap": 10331680,
+      "kills": 635
+    },
+    {
+      "t": 540.0000000000566,
+      "entities": {
+        "enemies": 42,
+        "bullets": 2,
+        "drops": 101,
+        "zones": 3,
+        "fx": 0
+      },
+      "heap": 11946712,
+      "kills": 770
+    },
+    {
+      "t": 600.000000000002,
+      "entities": {
+        "enemies": 82,
+        "bullets": 8,
+        "drops": 109,
+        "zones": 19,
+        "fx": 3
+      },
+      "heap": 6610832,
+      "kills": 897
+    },
+    {
+      "t": 659.9999999999475,
+      "entities": {
+        "enemies": 54,
+        "bullets": 0,
+        "drops": 110,
+        "zones": 8,
+        "fx": 6
+      },
+      "heap": 8993704,
+      "kills": 1120
+    },
+    {
+      "t": 719.9999999998929,
+      "entities": {
+        "enemies": 34,
+        "bullets": 1,
+        "drops": 110,
+        "zones": 11,
+        "fx": 2
+      },
+      "heap": 12002608,
+      "kills": 1337
+    },
+    {
+      "t": 779.9999999998383,
+      "entities": {
+        "enemies": 55,
+        "bullets": 8,
+        "drops": 110,
+        "zones": 15,
+        "fx": 3
+      },
+      "heap": 9590240,
+      "kills": 1490
+    },
+    {
+      "t": 839.9999999997838,
+      "entities": {
+        "enemies": 77,
+        "bullets": 4,
+        "drops": 110,
+        "zones": 11,
+        "fx": 7
+      },
+      "heap": 15150552,
+      "kills": 1675
+    },
+    {
+      "t": 899.9999999997292,
+      "entities": {
+        "enemies": 143,
+        "bullets": 12,
+        "drops": 110,
+        "zones": 30,
+        "fx": 1
+      },
+      "heap": 14420144,
+      "kills": 1822
+    },
+    {
+      "t": 959.9999999996746,
+      "entities": {
+        "enemies": 87,
+        "bullets": 9,
+        "drops": 110,
+        "zones": 12,
+        "fx": 0
+      },
+      "heap": 13614144,
+      "kills": 2063
+    },
+    {
+      "t": 1019.9999999996201,
+      "entities": {
+        "enemies": 65,
+        "bullets": 1,
+        "drops": 108,
+        "zones": 2,
+        "fx": 2
+      },
+      "heap": 18413400,
+      "kills": 2282
+    },
+    {
+      "t": 1079.9999999995655,
+      "entities": {
+        "enemies": 113,
+        "bullets": 10,
+        "drops": 110,
+        "zones": 25,
+        "fx": 1
+      },
+      "heap": 15849176,
+      "kills": 2425
+    },
+    {
+      "t": 1139.999999999511,
+      "entities": {
+        "enemies": 74,
+        "bullets": 7,
+        "drops": 110,
+        "zones": 5,
+        "fx": 1
+      },
+      "heap": 31070768,
+      "kills": 2637
+    },
+    {
+      "t": 1199.9999999994563,
+      "entities": {
+        "enemies": 86,
+        "bullets": 11,
+        "drops": 110,
+        "zones": 22,
+        "fx": 2
+      },
+      "heap": 32357288,
+      "kills": 2820
+    },
+    {
+      "t": 1259.9999999994018,
+      "entities": {
+        "enemies": 86,
+        "bullets": 12,
+        "drops": 110,
+        "zones": 24,
+        "fx": 5
+      },
+      "heap": 22395800,
+      "kills": 3015
+    },
+    {
+      "t": 1319.9999999993472,
+      "entities": {
+        "enemies": 58,
+        "bullets": 1,
+        "drops": 110,
+        "zones": 2,
+        "fx": 1
+      },
+      "heap": 29255736,
+      "kills": 3229
+    },
+    {
+      "t": 1379.9999999992926,
+      "entities": {
+        "enemies": 79,
+        "bullets": 12,
+        "drops": 110,
+        "zones": 5,
+        "fx": 1
+      },
+      "heap": 27018184,
+      "kills": 3393
+    },
+    {
+      "t": 1439.999999999238,
+      "entities": {
+        "enemies": 80,
+        "bullets": 3,
+        "drops": 110,
+        "zones": 10,
+        "fx": 3
+      },
+      "heap": 29005256,
+      "kills": 3586
+    },
+    {
+      "t": 1499.9999999991835,
+      "entities": {
+        "enemies": 58,
+        "bullets": 2,
+        "drops": 109,
+        "zones": 22,
+        "fx": 4
+      },
+      "heap": 26758144,
+      "kills": 3806
+    },
+    {
+      "t": 1559.999999999129,
+      "entities": {
+        "enemies": 61,
+        "bullets": 13,
+        "drops": 110,
+        "zones": 7,
+        "fx": 1
+      },
+      "heap": 27046840,
+      "kills": 3962
+    },
+    {
+      "t": 1619.9999999990744,
+      "entities": {
+        "enemies": 66,
+        "bullets": 5,
+        "drops": 110,
+        "zones": 3,
+        "fx": 2
+      },
+      "heap": 32368048,
+      "kills": 4167
+    },
+    {
+      "t": 1679.9999999990198,
+      "entities": {
+        "enemies": 123,
+        "bullets": 16,
+        "drops": 110,
+        "zones": 21,
+        "fx": 15
+      },
+      "heap": 32326376,
+      "kills": 4324
+    },
+    {
+      "t": 1739.9999999989652,
+      "entities": {
+        "enemies": 83,
+        "bullets": 5,
+        "drops": 110,
+        "zones": 15,
+        "fx": 2
+      },
+      "heap": 38036448,
+      "kills": 4551
+    },
+    {
+      "t": 1799.9999999989107,
+      "entities": {
+        "enemies": 69,
+        "bullets": 3,
+        "drops": 110,
+        "zones": 5,
+        "fx": 4
+      },
+      "heap": 6972416,
+      "kills": 4762
+    },
+    {
+      "t": 1859.999999998856,
+      "entities": {
+        "enemies": 95,
+        "bullets": 11,
+        "drops": 110,
+        "zones": 9,
+        "fx": 2
+      },
+      "heap": 6698872,
+      "kills": 4929
+    },
+    {
+      "t": 1919.9999999988015,
+      "entities": {
+        "enemies": 78,
+        "bullets": 2,
+        "drops": 110,
+        "zones": 2,
+        "fx": 1
+      },
+      "heap": 16717432,
+      "kills": 5108
+    },
+    {
+      "t": 1979.999999998747,
+      "entities": {
+        "enemies": 98,
+        "bullets": 15,
+        "drops": 109,
+        "zones": 4,
+        "fx": 2
+      },
+      "heap": 11024824,
+      "kills": 5283
+    },
+    {
+      "t": 2039.9999999986924,
+      "entities": {
+        "enemies": 94,
+        "bullets": 7,
+        "drops": 110,
+        "zones": 21,
+        "fx": 2
+      },
+      "heap": 13530472,
+      "kills": 5482
+    },
+    {
+      "t": 2099.999999998874,
+      "entities": {
+        "enemies": 70,
+        "bullets": 2,
+        "drops": 109,
+        "zones": 4,
+        "fx": 0
+      },
+      "heap": 17125072,
+      "kills": 5701
+    },
+    {
+      "t": 2159.9999999990923,
+      "entities": {
+        "enemies": 85,
+        "bullets": 15,
+        "drops": 110,
+        "zones": 3,
+        "fx": 3
+      },
+      "heap": 13923232,
+      "kills": 5850
+    },
+    {
+      "t": 2219.9999999993106,
+      "entities": {
+        "enemies": 75,
+        "bullets": 7,
+        "drops": 110,
+        "zones": 12,
+        "fx": 1
+      },
+      "heap": 23138536,
+      "kills": 6055
+    },
+    {
+      "t": 2279.999999999529,
+      "entities": {
+        "enemies": 105,
+        "bullets": 18,
+        "drops": 109,
+        "zones": 27,
+        "fx": 2
+      },
+      "heap": 24191880,
+      "kills": 6222
+    },
+    {
+      "t": 2339.999999999747,
+      "entities": {
+        "enemies": 62,
+        "bullets": 8,
+        "drops": 110,
+        "zones": 14,
+        "fx": 9
+      },
+      "heap": 20997696,
+      "kills": 6438
+    },
+    {
+      "t": 2399.9999999999654,
+      "entities": {
+        "enemies": 53,
+        "bullets": 2,
+        "drops": 110,
+        "zones": 7,
+        "fx": 2
+      },
+      "heap": 24477736,
+      "kills": 6657
+    },
+    {
+      "t": 2460.0000000001837,
+      "entities": {
+        "enemies": 121,
+        "bullets": 10,
+        "drops": 110,
+        "zones": 25,
+        "fx": 2
+      },
+      "heap": 33574304,
+      "kills": 6802
+    },
+    {
+      "t": 2520.000000000402,
+      "entities": {
+        "enemies": 99,
+        "bullets": 1,
+        "drops": 110,
+        "zones": 4,
+        "fx": 1
+      },
+      "heap": 30936792,
+      "kills": 7006
+    },
+    {
+      "t": 2580.0000000006203,
+      "entities": {
+        "enemies": 67,
+        "bullets": 12,
+        "drops": 110,
+        "zones": 20,
+        "fx": 5
+      },
+      "heap": 36428744,
+      "kills": 7232
+    },
+    {
+      "t": 2640.0000000008386,
+      "entities": {
+        "enemies": 93,
+        "bullets": 8,
+        "drops": 110,
+        "zones": 19,
+        "fx": 2
+      },
+      "heap": 31690000,
+      "kills": 7402
+    },
+    {
+      "t": 2700.000000001057,
+      "entities": {
+        "enemies": 59,
+        "bullets": 1,
+        "drops": 109,
+        "zones": 3,
+        "fx": 0
+      },
+      "heap": 37638208,
+      "kills": 7599
+    },
+    {
+      "t": 2760.000000001275,
+      "entities": {
+        "enemies": 109,
+        "bullets": 15,
+        "drops": 110,
+        "zones": 23,
+        "fx": 1
+      },
+      "heap": 27250552,
+      "kills": 7747
+    },
+    {
+      "t": 2820.0000000014934,
+      "entities": {
+        "enemies": 111,
+        "bullets": 7,
+        "drops": 110,
+        "zones": 18,
+        "fx": 1
+      },
+      "heap": 26579712,
+      "kills": 7938
+    },
+    {
+      "t": 2880.0000000017117,
+      "entities": {
+        "enemies": 70,
+        "bullets": 2,
+        "drops": 109,
+        "zones": 10,
+        "fx": 1
+      },
+      "heap": 30884280,
+      "kills": 8178
+    },
+    {
+      "t": 2940.00000000193,
+      "entities": {
+        "enemies": 74,
+        "bullets": 10,
+        "drops": 110,
+        "zones": 12,
+        "fx": 6
+      },
+      "heap": 41502264,
+      "kills": 8328
+    },
+    {
+      "t": 3000.000000002148,
+      "entities": {
+        "enemies": 87,
+        "bullets": 11,
+        "drops": 110,
+        "zones": 5,
+        "fx": 1
+      },
+      "heap": 40347304,
+      "kills": 8511
+    },
+    {
+      "t": 3060.0000000023665,
+      "entities": {
+        "enemies": 119,
+        "bullets": 20,
+        "drops": 110,
+        "zones": 20,
+        "fx": 2
+      },
+      "heap": 8423392,
+      "kills": 8674
+    },
+    {
+      "t": 3120.000000002585,
+      "entities": {
+        "enemies": 84,
+        "bullets": 3,
+        "drops": 110,
+        "zones": 12,
+        "fx": 1
+      },
+      "heap": 8455368,
+      "kills": 8870
+    },
+    {
+      "t": 3180.000000002803,
+      "entities": {
+        "enemies": 42,
+        "bullets": 2,
+        "drops": 110,
+        "zones": 3,
+        "fx": 30
+      },
+      "heap": 19885104,
+      "kills": 9123
+    },
+    {
+      "t": 3240.0000000030213,
+      "entities": {
+        "enemies": 105,
+        "bullets": 18,
+        "drops": 110,
+        "zones": 21,
+        "fx": 0
+      },
+      "heap": 20877392,
+      "kills": 9271
+    },
+    {
+      "t": 3300.0000000032396,
+      "entities": {
+        "enemies": 97,
+        "bullets": 3,
+        "drops": 110,
+        "zones": 3,
+        "fx": 1
+      },
+      "heap": 14351472,
+      "kills": 9450
+    },
+    {
+      "t": 3360.000000003458,
+      "entities": {
+        "enemies": 117,
+        "bullets": 9,
+        "drops": 110,
+        "zones": 7,
+        "fx": 0
+      },
+      "heap": 27238856,
+      "kills": 9624
+    },
+    {
+      "t": 3420.000000003676,
+      "entities": {
+        "enemies": 126,
+        "bullets": 14,
+        "drops": 110,
+        "zones": 17,
+        "fx": 1
+      },
+      "heap": 16117616,
+      "kills": 9811
+    },
+    {
+      "t": 3480.0000000038945,
+      "entities": {
+        "enemies": 82,
+        "bullets": 2,
+        "drops": 110,
+        "zones": 2,
+        "fx": 0
+      },
+      "heap": 23001488,
+      "kills": 10036
+    },
+    {
+      "t": 3540.0000000041127,
+      "entities": {
+        "enemies": 128,
+        "bullets": 11,
+        "drops": 109,
+        "zones": 27,
+        "fx": 2
+      },
+      "heap": 30648168,
+      "kills": 10160
+    }
+  ]
+}

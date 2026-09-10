@@ -1,0 +1,43 @@
+{
+  "samples": {
+    "opening": {
+      "S": 7439,
+      "A": 10050,
+      "B": 12511
+    },
+    "upgrade": {
+      "S": 4095,
+      "A": 9249,
+      "B": 6656
+    },
+    "event": {
+      "S": 6325,
+      "A": 13956,
+      "B": 9719
+    }
+  },
+  "results": [
+    {
+      "name": "unlearned S is scarcer than A and B per skill across ordinary offers",
+      "pass": true
+    },
+    {
+      "name": "learned skills retain equal upgrade weights irrespective of grade",
+      "pass": true
+    },
+    {
+      "name": "rare last missing component and mastery remain guaranteed with a training slot",
+      "pass": true
+    },
+    {
+      "name": "all openings unique, screen-compatible and never empty",
+      "pass": true
+    },
+    {
+      "name": "every skill grade visible before collapsed details; gifts and training ungraded",
+      "pass": true
+    }
+  ],
+  "passed": 5,
+  "total": 5
+}

@@ -1,0 +1,97 @@
+[
+  {
+    "path": "scripts/game.js",
+    "before": "53d382cfb7da92d176d9ca8597b2b7cb6162a696cb2283e4b6e9747fdbc63e32",
+    "after": "9347cb659e62828db7ce8c6bcbab7fc073ff9eb61e0aa59b6f3441fb1aa6415e"
+  },
+  {
+    "path": "scripts/guide.js",
+    "before": "636a3016f53cc9cb9e9fc44dfa2158a5566ffaffb35b25b55289325fa9187415",
+    "after": "f2f028beed024a96cee15c424a201c6a0013087724247a5611c25c165719a3aa"
+  },
+  {
+    "path": "scripts/experience-ui.js",
+    "before": "851b30285a68cd905421124328c862c5e056339b01bb722143d9086cd4e9491f",
+    "after": "d0f7eead06a207a6aea1ab2062bfb4619ac6e620984e06e623eaec5015367dc5"
+  },
+  {
+    "path": "scripts/fruit-art.js",
+    "before": null,
+    "after": "99897e1fff8b7feabc41e1fb46ea06e8344ca74c8d73b9215f66c55b2f1f6320"
+  },
+  {
+    "path": "scripts/run-systems.js",
+    "before": "69e2ebbaa18cc31a5907616b88428e7c9dbba4ab3d3801ebfbf54086e0fb4633",
+    "after": "0b25a5f77d750f3baea68c46a6add1faad6b91420f0bba42397171a429150e42"
+  },
+  {
+    "path": "scripts/lore.js",
+    "before": "0b7cc1c72f5b33d6053a5584c66c4170f78086c20c9caa0dd13b40889949e0e4",
+    "after": "585f5e551dd128afd4c61f102c4cb4afab6523413d71610453ef13b76b051397"
+  },
+  {
+    "path": "scripts/engine.js",
+    "before": "e67ae2f1e7014ecbbeb7278c9ec144597bc00195b062b57cfe52b9b76479bc62",
+    "after": "30ae863390d63dd56847e4a56ac36ce3e5dfe8064b7298a795cb016d595b2ce2"
+  },
+  {
+    "path": "scripts/content.js",
+    "before": "c3905af6e6a64f09717b7940f0c1816a9163d8065d6a50c1888493f37833a121",
+    "after": "08946588110a0eacb932cd3afdf596ae2fb366398448a88ccb7a296c9753d5aa"
+  },
+  {
+    "path": "scripts/field-event.js",
+    "before": "81b8df4f465c3c474a655695d402969cda2d480d75763629cd8e8b4379e62494",
+    "after": "14920dee480ed474545275d90469337e8a79713e61ce62392cf201cdbfeb070d"
+  },
+  {
+    "path": "docs/设定资料库.json",
+    "before": "8bfad1c5595be0ddb240702523aa9d3a85a82e8bf812fa57c0809977af1eeba9",
+    "after": "f54a86501da74228bb2bea320fd514d0fc580392c066b7d22609e6b48a1b85d7"
+  },
+  {
+    "path": "docs/操作说明.md",
+    "before": "3363a08aad0fea0aa352e8047ab635005ab27bc2d752a0d9b1c63f45ac5b02e3",
+    "after": "a3c42cb8b3b582b5054e48f6366af59257eb3bf1d49155529ecb4af5a0f3b8fa"
+  },
+  {
+    "path": "docs/原作设定与游戏表现对照.md",
+    "before": "79b66370deb4fd2600db870ad4a1ab6ac6b7c4806fb98090afab982e96fe4116",
+    "after": "623052a23fab427f95fc1efeabc3916b8e74b87768e5e4f085a595c00cb594d0"
+  },
+  {
+    "path": "docs/0.17.0-果位同参.md",
+    "before": null,
+    "after": "4dc1741281fcaf42a7c8221f90216af0710976d14c0108bcf1609092ad2dd34f"
+  },
+  {
+    "path": "tests/fruit-smoke.cjs",
+    "before": null,
+    "after": "cdce74b4773118c88a62872908dd269506cdb254bc68c09ee359b211c9f177f4"
+  },
+  {
+    "path": "tests/fruit.cjs",
+    "before": null,
+    "after": "602c7b9090e7172bf897cde046ada6909d5082f89bd6d576780b59b47f157d2e"
+  },
+  {
+    "path": "tests/playability.cjs",
+    "before": "9b9a36e3de5e28b3b6415d54f70763dadb739217a484a3de46ef5448c3de8cba",
+    "after": "d750b947c798b13d2f8277c98a3119acf089261cff60e309c1590fbee81f0d1b"
+  },
+  {
+    "path": "tests/logic.cjs",
+    "before": "ea55314db81e29b21e576cb464c6c0763b5df75728330c84b4b94e72e6885395",
+    "after": "6cd42fdb7e5e1e05685183a17668b82719e328a90d80e4e6eeb6d17d172acfcf"
+  },
+  {
+    "path": "index.html",
+    "before": "0723839a042f6a4d2ef2cf1d3dd271fd2fe3a96a83d9f42b088ef141757c14ce",
+    "after": "d7af0b43649c8cd9ba94cbd4899583dcf1aa762d4b67fd4ff41345f9853a1b52"
+  },
+  {
+    "path": "guide.html",
+    "before": "3124bc72d259222595a2d9a0f470553b8cd72203a3730420d3c36768ad5b857a",
+    "after": "d795dc411a8812ab0268161fc117713ade695b64cd05924e600fa8ac4922d950"
+  }
+]

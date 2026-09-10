@@ -1,0 +1,17 @@
+{
+  "method": "isolated Chrome file:// release entry, choose, move, pause, book and guide; short smoke, no injected state",
+  "state": {
+    "version": true,
+    "testHook": false,
+    "state": "paused",
+    "skills": {
+      "rain": 1
+    },
+    "moved": true,
+    "fruitArt": true
+  },
+  "book": true,
+  "bookStart": "本局修行 · 按果位查看\n神通谱\n\n五道同参齐备，其中任意一道三重，成果位。可自由混选。\n\n设定与效果说明 ↗\n返回战场 · Tab\n明阳果位\n尚未修习\n\n召兵协战 · 合围破局\n\n还缺：谒天门、君蹈危、帝观元、赤断镞、天下明\n\n成型后获得\n\n天下明显化一名金甲仙将，持续6秒；仙将每0.65秒单体打击，为普通甲兵基础伤害的2.4倍并忽略减伤。不额外耗法，至多一将、与甲兵共用8名上限。令域跟随自身；召兵数量 +2；天下明延长令域；血漠挪移召回甲兵并打击落点。\n\n谒天门\n召出甲兵，替你追击近敌。\n未学\n君蹈危\n合围时增强攻防，脱围后恢复部分战伤。\n未学\n帝观元\n展开令域，让普攻追加打击、召回远处甲兵。\n未学\n赤断镞\n血漠记下部分伤势，离域或收术后返还。\n未学\n天下明\n禁闭周敌、消解敌弹，并强化在",
+  "guide": true,
+  "errors": []
+}

@@ -1,0 +1,47 @@
+{
+  "suite": "0.17 fruit: unit and constructed checks, not normal play",
+  "passed": 10,
+  "total": 10,
+  "results": [
+    {
+      "name": "five at one never forms; any route skill at three forms exactly once; off-route mastery/training does not count",
+      "pass": true
+    },
+    {
+      "name": "mastery first then fifth skill forms; independent routes can coexist",
+      "pass": true
+    },
+    {
+      "name": "cards distinguish fifth skill from actual formation and second-to-third mastery",
+      "pass": true
+    },
+    {
+      "name": "1000 seeds: full route mastery pity preserves two skills plus training and supplies a route upgrade",
+      "pass": true
+    },
+    {
+      "name": "edict hits three times at the cast point, clears new bullets, no general or extra mana",
+      "pass": true
+    },
+    {
+      "name": "full pools cannot displace edict echoes; ordinary light has one pulse and original radius",
+      "pass": true
+    },
+    {
+      "name": "fruit rain multiplies radius duration and actual damage at all three levels including screen",
+      "pass": true
+    },
+    {
+      "name": "two seconds continuous rain breaks guard for three seconds after leaving; never removes innate armor or bullets",
+      "pass": true
+    },
+    {
+      "name": "overlap cannot double soak speed; leaving before two seconds resets it",
+      "pass": true
+    },
+    {
+      "name": "pause freezes fruit combat effects, restart resets, old saved fruit achievements survive import",
+      "pass": true
+    }
+  ]
+}

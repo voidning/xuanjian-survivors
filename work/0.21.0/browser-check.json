@@ -1,0 +1,9 @@
+{
+  "releaseNormalEntry": true,
+  "releaseSpaceMovesOnly": true,
+  "pauseBlocks": true,
+  "constructedSpaceRepeatBlocked": true,
+  "gCastsItem": true,
+  "mobileButton": true,
+  "errors": []
+}

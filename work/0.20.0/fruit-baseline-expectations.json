@@ -1,0 +1,50 @@
+{
+  "suite": "0.17 fruit: unit and constructed checks, not normal play",
+  "passed": 7,
+  "total": 10,
+  "results": [
+    {
+      "name": "five at one never forms; any route skill at three forms exactly once; off-route mastery/training does not count",
+      "pass": true
+    },
+    {
+      "name": "mastery first then fifth skill forms; independent routes can coexist",
+      "pass": true
+    },
+    {
+      "name": "cards distinguish fifth skill from actual formation and second-to-third mastery",
+      "pass": true
+    },
+    {
+      "name": "1000 seeds: full route mastery pity preserves two skills plus training and supplies a route upgrade",
+      "pass": true
+    },
+    {
+      "name": "edict hits three times at the cast point, clears new bullets, no general or extra mana",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nundefined !== 1\n\n    at /Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/active-upgrade/tests/fruit.cjs:13:245\n    at test (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/active-upgrade/tests/fruit.cjs:3:45)\n    at Object.<anonymous> (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/active-upgrade/tests/fruit.cjs:13:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "full pools cannot displace edict echoes; ordinary light has one pulse and original radius",
+      "pass": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\nundefined !== 3\n\n    at /Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/active-upgrade/tests/fruit.cjs:14:374\n    at test (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/active-upgrade/tests/fruit.cjs:3:45)\n    at Object.<anonymous> (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/active-upgrade/tests/fruit.cjs:14:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    },
+    {
+      "name": "fruit rain multiplies radius duration and actual damage at all three levels including screen",
+      "pass": true
+    },
+    {
+      "name": "two seconds continuous rain breaks guard for three seconds after leaving; never removes innate armor or bullets",
+      "pass": true
+    },
+    {
+      "name": "overlap cannot double soak speed; leaving before two seconds resets it",
+      "pass": true
+    },
+    {
+      "name": "pause freezes fruit combat effects, restart resets, old saved fruit achievements survive import",
+      "pass": false,
+      "error": "TypeError: Cannot read properties of undefined (reading 'age')\n    at /Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/active-upgrade/tests/fruit.cjs:18:250\n    at test (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/active-upgrade/tests/fruit.cjs:3:45)\n    at Object.<anonymous> (/Users/ningnarigele/Documents/Codex/2026-09-08/ni-2/work/active-upgrade/tests/fruit.cjs:18:1)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:170:5)"
+    }
+  ]
+}

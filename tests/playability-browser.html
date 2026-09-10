@@ -1,0 +1,32 @@
+<!doctype html><meta charset="utf-8"><title>0.14 构造场景检查</title>
+<style>body{margin:0;background:#eeeade;font:13px system-ui;color:#364c43}header{padding:10px}button{padding:8px;margin:4px}iframe{width:100%;height:800px;border:0}pre{white-space:pre-wrap;max-height:110px;overflow:auto}</style>
+<header>明确的构造场景，不代表自然成型或完整通关。
+<button id="checks">运行界面与存档检查</button><button id="fit">查看持屏选卡</button><button id="event">查看试阵战场</button><button id="primary">查看主修设置</button><span id="status">等待游戏</span><pre id="report"></pre></header>
+<iframe id="frame" src="../index.html?test=1"></iframe>
+<script>
+const frame=document.getElementById('frame'),status=document.getElementById('status'),report=document.getElementById('report');
+frame.onload=()=>status.textContent='游戏已载入';
+const settle=()=>new Promise(resolve=>setTimeout(resolve,220));
+function quiet(item='screen'){const r=new frame.contentWindow.XJ.Run(42,item,'standard');r.spawnTimer=r.eliteAt=r.bossAt=r.eventAt=1e8;return r;}
+function render(r){frame.contentWindow.xuanjian.test.setRun(r);return frame.contentDocument;}
+function fit(){const r=quiet();r.skills={gate:1};r.openChoice();r.choices=['spring','edict','flame'];render(r);}
+function event(){const r=quiet('sword');r.skills={gate:2,light:2,flame:2,dusk:1};r.t=90;r.p.x=1600;r.p.y=1100;r.updateFieldEvent();r.cool.attack=1e8;render(r);}
+function primary(){const r=quiet('sword');r.skills={gate:1,flame:1,armor:1};r.setPrimary('gate');r.pause();render(r);}
+document.getElementById('fit').onclick=fit;document.getElementById('event').onclick=event;document.getElementById('primary').onclick=primary;
+document.getElementById('checks').onclick=async()=>{const checks=[];const check=(name,value)=>{checks.push({name,pass:!!value});if(!value)throw Error(name);};const w=frame.contentWindow;
+try{
+ fit();let d=frame.contentDocument;check('持屏适配提示显示',d.getElementById('panel').textContent.includes('助击停用且不耗法力'));
+ check('选卡法力信息显示',d.getElementById('panel').textContent.includes('每秒回复'));
+ primary();d=frame.contentDocument;const select=d.getElementById('primarySelect');check('已有主修在暂停菜单回显',select.value==='gate');select.value='flame';select.dispatchEvent(new Event('change'));check('DOM选择主修接入运行状态',w.xuanjian.run.primarySkill==='flame');
+ const manual=d.getElementById('manualSelect');manual.value='flame';manual.dispatchEvent(new Event('change'));check('手动与主修互斥且界面刷新',w.xuanjian.run.primarySkill===null&&d.getElementById('primarySelect').value==='');
+ d.getElementById('primarySelect').value='gate';d.getElementById('primarySelect').dispatchEvent(new Event('change'));d.getElementById('resume').click();w.xuanjian.test.sync();check('战场技能栏显示主修',d.getElementById('skillChips').textContent.includes('主修 谒天门'));
+ event();d=frame.contentDocument;check('事件HUD显示方位奖励和倒计时',!d.getElementById('fieldEvent').hidden&&d.getElementById('fieldEvent').textContent.includes('重抽 +1'));
+ d.getElementById('pause').click();check('暂停显示放弃入口',!!d.getElementById('abandonEvent'));d.getElementById('abandonEvent').click();check('放弃按钮执行且不再显示',w.xuanjian.run.fieldEvent.status==='abandoned'&&!d.getElementById('abandonEvent'));
+ d.getElementById('endRun').click();check('结算显示事件结果',d.getElementById('panel').textContent.includes('已放弃'));
+ const saved=JSON.parse(w.localStorage.getItem('jibichangsheng.archive.v1'));check('新记录保存事件且保持schema1',saved.schema===1&&saved.records.at(-1).fieldEvent.status==='abandoned');
+ d.getElementById('restart').click();check('修行录显示新字段',d.getElementById('panel').textContent.includes('山场试阵：'));
+ const old={schema:1,records:[{id:'legacy-playability-fixture',item:'bow',time:20,kills:2,mode:'standard',won:false}],marks:['firstElite'],best:{standard:{},endless:{}}};w.XJArchive.merge(old);check('旧存档仍可合并',w.XJArchive.data.records.some(r=>r.id===old.records[0].id));
+ primary();status.textContent=`${checks.length}/${checks.length} 通过`;
+}catch(e){status.textContent='失败：'+e.message;}report.textContent=JSON.stringify(checks,null,2);
+};
+</script>

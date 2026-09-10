@@ -1,0 +1,119 @@
+{
+  "version": "0.23.0",
+  "regression": [
+    {
+      "suite": "medicine",
+      "passed": 8,
+      "total": 8,
+      "exit": 0
+    },
+    {
+      "suite": "core-loop",
+      "passed": 9,
+      "total": 9,
+      "exit": 0
+    },
+    {
+      "suite": "playability",
+      "passed": 15,
+      "total": 15,
+      "exit": 0
+    },
+    {
+      "suite": "training",
+      "passed": 12,
+      "total": 12,
+      "exit": 0
+    },
+    {
+      "suite": "fruit",
+      "passed": 10,
+      "total": 10,
+      "exit": 0
+    },
+    {
+      "suite": "fruit-active",
+      "passed": 6,
+      "total": 6,
+      "exit": 0
+    },
+    {
+      "suite": "rarity",
+      "passed": 5,
+      "total": 5,
+      "exit": 0
+    },
+    {
+      "suite": "dash",
+      "passed": 5,
+      "total": 5,
+      "exit": 0
+    },
+    {
+      "suite": "experience",
+      "passed": 10,
+      "total": 10,
+      "exit": 0
+    },
+    {
+      "suite": "encounters",
+      "passed": 18,
+      "total": 18,
+      "exit": 0
+    },
+    {
+      "suite": "refinement",
+      "passed": 8,
+      "total": 8,
+      "exit": 0
+    }
+  ],
+  "totalPassed": 106,
+  "browser": {
+    "errors": [],
+    "entry": true,
+    "dash": true,
+    "constructedKillDrop": true,
+    "keyboardPickup": true,
+    "actualHeal": 15,
+    "resultAndArchive": {
+      "dropped": 1,
+      "picked": 1,
+      "healed": 15,
+      "left": 0
+    },
+    "limitations": "Constructed injured run and eight real kill calls; not a natural 12-minute human run."
+  },
+  "release": {
+    "version": "0.23.0",
+    "releaseEntry": true,
+    "embeddedImage": true,
+    "testHookAbsent": true,
+    "dash": true,
+    "finalAt": 675,
+    "guide": true,
+    "errors": []
+  },
+  "independent": "passed; logic and constructed checks only",
+  "humanFullRun": "not performed",
+  "simulation": {
+    "before": {
+      "runs": 48,
+      "wins": 22,
+      "formed": 39,
+      "picked": 0,
+      "healed": 0,
+      "method": "Input-only deterministic simulation, not browser or human E2E. Natural opening/offers/XP/HP/time. Same avoidance policy as encounters-smoke. Seek nearest medicine below 65% HP using same danger avoidance; Gift whale/cloud; default casting priority; safe dash when near enemies; max 2 rerolls per decision with no target, except every third ordinary upgrade in balanced chooses training if available. Route targets prefer missing skills, then highest rank toward mastery only where fruitProgress exists. Initial-offer drought counts ordinary upgrade screens before rerolls while targets remain. Deaths retained.",
+      "limit": 800
+    },
+    "after": {
+      "runs": 48,
+      "wins": 37,
+      "formed": 45,
+      "picked": 390,
+      "healed": 5467.028312304468,
+      "method": "Input-only deterministic simulation, not browser or human E2E. Natural opening/offers/XP/HP/time. Same avoidance policy as encounters-smoke. Seek nearest medicine below 65% HP using same danger avoidance; Gift whale/cloud; default casting priority; safe dash when near enemies; max 2 rerolls per decision with no target, except every third ordinary upgrade in balanced chooses training if available. Route targets prefer missing skills, then highest rank toward mastery only where fruitProgress exists. Initial-offer drought counts ordinary upgrade screens before rerolls while targets remain. Deaths retained.",
+      "limit": 800
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "suite": "0.16 cultivation logic and constructed regression",
+  "passed": 12,
+  "total": 12,
+  "results": [
+    {
+      "name": "5000 seed/weapon ordinary upgrades preserve two skills, one usable training; events preserve skills",
+      "pass": true
+    },
+    {
+      "name": "every training ranks through choose, leaves pool at cap, never creates a skill or fruit",
+      "pass": true
+    },
+    {
+      "name": "bow arrows actually hit separately at 40%, pierce/guard carry over and spring spends once",
+      "pass": true
+    },
+    {
+      "name": "sword existing sweep reaches wider area with matching effect radius",
+      "pass": true
+    },
+    {
+      "name": "spear hits four aligned enemies while default hits two; no range/damage inflation",
+      "pass": true
+    },
+    {
+      "name": "thunderseal acquires a distant target through normal step, unchanged single damage",
+      "pass": true
+    },
+    {
+      "name": "haste speeds actual auto-fire but leaves item/skill cooldown alone",
+      "pass": true
+    },
+    {
+      "name": "movement and mana regeneration apply to real step with low caps and stacking",
+      "pass": true
+    },
+    {
+      "name": "recovery restores only actual HP in running time; no life, revival, pause, or overheal",
+      "pass": true
+    },
+    {
+      "name": "growth does not consume or increase stored body/dusk wounds",
+      "pass": true
+    },
+    {
+      "name": "snapshots, standard-to-endless, restart and legacy archive remain separate",
+      "pass": true
+    },
+    {
+      "name": "cards and book show exact stage, costs, limits and no undefined across weapons",
+      "pass": true
+    }
+  ]
+}

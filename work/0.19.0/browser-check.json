@@ -1,0 +1,13 @@
+{
+  "releaseImageLoaded": true,
+  "releaseHasNoTestHook": true,
+  "badge": {
+    "text": "A",
+    "color": "rgb(185, 220, 231)",
+    "background": "rgba(0, 0, 0, 0)"
+  },
+  "desktopAndMobile": true,
+  "constructedBattle": true,
+  "reducedMotion": true,
+  "errors": []
+}

@@ -1,0 +1,30 @@
+{
+  "passed": 6,
+  "total": 6,
+  "results": [
+    {
+      "name": "locked F cannot spend or fire; formation fills once and returns manual to auto",
+      "pass": true
+    },
+    {
+      "name": "combat time fills in 40 seconds; safe distance, pause, choice and death do not charge",
+      "pass": true
+    },
+    {
+      "name": "kill bonus capped per cycle, dead enemies cannot be counted twice",
+      "pass": true
+    },
+    {
+      "name": "full charge held indefinitely; insufficient charge harmless; full cast free of mana and not repeatable",
+      "pass": true
+    },
+    {
+      "name": "ordinary light remains single pulse even with fruit; active does not spend ordinary cooldown",
+      "pass": true
+    },
+    {
+      "name": "pause freezes echoes; restart clears and endless keeps charge",
+      "pass": true
+    }
+  ]
+}

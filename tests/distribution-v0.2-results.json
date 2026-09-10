@@ -1,0 +1,5050 @@
+{
+  "method": "正常模拟：开局零神通，无注入经验/血量；自动走位策略，不代表真人手感或平衡。种子奇数随机倾向、偶数找配方。",
+  "n": 60,
+  "maxT": 720,
+  "wallSeconds": 6.9,
+  "summary": {
+    "fruitCompleted": 22,
+    "notCompleted": 38,
+    "notCompletedPct": 63.3,
+    "firstFruitSeconds": 87.2,
+    "medianFruitSeconds": 125,
+    "lastFruitSeconds": 310,
+    "deaths": 60,
+    "survivalMedian": 166.7,
+    "skillAcquisitionCounts": {
+      "body": 45,
+      "edict": 49,
+      "rain": 17,
+      "gold": 13,
+      "light": 44,
+      "thunder": 22,
+      "flame": 20,
+      "dusk": 47,
+      "pure": 20,
+      "gate": 46,
+      "mountain": 20,
+      "armor": 15,
+      "grove": 21
+    }
+  },
+  "runs": [
+    {
+      "seed": 1,
+      "policy": "random",
+      "item": "sword",
+      "gift": "life",
+      "ended": true,
+      "time": 243.9,
+      "fruitAt": null,
+      "skills": {
+        "body": 1,
+        "edict": 2,
+        "rain": 1,
+        "gold": 1,
+        "light": 1,
+        "thunder": 1,
+        "flame": 2,
+        "dusk": 1
+      },
+      "level": 10,
+      "kills": 259,
+      "elites": 3,
+      "bosses": 1,
+      "damageTaken": 163.3,
+      "choices": [
+        {
+          "t": 22.000000000000178,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 35.050000000000146,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 49.04999999999935,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 62.94999999999856,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        },
+        {
+          "t": 89.14999999999708,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 122.44999999999519,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 2
+        },
+        {
+          "t": 152.8500000000005,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 191.30000000000925,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 207.90000000001302,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 41,
+        "bullets": 21,
+        "drops": 27
+      },
+      "telemetry": {
+        "spawns": 300,
+        "despawned": 0,
+        "dropMerged": 26,
+        "autoShots": 394,
+        "itemUses": 33,
+        "lifeUses": 8,
+        "blinkUses": 0,
+        "enemyShots": 235,
+        "charges": 59,
+        "hazards": 120
+      }
+    },
+    {
+      "seed": 2,
+      "policy": "recipe",
+      "item": "bow",
+      "gift": "sparrow",
+      "ended": true,
+      "time": 132.2,
+      "fruitAt": null,
+      "skills": {
+        "pure": 1,
+        "light": 1,
+        "body": 2,
+        "edict": 1,
+        "gate": 1
+      },
+      "level": 6,
+      "kills": 125,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 112,
+      "choices": [
+        {
+          "t": 20.300000000000153,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 38.599999999999945,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 63.49999999999853,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 81.09999999999754,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 101.84999999999636,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 27,
+        "bullets": 14,
+        "drops": 18
+      },
+      "telemetry": {
+        "spawns": 148,
+        "despawned": 0,
+        "dropMerged": 23,
+        "autoShots": 205,
+        "itemUses": 29,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 105,
+        "charges": 44,
+        "hazards": 21
+      }
+    },
+    {
+      "seed": 3,
+      "policy": "random",
+      "item": "rings",
+      "gift": "cloud",
+      "ended": true,
+      "time": 181.6,
+      "fruitAt": null,
+      "skills": {
+        "thunder": 1,
+        "flame": 1,
+        "mountain": 1,
+        "pure": 1,
+        "armor": 1,
+        "light": 1
+      },
+      "level": 6,
+      "kills": 141,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 119,
+      "choices": [
+        {
+          "t": 17.100000000000108,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 29.600000000000286,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 53.99999999999907,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 75.29999999999787,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 88.8499999999971,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "light",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 75,
+        "bullets": 37,
+        "drops": 30
+      },
+      "telemetry": {
+        "spawns": 216,
+        "despawned": 0,
+        "dropMerged": 26,
+        "autoShots": 269,
+        "itemUses": 27,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 415,
+        "charges": 86,
+        "hazards": 128
+      }
+    },
+    {
+      "seed": 4,
+      "policy": "recipe",
+      "item": "screen",
+      "gift": "firegift",
+      "ended": true,
+      "time": 174.1,
+      "fruitAt": null,
+      "skills": {
+        "mountain": 1,
+        "flame": 1,
+        "body": 1,
+        "edict": 1,
+        "gold": 1,
+        "gate": 1,
+        "light": 1
+      },
+      "level": 7,
+      "kills": 176,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 127.7,
+      "choices": [
+        {
+          "t": 19.40000000000014,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 59.44999999999876,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 74.09999999999793,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 92.89999999999687,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 120.3499999999953,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 141.99999999999804,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 35,
+        "bullets": 28,
+        "drops": 32
+      },
+      "telemetry": {
+        "spawns": 205,
+        "despawned": 0,
+        "dropMerged": 34,
+        "autoShots": 292,
+        "itemUses": 23,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 229,
+        "charges": 58,
+        "hazards": 58
+      }
+    },
+    {
+      "seed": 5,
+      "policy": "random",
+      "item": "lamp",
+      "gift": "whale",
+      "ended": true,
+      "time": 201.4,
+      "fruitAt": null,
+      "skills": {
+        "mountain": 1,
+        "armor": 1,
+        "light": 1,
+        "pure": 2,
+        "edict": 1,
+        "gate": 1,
+        "dusk": 1
+      },
+      "level": 8,
+      "kills": 184,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 114.6,
+      "choices": [
+        {
+          "t": 19.650000000000144,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 37.200000000000024,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        },
+        {
+          "t": 54.09999999999906,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 68.69999999999824,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 93.24999999999685,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 130.64999999999546,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 181.05000000000692,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 52,
+        "bullets": 25,
+        "drops": 19
+      },
+      "telemetry": {
+        "spawns": 236,
+        "despawned": 0,
+        "dropMerged": 21,
+        "autoShots": 339,
+        "itemUses": 31,
+        "lifeUses": 0,
+        "blinkUses": 1,
+        "enemyShots": 329,
+        "charges": 56,
+        "hazards": 186
+      }
+    },
+    {
+      "seed": 6,
+      "policy": "recipe",
+      "item": "sword",
+      "gift": "life",
+      "ended": true,
+      "time": 178.7,
+      "fruitAt": null,
+      "skills": {
+        "gate": 1,
+        "pure": 1,
+        "dusk": 1,
+        "edict": 1,
+        "thunder": 1,
+        "rain": 1,
+        "light": 1,
+        "gold": 1
+      },
+      "level": 8,
+      "kills": 184,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 120,
+      "choices": [
+        {
+          "t": 19.600000000000144,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 32.950000000000266,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 49.79999999999931,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 59.74999999999874,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 87.89999999999715,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 120.3499999999953,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 149.3499999999997,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 29,
+        "bullets": 8,
+        "drops": 15
+      },
+      "telemetry": {
+        "spawns": 211,
+        "despawned": 0,
+        "dropMerged": 11,
+        "autoShots": 246,
+        "itemUses": 21,
+        "lifeUses": 8,
+        "blinkUses": 0,
+        "enemyShots": 61,
+        "charges": 32,
+        "hazards": 37
+      }
+    },
+    {
+      "seed": 7,
+      "policy": "random",
+      "item": "bow",
+      "gift": "sparrow",
+      "ended": true,
+      "time": 135.5,
+      "fruitAt": null,
+      "skills": {
+        "grove": 1,
+        "flame": 1,
+        "armor": 1,
+        "gate": 1,
+        "rain": 1,
+        "light": 1
+      },
+      "level": 6,
+      "kills": 123,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 120.1,
+      "choices": [
+        {
+          "t": 17.550000000000114,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 30.5500000000003,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 52.499999999999154,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        },
+        {
+          "t": 76.79999999999778,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 116.29999999999553,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "light",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 30,
+        "bullets": 17,
+        "drops": 23
+      },
+      "telemetry": {
+        "spawns": 152,
+        "despawned": 0,
+        "dropMerged": 23,
+        "autoShots": 217,
+        "itemUses": 25,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 121,
+        "charges": 45,
+        "hazards": 29
+      }
+    },
+    {
+      "seed": 8,
+      "policy": "recipe",
+      "item": "rings",
+      "gift": "cloud",
+      "ended": true,
+      "time": 136.5,
+      "fruitAt": 87.2,
+      "skills": {
+        "gate": 2,
+        "dusk": 1,
+        "light": 1,
+        "body": 1,
+        "edict": 1
+      },
+      "level": 6,
+      "kills": 130,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 110,
+      "choices": [
+        {
+          "t": 21.45000000000017,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 31.650000000000315,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 45.04999999999958,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 56.79999999999891,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 87.24999999999719,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 28,
+        "bullets": 10,
+        "drops": 14
+      },
+      "telemetry": {
+        "spawns": 154,
+        "despawned": 0,
+        "dropMerged": 15,
+        "autoShots": 183,
+        "itemUses": 21,
+        "lifeUses": 0,
+        "blinkUses": 1,
+        "enemyShots": 81,
+        "charges": 35,
+        "hazards": 32
+      }
+    },
+    {
+      "seed": 9,
+      "policy": "random",
+      "item": "screen",
+      "gift": "firegift",
+      "ended": true,
+      "time": 156.9,
+      "fruitAt": null,
+      "skills": {
+        "armor": 1,
+        "rain": 1,
+        "mountain": 1,
+        "edict": 2,
+        "dusk": 1,
+        "light": 1
+      },
+      "level": 7,
+      "kills": 130,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 116.2,
+      "choices": [
+        {
+          "t": 18.60000000000013,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        },
+        {
+          "t": 31.800000000000317,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 58.999999999998785,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 84.29999999999735,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 95.24999999999673,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 144.09999999999852,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 51,
+        "bullets": 32,
+        "drops": 22
+      },
+      "telemetry": {
+        "spawns": 181,
+        "despawned": 0,
+        "dropMerged": 16,
+        "autoShots": 270,
+        "itemUses": 21,
+        "lifeUses": 0,
+        "blinkUses": 1,
+        "enemyShots": 214,
+        "charges": 80,
+        "hazards": 111
+      }
+    },
+    {
+      "seed": 10,
+      "policy": "recipe",
+      "item": "lamp",
+      "gift": "whale",
+      "ended": true,
+      "time": 186.4,
+      "fruitAt": 125,
+      "skills": {
+        "gate": 1,
+        "rain": 1,
+        "body": 1,
+        "light": 1,
+        "edict": 2,
+        "dusk": 1,
+        "grove": 1
+      },
+      "level": 8,
+      "kills": 183,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 138.4,
+      "choices": [
+        {
+          "t": 18.400000000000126,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 30.050000000000292,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 45.04999999999958,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 57.29999999999888,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 86.49999999999723,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 128.599999999995,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 161.70000000000252,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 39,
+        "bullets": 9,
+        "drops": 19
+      },
+      "telemetry": {
+        "spawns": 220,
+        "despawned": 0,
+        "dropMerged": 20,
+        "autoShots": 292,
+        "itemUses": 30,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 131,
+        "charges": 41,
+        "hazards": 78
+      }
+    },
+    {
+      "seed": 11,
+      "policy": "random",
+      "item": "sword",
+      "gift": "life",
+      "ended": true,
+      "time": 209.8,
+      "fruitAt": null,
+      "skills": {
+        "thunder": 1,
+        "grove": 1,
+        "body": 1,
+        "light": 1,
+        "flame": 1,
+        "gate": 1,
+        "dusk": 1,
+        "mountain": 1
+      },
+      "level": 8,
+      "kills": 206,
+      "elites": 3,
+      "bosses": 0,
+      "damageTaken": 159.4,
+      "choices": [
+        {
+          "t": 19.200000000000138,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 32.85000000000027,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 53.79999999999908,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 65.74999999999841,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 91.44999999999695,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 119.04999999999538,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 158.1500000000017,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 42,
+        "bullets": 16,
+        "drops": 20
+      },
+      "telemetry": {
+        "spawns": 248,
+        "despawned": 0,
+        "dropMerged": 27,
+        "autoShots": 333,
+        "itemUses": 30,
+        "lifeUses": 8,
+        "blinkUses": 0,
+        "enemyShots": 86,
+        "charges": 55,
+        "hazards": 104
+      }
+    },
+    {
+      "seed": 12,
+      "policy": "recipe",
+      "item": "bow",
+      "gift": "sparrow",
+      "ended": true,
+      "time": 163.2,
+      "fruitAt": 138.4,
+      "skills": {
+        "body": 1,
+        "gate": 1,
+        "dusk": 2,
+        "light": 2,
+        "edict": 1
+      },
+      "level": 7,
+      "kills": 146,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 107.9,
+      "choices": [
+        {
+          "t": 16.5000000000001,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 35.250000000000135,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 47.09999999999946,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 56.699999999998916,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 87.24999999999719,
+          "type": "upgrade",
+          "id": "light",
+          "level": 2
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "dusk",
+          "level": 2
+        },
+        {
+          "t": 138.39999999999722,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 43,
+        "bullets": 22,
+        "drops": 17
+      },
+      "telemetry": {
+        "spawns": 189,
+        "despawned": 0,
+        "dropMerged": 7,
+        "autoShots": 247,
+        "itemUses": 31,
+        "lifeUses": 0,
+        "blinkUses": 1,
+        "enemyShots": 266,
+        "charges": 32,
+        "hazards": 93
+      }
+    },
+    {
+      "seed": 13,
+      "policy": "random",
+      "item": "rings",
+      "gift": "cloud",
+      "ended": true,
+      "time": 166.7,
+      "fruitAt": null,
+      "skills": {
+        "grove": 1,
+        "edict": 1,
+        "light": 1,
+        "gate": 1,
+        "armor": 1
+      },
+      "level": 5,
+      "kills": 138,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 137.8,
+      "choices": [
+        {
+          "t": 21.200000000000166,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 45.04999999999958,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 121.39999999999525,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 144.99999999999872,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 56,
+        "bullets": 28,
+        "drops": 46
+      },
+      "telemetry": {
+        "spawns": 194,
+        "despawned": 3,
+        "dropMerged": 39,
+        "autoShots": 243,
+        "itemUses": 27,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 329,
+        "charges": 70,
+        "hazards": 53
+      }
+    },
+    {
+      "seed": 14,
+      "policy": "recipe",
+      "item": "screen",
+      "gift": "firegift",
+      "ended": true,
+      "time": 161.6,
+      "fruitAt": null,
+      "skills": {
+        "dusk": 1,
+        "grove": 1,
+        "body": 1,
+        "flame": 1,
+        "pure": 1
+      },
+      "level": 5,
+      "kills": 101,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 168.6,
+      "choices": [
+        {
+          "t": 19.35000000000014,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 39.14999999999991,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 127.99999999999487,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 158.1000000000017,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 86,
+        "bullets": 39,
+        "drops": 39
+      },
+      "telemetry": {
+        "spawns": 187,
+        "despawned": 0,
+        "dropMerged": 11,
+        "autoShots": 279,
+        "itemUses": 23,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 237,
+        "charges": 135,
+        "hazards": 60
+      }
+    },
+    {
+      "seed": 15,
+      "policy": "random",
+      "item": "lamp",
+      "gift": "whale",
+      "ended": true,
+      "time": 188.2,
+      "fruitAt": 155.5,
+      "skills": {
+        "edict": 1,
+        "grove": 1,
+        "body": 2,
+        "pure": 1,
+        "gate": 1,
+        "light": 1,
+        "dusk": 1
+      },
+      "level": 8,
+      "kills": 194,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 155.2,
+      "choices": [
+        {
+          "t": 18.900000000000134,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 37.15000000000003,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 55.199999999999,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 60.249999999998714,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 89.74999999999704,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 119.04999999999538,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 2
+        },
+        {
+          "t": 155.5000000000011,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 31,
+        "bullets": 12,
+        "drops": 13
+      },
+      "telemetry": {
+        "spawns": 221,
+        "despawned": 0,
+        "dropMerged": 31,
+        "autoShots": 318,
+        "itemUses": 31,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 155,
+        "charges": 53,
+        "hazards": 57
+      }
+    },
+    {
+      "seed": 16,
+      "policy": "recipe",
+      "item": "sword",
+      "gift": "life",
+      "ended": true,
+      "time": 276.3,
+      "fruitAt": 98.8,
+      "skills": {
+        "light": 1,
+        "body": 1,
+        "dusk": 1,
+        "gate": 2,
+        "edict": 1,
+        "gold": 1,
+        "thunder": 1,
+        "grove": 1,
+        "armor": 1
+      },
+      "level": 10,
+      "kills": 290,
+      "elites": 4,
+      "bosses": 1,
+      "damageTaken": 175.2,
+      "choices": [
+        {
+          "t": 18.70000000000013,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 32.90000000000027,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 53.09999999999912,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 70.39999999999814,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 98.79999999999653,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 121.09999999999526,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 2
+        },
+        {
+          "t": 162.85000000000278,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 187.9500000000085,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 199.4500000000111,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 51,
+        "bullets": 19,
+        "drops": 37
+      },
+      "telemetry": {
+        "spawns": 341,
+        "despawned": 0,
+        "dropMerged": 50,
+        "autoShots": 437,
+        "itemUses": 34,
+        "lifeUses": 8,
+        "blinkUses": 0,
+        "enemyShots": 306,
+        "charges": 71,
+        "hazards": 185
+      }
+    },
+    {
+      "seed": 17,
+      "policy": "random",
+      "item": "bow",
+      "gift": "sparrow",
+      "ended": true,
+      "time": 132.6,
+      "fruitAt": null,
+      "skills": {
+        "mountain": 1,
+        "flame": 1,
+        "dusk": 1,
+        "light": 1,
+        "thunder": 1,
+        "gate": 1
+      },
+      "level": 6,
+      "kills": 121,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 111,
+      "choices": [
+        {
+          "t": 19.40000000000014,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 32.00000000000032,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 47.69999999999943,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 58.04999999999884,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 96.54999999999666,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 28,
+        "bullets": 12,
+        "drops": 10
+      },
+      "telemetry": {
+        "spawns": 149,
+        "despawned": 0,
+        "dropMerged": 26,
+        "autoShots": 207,
+        "itemUses": 22,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 100,
+        "charges": 42,
+        "hazards": 46
+      }
+    },
+    {
+      "seed": 18,
+      "policy": "recipe",
+      "item": "rings",
+      "gift": "cloud",
+      "ended": true,
+      "time": 137,
+      "fruitAt": null,
+      "skills": {
+        "dusk": 1,
+        "pure": 1,
+        "body": 1,
+        "gate": 1
+      },
+      "level": 4,
+      "kills": 74,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 143.6,
+      "choices": [
+        {
+          "t": 21.150000000000166,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 66.49999999999837,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 106.54999999999609,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 87,
+        "bullets": 17,
+        "drops": 16
+      },
+      "telemetry": {
+        "spawns": 154,
+        "despawned": 0,
+        "dropMerged": 13,
+        "autoShots": 197,
+        "itemUses": 23,
+        "lifeUses": 0,
+        "blinkUses": 2,
+        "enemyShots": 148,
+        "charges": 214,
+        "hazards": 48
+      }
+    },
+    {
+      "seed": 19,
+      "policy": "random",
+      "item": "screen",
+      "gift": "firegift",
+      "ended": true,
+      "time": 151.2,
+      "fruitAt": null,
+      "skills": {
+        "gate": 1,
+        "flame": 1,
+        "dusk": 1,
+        "armor": 1,
+        "body": 3
+      },
+      "level": 7,
+      "kills": 132,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 109.4,
+      "choices": [
+        {
+          "t": 19.800000000000146,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 32.450000000000294,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 48.39999999999939,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 61.49999999999864,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        },
+        {
+          "t": 85.1499999999973,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 2
+        },
+        {
+          "t": 134.89999999999642,
+          "type": "upgrade",
+          "id": "body",
+          "level": 3
+        }
+      ],
+      "peak": {
+        "enemies": 41,
+        "bullets": 33,
+        "drops": 8
+      },
+      "telemetry": {
+        "spawns": 173,
+        "despawned": 0,
+        "dropMerged": 16,
+        "autoShots": 238,
+        "itemUses": 21,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 199,
+        "charges": 40,
+        "hazards": 65
+      }
+    },
+    {
+      "seed": 20,
+      "policy": "recipe",
+      "item": "lamp",
+      "gift": "whale",
+      "ended": true,
+      "time": 135.6,
+      "fruitAt": null,
+      "skills": {
+        "flame": 1,
+        "dusk": 1,
+        "grove": 1,
+        "body": 1,
+        "light": 1,
+        "gate": 1
+      },
+      "level": 6,
+      "kills": 129,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 147.4,
+      "choices": [
+        {
+          "t": 20.15000000000015,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 31.90000000000032,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 44.6499999999996,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 66.34999999999837,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 93.59999999999683,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 30,
+        "bullets": 18,
+        "drops": 19
+      },
+      "telemetry": {
+        "spawns": 152,
+        "despawned": 0,
+        "dropMerged": 19,
+        "autoShots": 225,
+        "itemUses": 22,
+        "lifeUses": 0,
+        "blinkUses": 1,
+        "enemyShots": 190,
+        "charges": 36,
+        "hazards": 26
+      }
+    },
+    {
+      "seed": 21,
+      "policy": "random",
+      "item": "sword",
+      "gift": "life",
+      "ended": true,
+      "time": 229.1,
+      "fruitAt": null,
+      "skills": {
+        "edict": 1,
+        "gold": 1,
+        "thunder": 2,
+        "light": 1,
+        "dusk": 1,
+        "gate": 1,
+        "rain": 1,
+        "pure": 1
+      },
+      "level": 9,
+      "kills": 235,
+      "elites": 3,
+      "bosses": 0,
+      "damageTaken": 123.4,
+      "choices": [
+        {
+          "t": 22.75000000000019,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 34.60000000000017,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        },
+        {
+          "t": 47.69999999999943,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 59.199999999998774,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 2
+        },
+        {
+          "t": 86.64999999999722,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 121.39999999999525,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 161.55000000000248,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 197.50000000001066,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 41,
+        "bullets": 18,
+        "drops": 20
+      },
+      "telemetry": {
+        "spawns": 276,
+        "despawned": 0,
+        "dropMerged": 22,
+        "autoShots": 345,
+        "itemUses": 31,
+        "lifeUses": 8,
+        "blinkUses": 0,
+        "enemyShots": 120,
+        "charges": 65,
+        "hazards": 71
+      }
+    },
+    {
+      "seed": 22,
+      "policy": "recipe",
+      "item": "bow",
+      "gift": "sparrow",
+      "ended": true,
+      "time": 154,
+      "fruitAt": null,
+      "skills": {
+        "body": 1,
+        "edict": 1,
+        "gate": 3,
+        "rain": 1,
+        "light": 1
+      },
+      "level": 7,
+      "kills": 151,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 110,
+      "choices": [
+        {
+          "t": 18.05000000000012,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 31.20000000000031,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 57.049999999998896,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 68.59999999999825,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 2
+        },
+        {
+          "t": 86.19999999999725,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 122.44999999999519,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 3
+        }
+      ],
+      "peak": {
+        "enemies": 26,
+        "bullets": 8,
+        "drops": 16
+      },
+      "telemetry": {
+        "spawns": 177,
+        "despawned": 0,
+        "dropMerged": 18,
+        "autoShots": 234,
+        "itemUses": 28,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 61,
+        "charges": 30,
+        "hazards": 57
+      }
+    },
+    {
+      "seed": 23,
+      "policy": "random",
+      "item": "rings",
+      "gift": "cloud",
+      "ended": true,
+      "time": 169.6,
+      "fruitAt": null,
+      "skills": {
+        "mountain": 2,
+        "rain": 1,
+        "armor": 1,
+        "edict": 1,
+        "gate": 1,
+        "light": 1
+      },
+      "level": 7,
+      "kills": 151,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 100,
+      "choices": [
+        {
+          "t": 39.74999999999988,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 61.649999999998634,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 82.24999999999747,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 2
+        },
+        {
+          "t": 110.54999999999586,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 140.4499999999977,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 158.9500000000019,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 47,
+        "bullets": 24,
+        "drops": 32
+      },
+      "telemetry": {
+        "spawns": 198,
+        "despawned": 0,
+        "dropMerged": 37,
+        "autoShots": 243,
+        "itemUses": 28,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 246,
+        "charges": 51,
+        "hazards": 77
+      }
+    },
+    {
+      "seed": 24,
+      "policy": "recipe",
+      "item": "screen",
+      "gift": "firegift",
+      "ended": true,
+      "time": 190.5,
+      "fruitAt": 125,
+      "skills": {
+        "body": 1,
+        "light": 1,
+        "gate": 2,
+        "edict": 2,
+        "dusk": 1
+      },
+      "level": 7,
+      "kills": 176,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 144,
+      "choices": [
+        {
+          "t": 20.500000000000156,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 50.99999999999924,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 107.69999999999602,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 124.44999999999507,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 134.24999999999628,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 2
+        },
+        {
+          "t": 153.95000000000076,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 48,
+        "bullets": 29,
+        "drops": 41
+      },
+      "telemetry": {
+        "spawns": 223,
+        "despawned": 0,
+        "dropMerged": 50,
+        "autoShots": 323,
+        "itemUses": 26,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 232,
+        "charges": 80,
+        "hazards": 70
+      }
+    },
+    {
+      "seed": 25,
+      "policy": "random",
+      "item": "lamp",
+      "gift": "whale",
+      "ended": true,
+      "time": 226.9,
+      "fruitAt": null,
+      "skills": {
+        "gold": 1,
+        "flame": 1,
+        "dusk": 1,
+        "rain": 1,
+        "grove": 1,
+        "mountain": 1,
+        "edict": 1,
+        "body": 1,
+        "light": 1
+      },
+      "level": 9,
+      "kills": 233,
+      "elites": 3,
+      "bosses": 0,
+      "damageTaken": 157.6,
+      "choices": [
+        {
+          "t": 18.75000000000013,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        },
+        {
+          "t": 28.60000000000027,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 45.39999999999956,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 66.19999999999838,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 88.59999999999711,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 121.99999999999521,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 157.00000000000145,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 224.35000000001676,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 41,
+        "bullets": 12,
+        "drops": 39
+      },
+      "telemetry": {
+        "spawns": 273,
+        "despawned": 0,
+        "dropMerged": 15,
+        "autoShots": 367,
+        "itemUses": 35,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 133,
+        "charges": 53,
+        "hazards": 105
+      }
+    },
+    {
+      "seed": 26,
+      "policy": "recipe",
+      "item": "sword",
+      "gift": "life",
+      "ended": true,
+      "time": 207.7,
+      "fruitAt": null,
+      "skills": {
+        "dusk": 2,
+        "grove": 1,
+        "gate": 1,
+        "flame": 1,
+        "body": 2,
+        "edict": 1
+      },
+      "level": 8,
+      "kills": 192,
+      "elites": 3,
+      "bosses": 0,
+      "damageTaken": 179.7,
+      "choices": [
+        {
+          "t": 30.400000000000297,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 41.89999999999976,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 71.89999999999806,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 81.14999999999753,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 98.49999999999655,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 123.34999999999513,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 2
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 168.7000000000041,
+          "type": "upgrade",
+          "id": "body",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 53,
+        "bullets": 24,
+        "drops": 22
+      },
+      "telemetry": {
+        "spawns": 245,
+        "despawned": 0,
+        "dropMerged": 37,
+        "autoShots": 331,
+        "itemUses": 29,
+        "lifeUses": 8,
+        "blinkUses": 0,
+        "enemyShots": 216,
+        "charges": 55,
+        "hazards": 162
+      }
+    },
+    {
+      "seed": 27,
+      "policy": "random",
+      "item": "bow",
+      "gift": "sparrow",
+      "ended": true,
+      "time": 183,
+      "fruitAt": null,
+      "skills": {
+        "pure": 1,
+        "body": 1,
+        "armor": 1,
+        "gate": 1,
+        "edict": 1,
+        "dusk": 1,
+        "flame": 1
+      },
+      "level": 7,
+      "kills": 160,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 110.2,
+      "choices": [
+        {
+          "t": 18.900000000000134,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 41.49999999999978,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 89.99999999999703,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 126.74999999999494,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 137.09999999999692,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 178.95000000000644,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 52,
+        "bullets": 19,
+        "drops": 44
+      },
+      "telemetry": {
+        "spawns": 217,
+        "despawned": 5,
+        "dropMerged": 32,
+        "autoShots": 286,
+        "itemUses": 33,
+        "lifeUses": 0,
+        "blinkUses": 2,
+        "enemyShots": 237,
+        "charges": 67,
+        "hazards": 122
+      }
+    },
+    {
+      "seed": 28,
+      "policy": "recipe",
+      "item": "rings",
+      "gift": "cloud",
+      "ended": true,
+      "time": 149.5,
+      "fruitAt": null,
+      "skills": {
+        "dusk": 1,
+        "light": 1,
+        "gate": 1,
+        "body": 1
+      },
+      "level": 4,
+      "kills": 109,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 124.5,
+      "choices": [
+        {
+          "t": 24.850000000000218,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 82.94999999999743,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 128.79999999999504,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 84,
+        "bullets": 18,
+        "drops": 40
+      },
+      "telemetry": {
+        "spawns": 171,
+        "despawned": 0,
+        "dropMerged": 34,
+        "autoShots": 215,
+        "itemUses": 25,
+        "lifeUses": 0,
+        "blinkUses": 2,
+        "enemyShots": 165,
+        "charges": 202,
+        "hazards": 38
+      }
+    },
+    {
+      "seed": 29,
+      "policy": "random",
+      "item": "screen",
+      "gift": "firegift",
+      "ended": true,
+      "time": 147.1,
+      "fruitAt": null,
+      "skills": {
+        "dusk": 1,
+        "body": 1,
+        "pure": 1,
+        "gate": 1
+      },
+      "level": 4,
+      "kills": 122,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 116.5,
+      "choices": [
+        {
+          "t": 19.35000000000014,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 36.00000000000009,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 92.64999999999688,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 64,
+        "bullets": 31,
+        "drops": 47
+      },
+      "telemetry": {
+        "spawns": 168,
+        "despawned": 0,
+        "dropMerged": 28,
+        "autoShots": 250,
+        "itemUses": 21,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 168,
+        "charges": 87,
+        "hazards": 44
+      }
+    },
+    {
+      "seed": 30,
+      "policy": "recipe",
+      "item": "lamp",
+      "gift": "whale",
+      "ended": true,
+      "time": 130.8,
+      "fruitAt": 125,
+      "skills": {
+        "dusk": 1,
+        "gate": 1,
+        "mountain": 1,
+        "edict": 2,
+        "light": 1,
+        "body": 1
+      },
+      "level": 7,
+      "kills": 129,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 129.6,
+      "choices": [
+        {
+          "t": 19.45000000000014,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 32.70000000000028,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 46.04999999999952,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 56.699999999998916,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 88.34999999999712,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 119.44999999999536,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 2
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 18,
+        "bullets": 7,
+        "drops": 11
+      },
+      "telemetry": {
+        "spawns": 146,
+        "despawned": 0,
+        "dropMerged": 8,
+        "autoShots": 208,
+        "itemUses": 22,
+        "lifeUses": 0,
+        "blinkUses": 2,
+        "enemyShots": 29,
+        "charges": 35,
+        "hazards": 13
+      }
+    },
+    {
+      "seed": 31,
+      "policy": "random",
+      "item": "sword",
+      "gift": "life",
+      "ended": true,
+      "time": 194.7,
+      "fruitAt": null,
+      "skills": {
+        "pure": 1,
+        "armor": 1,
+        "thunder": 1,
+        "body": 1,
+        "light": 1,
+        "dusk": 1,
+        "edict": 1,
+        "flame": 1
+      },
+      "level": 8,
+      "kills": 185,
+      "elites": 3,
+      "bosses": 0,
+      "damageTaken": 132,
+      "choices": [
+        {
+          "t": 18.55000000000013,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 34.1000000000002,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        },
+        {
+          "t": 61.74999999999863,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 82.84999999999744,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 100.69999999999642,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 124.89999999999505,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 185.60000000000795,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 42,
+        "bullets": 16,
+        "drops": 27
+      },
+      "telemetry": {
+        "spawns": 227,
+        "despawned": 0,
+        "dropMerged": 27,
+        "autoShots": 334,
+        "itemUses": 32,
+        "lifeUses": 8,
+        "blinkUses": 0,
+        "enemyShots": 144,
+        "charges": 58,
+        "hazards": 184
+      }
+    },
+    {
+      "seed": 32,
+      "policy": "recipe",
+      "item": "bow",
+      "gift": "sparrow",
+      "ended": true,
+      "time": 169.3,
+      "fruitAt": 125,
+      "skills": {
+        "dusk": 1,
+        "gate": 2,
+        "body": 1,
+        "light": 1,
+        "edict": 1,
+        "thunder": 1
+      },
+      "level": 7,
+      "kills": 159,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 137.7,
+      "choices": [
+        {
+          "t": 19.150000000000137,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 28.750000000000274,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 43.94999999999964,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 56.9499999999989,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 93.04999999999686,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 2
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 125.34999999999502,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 39,
+        "bullets": 15,
+        "drops": 27
+      },
+      "telemetry": {
+        "spawns": 197,
+        "despawned": 0,
+        "dropMerged": 17,
+        "autoShots": 268,
+        "itemUses": 29,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 190,
+        "charges": 48,
+        "hazards": 84
+      }
+    },
+    {
+      "seed": 33,
+      "policy": "random",
+      "item": "rings",
+      "gift": "cloud",
+      "ended": true,
+      "time": 163.3,
+      "fruitAt": 130.2,
+      "skills": {
+        "light": 1,
+        "mountain": 1,
+        "gold": 1,
+        "gate": 1,
+        "edict": 1,
+        "dusk": 1,
+        "body": 1
+      },
+      "level": 7,
+      "kills": 159,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 103.1,
+      "choices": [
+        {
+          "t": 35.9000000000001,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 55.44999999999899,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 76.3999999999978,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        },
+        {
+          "t": 97.19999999999662,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 115.99999999999555,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 130.19999999999536,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 34,
+        "bullets": 14,
+        "drops": 28
+      },
+      "telemetry": {
+        "spawns": 189,
+        "despawned": 0,
+        "dropMerged": 37,
+        "autoShots": 220,
+        "itemUses": 25,
+        "lifeUses": 0,
+        "blinkUses": 2,
+        "enemyShots": 104,
+        "charges": 72,
+        "hazards": 71
+      }
+    },
+    {
+      "seed": 34,
+      "policy": "recipe",
+      "item": "screen",
+      "gift": "firegift",
+      "ended": true,
+      "time": 139.8,
+      "fruitAt": 125,
+      "skills": {
+        "light": 1,
+        "edict": 2,
+        "dusk": 1,
+        "gate": 1,
+        "body": 1
+      },
+      "level": 6,
+      "kills": 117,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 113.1,
+      "choices": [
+        {
+          "t": 21.45000000000017,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 32.70000000000028,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 62.94999999999856,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 83.94999999999737,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 2
+        },
+        {
+          "t": 119.14999999999537,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 41,
+        "bullets": 25,
+        "drops": 22
+      },
+      "telemetry": {
+        "spawns": 158,
+        "despawned": 0,
+        "dropMerged": 22,
+        "autoShots": 236,
+        "itemUses": 20,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 208,
+        "charges": 40,
+        "hazards": 58
+      }
+    },
+    {
+      "seed": 35,
+      "policy": "random",
+      "item": "lamp",
+      "gift": "whale",
+      "ended": true,
+      "time": 165,
+      "fruitAt": null,
+      "skills": {
+        "grove": 1,
+        "dusk": 1,
+        "light": 1,
+        "mountain": 1,
+        "thunder": 1,
+        "edict": 1,
+        "flame": 1
+      },
+      "level": 7,
+      "kills": 159,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 142.9,
+      "choices": [
+        {
+          "t": 21.300000000000168,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 35.30000000000013,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 68.14999999999827,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 101.44999999999638,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 109.24999999999594,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 127.59999999999489,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 33,
+        "bullets": 16,
+        "drops": 30
+      },
+      "telemetry": {
+        "spawns": 191,
+        "despawned": 0,
+        "dropMerged": 24,
+        "autoShots": 279,
+        "itemUses": 26,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 160,
+        "charges": 51,
+        "hazards": 90
+      }
+    },
+    {
+      "seed": 36,
+      "policy": "recipe",
+      "item": "sword",
+      "gift": "life",
+      "ended": true,
+      "time": 177.2,
+      "fruitAt": 125,
+      "skills": {
+        "pure": 1,
+        "thunder": 1,
+        "edict": 1,
+        "dusk": 1,
+        "gate": 1,
+        "body": 1,
+        "light": 2
+      },
+      "level": 8,
+      "kills": 187,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 117.9,
+      "choices": [
+        {
+          "t": 17.15000000000011,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 29.650000000000286,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 45.89999999999953,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 57.69999999999886,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 86.19999999999725,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 117.49999999999547,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 146.09999999999897,
+          "type": "upgrade",
+          "id": "light",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 22,
+        "bullets": 9,
+        "drops": 10
+      },
+      "telemetry": {
+        "spawns": 209,
+        "despawned": 0,
+        "dropMerged": 13,
+        "autoShots": 293,
+        "itemUses": 28,
+        "lifeUses": 8,
+        "blinkUses": 0,
+        "enemyShots": 83,
+        "charges": 43,
+        "hazards": 37
+      }
+    },
+    {
+      "seed": 37,
+      "policy": "random",
+      "item": "bow",
+      "gift": "sparrow",
+      "ended": true,
+      "time": 164.5,
+      "fruitAt": null,
+      "skills": {
+        "rain": 1,
+        "gate": 1,
+        "gold": 1,
+        "mountain": 1,
+        "thunder": 1,
+        "body": 1,
+        "edict": 1,
+        "flame": 1
+      },
+      "level": 8,
+      "kills": 174,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 110,
+      "choices": [
+        {
+          "t": 19.900000000000148,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 32.800000000000274,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 47.84999999999942,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        },
+        {
+          "t": 61.84999999999862,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 86.59999999999722,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 136.29999999999674,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 161.80000000000254,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 20,
+        "bullets": 8,
+        "drops": 23
+      },
+      "telemetry": {
+        "spawns": 191,
+        "despawned": 1,
+        "dropMerged": 16,
+        "autoShots": 235,
+        "itemUses": 30,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 47,
+        "charges": 36,
+        "hazards": 51
+      }
+    },
+    {
+      "seed": 38,
+      "policy": "recipe",
+      "item": "rings",
+      "gift": null,
+      "ended": true,
+      "time": 153,
+      "fruitAt": null,
+      "skills": {
+        "body": 1,
+        "dusk": 1,
+        "edict": 1,
+        "grove": 1
+      },
+      "level": 4,
+      "kills": 70,
+      "elites": 0,
+      "bosses": 0,
+      "damageTaken": 137.7,
+      "choices": [
+        {
+          "t": 24.100000000000207,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 73.64999999999796,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 125.14999999999503,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 104,
+        "bullets": 11,
+        "drops": 22
+      },
+      "telemetry": {
+        "spawns": 175,
+        "despawned": 1,
+        "dropMerged": 10,
+        "autoShots": 221,
+        "itemUses": 26,
+        "lifeUses": 0,
+        "blinkUses": 1,
+        "enemyShots": 93,
+        "charges": 269,
+        "hazards": 56
+      }
+    },
+    {
+      "seed": 39,
+      "policy": "random",
+      "item": "screen",
+      "gift": "firegift",
+      "ended": true,
+      "time": 168.9,
+      "fruitAt": 125,
+      "skills": {
+        "gate": 1,
+        "body": 1,
+        "rain": 1,
+        "dusk": 1,
+        "edict": 1,
+        "light": 1,
+        "grove": 1
+      },
+      "level": 7,
+      "kills": 154,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 116.6,
+      "choices": [
+        {
+          "t": 23.150000000000194,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 30.6000000000003,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 46.29999999999951,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 56.84999999999891,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 88.39999999999712,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 149.49999999999974,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 43,
+        "bullets": 24,
+        "drops": 20
+      },
+      "telemetry": {
+        "spawns": 197,
+        "despawned": 0,
+        "dropMerged": 19,
+        "autoShots": 280,
+        "itemUses": 22,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 170,
+        "charges": 48,
+        "hazards": 154
+      }
+    },
+    {
+      "seed": 40,
+      "policy": "recipe",
+      "item": "lamp",
+      "gift": "whale",
+      "ended": true,
+      "time": 260.5,
+      "fruitAt": 125,
+      "skills": {
+        "light": 1,
+        "gate": 2,
+        "pure": 1,
+        "body": 1,
+        "edict": 1,
+        "dusk": 1,
+        "gold": 1,
+        "grove": 1,
+        "rain": 1
+      },
+      "level": 10,
+      "kills": 281,
+      "elites": 3,
+      "bosses": 1,
+      "damageTaken": 156.7,
+      "choices": [
+        {
+          "t": 19.800000000000146,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 32.65000000000028,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 46.64999999999949,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 59.199999999998774,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 90.499999999997,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 2
+        },
+        {
+          "t": 118.29999999999542,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 156.55000000000135,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        },
+        {
+          "t": 196.15000000001035,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 205.35000000001244,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 39,
+        "bullets": 16,
+        "drops": 33
+      },
+      "telemetry": {
+        "spawns": 316,
+        "despawned": 0,
+        "dropMerged": 30,
+        "autoShots": 401,
+        "itemUses": 42,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 122,
+        "charges": 66,
+        "hazards": 156
+      }
+    },
+    {
+      "seed": 41,
+      "policy": "random",
+      "item": "sword",
+      "gift": "life",
+      "ended": true,
+      "time": 235.5,
+      "fruitAt": null,
+      "skills": {
+        "thunder": 1,
+        "light": 1,
+        "gold": 1,
+        "pure": 1,
+        "grove": 1,
+        "mountain": 1,
+        "dusk": 2,
+        "gate": 1,
+        "edict": 1
+      },
+      "level": 10,
+      "kills": 252,
+      "elites": 3,
+      "bosses": 1,
+      "damageTaken": 170.2,
+      "choices": [
+        {
+          "t": 21.45000000000017,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 31.750000000000316,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 46.59999999999949,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        },
+        {
+          "t": 57.249999999998884,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 86.84999999999721,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 122.59999999999518,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 158.5500000000018,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 195.15000000001012,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 207.10000000001284,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 34,
+        "bullets": 14,
+        "drops": 22
+      },
+      "telemetry": {
+        "spawns": 286,
+        "despawned": 0,
+        "dropMerged": 17,
+        "autoShots": 369,
+        "itemUses": 31,
+        "lifeUses": 8,
+        "blinkUses": 0,
+        "enemyShots": 130,
+        "charges": 49,
+        "hazards": 107
+      }
+    },
+    {
+      "seed": 42,
+      "policy": "recipe",
+      "item": "bow",
+      "gift": "sparrow",
+      "ended": true,
+      "time": 154.8,
+      "fruitAt": 125,
+      "skills": {
+        "gate": 1,
+        "light": 2,
+        "body": 1,
+        "dusk": 1,
+        "edict": 1
+      },
+      "level": 6,
+      "kills": 133,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 100,
+      "choices": [
+        {
+          "t": 17.600000000000115,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 33.80000000000022,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 49.54999999999932,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 60.99999999999867,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 112.09999999999577,
+          "type": "upgrade",
+          "id": "light",
+          "level": 2
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 45,
+        "bullets": 23,
+        "drops": 22
+      },
+      "telemetry": {
+        "spawns": 178,
+        "despawned": 0,
+        "dropMerged": 15,
+        "autoShots": 244,
+        "itemUses": 28,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 209,
+        "charges": 45,
+        "hazards": 55
+      }
+    },
+    {
+      "seed": 43,
+      "policy": "random",
+      "item": "rings",
+      "gift": "cloud",
+      "ended": true,
+      "time": 131.8,
+      "fruitAt": null,
+      "skills": {
+        "edict": 1,
+        "pure": 1,
+        "flame": 1,
+        "grove": 1,
+        "light": 1
+      },
+      "level": 5,
+      "kills": 91,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 118,
+      "choices": [
+        {
+          "t": 19.750000000000146,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 53.79999999999908,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 78.1999999999977,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 110.34999999999587,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "light",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 57,
+        "bullets": 20,
+        "drops": 25
+      },
+      "telemetry": {
+        "spawns": 148,
+        "despawned": 0,
+        "dropMerged": 20,
+        "autoShots": 192,
+        "itemUses": 22,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 156,
+        "charges": 88,
+        "hazards": 8
+      }
+    },
+    {
+      "seed": 44,
+      "policy": "recipe",
+      "item": "screen",
+      "gift": "firegift",
+      "ended": true,
+      "time": 142.4,
+      "fruitAt": null,
+      "skills": {
+        "edict": 2,
+        "thunder": 1,
+        "body": 1,
+        "dusk": 1,
+        "gate": 1,
+        "mountain": 1
+      },
+      "level": 7,
+      "kills": 139,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 129,
+      "choices": [
+        {
+          "t": 19.200000000000138,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 33.650000000000226,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 44.199999999999626,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 66.69999999999835,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 92.04999999999691,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 123.69999999999511,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 23,
+        "bullets": 23,
+        "drops": 11
+      },
+      "telemetry": {
+        "spawns": 161,
+        "despawned": 0,
+        "dropMerged": 20,
+        "autoShots": 243,
+        "itemUses": 20,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 126,
+        "charges": 39,
+        "hazards": 38
+      }
+    },
+    {
+      "seed": 45,
+      "policy": "random",
+      "item": "lamp",
+      "gift": "whale",
+      "ended": true,
+      "time": 322.2,
+      "fruitAt": 310,
+      "skills": {
+        "pure": 1,
+        "armor": 1,
+        "thunder": 1,
+        "body": 1,
+        "gold": 1,
+        "light": 2,
+        "flame": 1,
+        "gate": 1,
+        "rain": 1,
+        "dusk": 1,
+        "edict": 1
+      },
+      "level": 11,
+      "kills": 366,
+      "elites": 4,
+      "bosses": 1,
+      "damageTaken": 167.5,
+      "choices": [
+        {
+          "t": 21.45000000000017,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 37.74999999999999,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        },
+        {
+          "t": 71.59999999999808,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 82.59999999999745,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 103.59999999999626,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 141.94999999999803,
+          "type": "upgrade",
+          "id": "light",
+          "level": 2
+        },
+        {
+          "t": 175.55000000000567,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 202.80000000001186,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 281.20000000002966,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 308.1500000000358,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 310.0000000000362,
+          "type": "event",
+          "id": "edict",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 41,
+        "bullets": 24,
+        "drops": 54
+      },
+      "telemetry": {
+        "spawns": 410,
+        "despawned": 6,
+        "dropMerged": 69,
+        "autoShots": 550,
+        "itemUses": 49,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 513,
+        "charges": 77,
+        "hazards": 190
+      }
+    },
+    {
+      "seed": 46,
+      "policy": "recipe",
+      "item": "sword",
+      "gift": "life",
+      "ended": true,
+      "time": 161.8,
+      "fruitAt": 159.3,
+      "skills": {
+        "body": 3,
+        "gate": 1,
+        "edict": 1,
+        "dusk": 1,
+        "thunder": 1,
+        "light": 1
+      },
+      "level": 8,
+      "kills": 167,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 128.3,
+      "choices": [
+        {
+          "t": 17.600000000000115,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 31.90000000000032,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 45.04999999999958,
+          "type": "upgrade",
+          "id": "body",
+          "level": 2
+        },
+        {
+          "t": 56.79999999999891,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 84.54999999999734,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 117.14999999999549,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 3
+        },
+        {
+          "t": 159.25000000000196,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 24,
+        "bullets": 9,
+        "drops": 14
+      },
+      "telemetry": {
+        "spawns": 187,
+        "despawned": 0,
+        "dropMerged": 18,
+        "autoShots": 256,
+        "itemUses": 22,
+        "lifeUses": 4,
+        "blinkUses": 0,
+        "enemyShots": 77,
+        "charges": 41,
+        "hazards": 37
+      }
+    },
+    {
+      "seed": 47,
+      "policy": "random",
+      "item": "bow",
+      "gift": "sparrow",
+      "ended": true,
+      "time": 187,
+      "fruitAt": null,
+      "skills": {
+        "dusk": 1,
+        "gate": 1,
+        "thunder": 1,
+        "light": 1,
+        "grove": 1,
+        "body": 1
+      },
+      "level": 6,
+      "kills": 165,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 106.6,
+      "choices": [
+        {
+          "t": 17.600000000000115,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 34.80000000000016,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 46.849999999999476,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 55.39999999999899,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 107.24999999999605,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 56,
+        "bullets": 29,
+        "drops": 51
+      },
+      "telemetry": {
+        "spawns": 220,
+        "despawned": 0,
+        "dropMerged": 20,
+        "autoShots": 298,
+        "itemUses": 33,
+        "lifeUses": 0,
+        "blinkUses": 2,
+        "enemyShots": 378,
+        "charges": 70,
+        "hazards": 76
+      }
+    },
+    {
+      "seed": 48,
+      "policy": "recipe",
+      "item": "rings",
+      "gift": "cloud",
+      "ended": true,
+      "time": 135.5,
+      "fruitAt": null,
+      "skills": {
+        "body": 2,
+        "dusk": 1,
+        "edict": 1
+      },
+      "level": 4,
+      "kills": 71,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 112.4,
+      "choices": [
+        {
+          "t": 21.50000000000017,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 70.59999999999813,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 106.99999999999606,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 82,
+        "bullets": 21,
+        "drops": 21
+      },
+      "telemetry": {
+        "spawns": 152,
+        "despawned": 0,
+        "dropMerged": 14,
+        "autoShots": 192,
+        "itemUses": 22,
+        "lifeUses": 0,
+        "blinkUses": 1,
+        "enemyShots": 193,
+        "charges": 140,
+        "hazards": 31
+      }
+    },
+    {
+      "seed": 49,
+      "policy": "random",
+      "item": "screen",
+      "gift": "firegift",
+      "ended": true,
+      "time": 142.3,
+      "fruitAt": null,
+      "skills": {
+        "pure": 1,
+        "mountain": 1,
+        "grove": 1,
+        "rain": 1,
+        "edict": 1
+      },
+      "level": 5,
+      "kills": 134,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 136.9,
+      "choices": [
+        {
+          "t": 22.000000000000178,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 68.99999999999822,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 101.99999999999635,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 119.94999999999533,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 40,
+        "bullets": 27,
+        "drops": 43
+      },
+      "telemetry": {
+        "spawns": 161,
+        "despawned": 0,
+        "dropMerged": 35,
+        "autoShots": 239,
+        "itemUses": 20,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 183,
+        "charges": 84,
+        "hazards": 29
+      }
+    },
+    {
+      "seed": 50,
+      "policy": "recipe",
+      "item": "lamp",
+      "gift": "whale",
+      "ended": true,
+      "time": 146.1,
+      "fruitAt": 121.5,
+      "skills": {
+        "edict": 1,
+        "flame": 1,
+        "light": 1,
+        "gate": 2,
+        "dusk": 1,
+        "body": 1
+      },
+      "level": 7,
+      "kills": 147,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 116.2,
+      "choices": [
+        {
+          "t": 15.85000000000009,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 30.050000000000292,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 45.34999999999956,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 55.299999999998995,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 86.19999999999725,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 121.54999999999524,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 20,
+        "bullets": 8,
+        "drops": 13
+      },
+      "telemetry": {
+        "spawns": 166,
+        "despawned": 0,
+        "dropMerged": 16,
+        "autoShots": 234,
+        "itemUses": 23,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 57,
+        "charges": 37,
+        "hazards": 41
+      }
+    },
+    {
+      "seed": 51,
+      "policy": "random",
+      "item": "sword",
+      "gift": "life",
+      "ended": true,
+      "time": 223,
+      "fruitAt": 125,
+      "skills": {
+        "pure": 1,
+        "light": 1,
+        "gold": 1,
+        "edict": 1,
+        "dusk": 1,
+        "gate": 1,
+        "body": 1,
+        "grove": 1,
+        "rain": 1,
+        "mountain": 1
+      },
+      "level": 10,
+      "kills": 234,
+      "elites": 3,
+      "bosses": 1,
+      "damageTaken": 169.8,
+      "choices": [
+        {
+          "t": 21.250000000000167,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 33.20000000000025,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 54.64999999999903,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        },
+        {
+          "t": 62.89999999999856,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 87.19999999999719,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 116.9999999999955,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 159.25000000000196,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 188.35000000000858,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 213.35000000001426,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 34,
+        "bullets": 15,
+        "drops": 26
+      },
+      "telemetry": {
+        "spawns": 267,
+        "despawned": 0,
+        "dropMerged": 30,
+        "autoShots": 351,
+        "itemUses": 30,
+        "lifeUses": 8,
+        "blinkUses": 0,
+        "enemyShots": 101,
+        "charges": 58,
+        "hazards": 80
+      }
+    },
+    {
+      "seed": 52,
+      "policy": "recipe",
+      "item": "bow",
+      "gift": "sparrow",
+      "ended": true,
+      "time": 140.9,
+      "fruitAt": 91,
+      "skills": {
+        "edict": 2,
+        "light": 1,
+        "gate": 1,
+        "dusk": 1,
+        "body": 1,
+        "thunder": 1
+      },
+      "level": 7,
+      "kills": 135,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 131.2,
+      "choices": [
+        {
+          "t": 19.050000000000136,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 32.65000000000028,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 53.4499999999991,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 59.149999999998776,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 90.99999999999697,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 119.59999999999535,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 28,
+        "bullets": 16,
+        "drops": 15
+      },
+      "telemetry": {
+        "spawns": 159,
+        "despawned": 0,
+        "dropMerged": 20,
+        "autoShots": 216,
+        "itemUses": 25,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 131,
+        "charges": 30,
+        "hazards": 33
+      }
+    },
+    {
+      "seed": 53,
+      "policy": "random",
+      "item": "rings",
+      "gift": "cloud",
+      "ended": true,
+      "time": 152.5,
+      "fruitAt": null,
+      "skills": {
+        "thunder": 1,
+        "pure": 1,
+        "flame": 1,
+        "dusk": 1,
+        "armor": 1,
+        "edict": 1
+      },
+      "level": 6,
+      "kills": 116,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 119.4,
+      "choices": [
+        {
+          "t": 23.750000000000203,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 41.049999999999805,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 75.09999999999788,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        },
+        {
+          "t": 84.99999999999731,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 98.29999999999656,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 59,
+        "bullets": 28,
+        "drops": 26
+      },
+      "telemetry": {
+        "spawns": 175,
+        "despawned": 0,
+        "dropMerged": 21,
+        "autoShots": 215,
+        "itemUses": 25,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 280,
+        "charges": 43,
+        "hazards": 63
+      }
+    },
+    {
+      "seed": 54,
+      "policy": "recipe",
+      "item": "screen",
+      "gift": "firegift",
+      "ended": true,
+      "time": 153.1,
+      "fruitAt": 125,
+      "skills": {
+        "edict": 1,
+        "rain": 2,
+        "dusk": 1,
+        "gate": 1,
+        "body": 1,
+        "light": 1
+      },
+      "level": 7,
+      "kills": 141,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 129.3,
+      "choices": [
+        {
+          "t": 20.900000000000162,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 31.40000000000031,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 57.89999999999885,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 73.89999999999795,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 101.0999999999964,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 149.2499999999997,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 35,
+        "bullets": 18,
+        "drops": 22
+      },
+      "telemetry": {
+        "spawns": 176,
+        "despawned": 0,
+        "dropMerged": 23,
+        "autoShots": 255,
+        "itemUses": 21,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 111,
+        "charges": 43,
+        "hazards": 99
+      }
+    },
+    {
+      "seed": 55,
+      "policy": "random",
+      "item": "lamp",
+      "gift": "whale",
+      "ended": true,
+      "time": 198.7,
+      "fruitAt": null,
+      "skills": {
+        "thunder": 1,
+        "gold": 1,
+        "body": 1,
+        "edict": 3,
+        "mountain": 1,
+        "grove": 1,
+        "flame": 1
+      },
+      "level": 9,
+      "kills": 212,
+      "elites": 3,
+      "bosses": 0,
+      "damageTaken": 153.1,
+      "choices": [
+        {
+          "t": 19.650000000000144,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 29.85000000000029,
+          "type": "upgrade",
+          "id": "gold",
+          "level": 1
+        },
+        {
+          "t": 45.74999999999954,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 56.04999999999895,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 86.44999999999723,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 122.1499999999952,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "edict",
+          "level": 2
+        },
+        {
+          "t": 154.5500000000009,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 3
+        },
+        {
+          "t": 188.80000000000868,
+          "type": "upgrade",
+          "id": "flame",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 24,
+        "bullets": 13,
+        "drops": 14
+      },
+      "telemetry": {
+        "spawns": 232,
+        "despawned": 0,
+        "dropMerged": 27,
+        "autoShots": 296,
+        "itemUses": 33,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 77,
+        "charges": 57,
+        "hazards": 54
+      }
+    },
+    {
+      "seed": 56,
+      "policy": "recipe",
+      "item": "sword",
+      "gift": "life",
+      "ended": true,
+      "time": 194.2,
+      "fruitAt": 125,
+      "skills": {
+        "dusk": 2,
+        "edict": 2,
+        "gate": 1,
+        "grove": 1,
+        "body": 1,
+        "light": 1
+      },
+      "level": 8,
+      "kills": 198,
+      "elites": 3,
+      "bosses": 0,
+      "damageTaken": 188.8,
+      "choices": [
+        {
+          "t": 19.550000000000143,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 33.650000000000226,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 48.54999999999938,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 2
+        },
+        {
+          "t": 67.89999999999829,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 87.49999999999717,
+          "type": "upgrade",
+          "id": "grove",
+          "level": 1
+        },
+        {
+          "t": 116.34999999999553,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 164.7500000000032,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 30,
+        "bullets": 13,
+        "drops": 33
+      },
+      "telemetry": {
+        "spawns": 227,
+        "despawned": 0,
+        "dropMerged": 20,
+        "autoShots": 319,
+        "itemUses": 30,
+        "lifeUses": 8,
+        "blinkUses": 1,
+        "enemyShots": 141,
+        "charges": 55,
+        "hazards": 115
+      }
+    },
+    {
+      "seed": 57,
+      "policy": "random",
+      "item": "bow",
+      "gift": "sparrow",
+      "ended": true,
+      "time": 167.1,
+      "fruitAt": null,
+      "skills": {
+        "armor": 2,
+        "thunder": 1,
+        "mountain": 2,
+        "edict": 1,
+        "body": 1
+      },
+      "level": 7,
+      "kills": 154,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 108.9,
+      "choices": [
+        {
+          "t": 18.950000000000134,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        },
+        {
+          "t": 31.500000000000313,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 45.999999999999524,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 2
+        },
+        {
+          "t": 66.69999999999835,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 103.54999999999626,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 163.20000000000286,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 49,
+        "bullets": 30,
+        "drops": 27
+      },
+      "telemetry": {
+        "spawns": 194,
+        "despawned": 0,
+        "dropMerged": 33,
+        "autoShots": 264,
+        "itemUses": 29,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 387,
+        "charges": 70,
+        "hazards": 93
+      }
+    },
+    {
+      "seed": 58,
+      "policy": "recipe",
+      "item": "rings",
+      "gift": "cloud",
+      "ended": true,
+      "time": 126.1,
+      "fruitAt": 117.5,
+      "skills": {
+        "gate": 2,
+        "body": 1,
+        "dusk": 1,
+        "edict": 1,
+        "light": 1
+      },
+      "level": 6,
+      "kills": 119,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 127.6,
+      "choices": [
+        {
+          "t": 41.99999999999975,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 70.84999999999812,
+          "type": "upgrade",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 79.74999999999761,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 88.7999999999971,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 117.54999999999546,
+          "type": "upgrade",
+          "id": "light",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 2
+        }
+      ],
+      "peak": {
+        "enemies": 30,
+        "bullets": 17,
+        "drops": 29
+      },
+      "telemetry": {
+        "spawns": 142,
+        "despawned": 0,
+        "dropMerged": 26,
+        "autoShots": 172,
+        "itemUses": 21,
+        "lifeUses": 0,
+        "blinkUses": 1,
+        "enemyShots": 139,
+        "charges": 43,
+        "hazards": 6
+      }
+    },
+    {
+      "seed": 59,
+      "policy": "random",
+      "item": "screen",
+      "gift": "firegift",
+      "ended": true,
+      "time": 183.5,
+      "fruitAt": null,
+      "skills": {
+        "armor": 1,
+        "edict": 1,
+        "mountain": 1,
+        "pure": 1,
+        "rain": 1,
+        "gate": 1
+      },
+      "level": 6,
+      "kills": 154,
+      "elites": 1,
+      "bosses": 0,
+      "damageTaken": 100,
+      "choices": [
+        {
+          "t": 16.950000000000106,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        },
+        {
+          "t": 34.40000000000018,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 52.34999999999916,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 74.24999999999793,
+          "type": "upgrade",
+          "id": "pure",
+          "level": 1
+        },
+        {
+          "t": 118.94999999999538,
+          "type": "upgrade",
+          "id": "rain",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "gate",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 62,
+        "bullets": 37,
+        "drops": 32
+      },
+      "telemetry": {
+        "spawns": 217,
+        "despawned": 1,
+        "dropMerged": 29,
+        "autoShots": 319,
+        "itemUses": 25,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 368,
+        "charges": 73,
+        "hazards": 66
+      }
+    },
+    {
+      "seed": 60,
+      "policy": "recipe",
+      "item": "lamp",
+      "gift": "whale",
+      "ended": true,
+      "time": 229,
+      "fruitAt": null,
+      "skills": {
+        "edict": 1,
+        "gate": 2,
+        "dusk": 1,
+        "thunder": 1,
+        "body": 1,
+        "mountain": 1,
+        "armor": 1
+      },
+      "level": 8,
+      "kills": 218,
+      "elites": 2,
+      "bosses": 0,
+      "damageTaken": 112.3,
+      "choices": [
+        {
+          "t": 19.050000000000136,
+          "type": "upgrade",
+          "id": "edict",
+          "level": 1
+        },
+        {
+          "t": 35.250000000000135,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 1
+        },
+        {
+          "t": 52.19999999999917,
+          "type": "upgrade",
+          "id": "gate",
+          "level": 2
+        },
+        {
+          "t": 62.54999999999858,
+          "type": "upgrade",
+          "id": "dusk",
+          "level": 1
+        },
+        {
+          "t": 88.39999999999712,
+          "type": "upgrade",
+          "id": "thunder",
+          "level": 1
+        },
+        {
+          "t": 125.04999999999504,
+          "type": "event",
+          "id": "body",
+          "level": 1
+        },
+        {
+          "t": 126.44999999999496,
+          "type": "upgrade",
+          "id": "mountain",
+          "level": 1
+        },
+        {
+          "t": 157.45000000000155,
+          "type": "upgrade",
+          "id": "armor",
+          "level": 1
+        }
+      ],
+      "peak": {
+        "enemies": 58,
+        "bullets": 18,
+        "drops": 26
+      },
+      "telemetry": {
+        "spawns": 276,
+        "despawned": 0,
+        "dropMerged": 27,
+        "autoShots": 384,
+        "itemUses": 37,
+        "lifeUses": 0,
+        "blinkUses": 0,
+        "enemyShots": 187,
+        "charges": 54,
+        "hazards": 184
+      }
+    }
+  ]
+}

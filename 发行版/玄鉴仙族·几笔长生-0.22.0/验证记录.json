@@ -1,0 +1,100 @@
+{
+  "version": "0.22.0",
+  "regression": [
+    {
+      "suite": "core-loop",
+      "exit": 0,
+      "passed": 9,
+      "total": 9
+    },
+    {
+      "suite": "playability",
+      "exit": 0,
+      "passed": 15,
+      "total": 15
+    },
+    {
+      "suite": "training",
+      "exit": 0,
+      "passed": 12,
+      "total": 12
+    },
+    {
+      "suite": "fruit",
+      "exit": 0,
+      "passed": 10,
+      "total": 10
+    },
+    {
+      "suite": "fruit-active",
+      "exit": 0,
+      "passed": 6,
+      "total": 6
+    },
+    {
+      "suite": "rarity",
+      "exit": 0,
+      "passed": 5,
+      "total": 5
+    },
+    {
+      "suite": "dash",
+      "exit": 0,
+      "passed": 5,
+      "total": 5
+    },
+    {
+      "suite": "experience",
+      "exit": 0,
+      "passed": 10,
+      "total": 10
+    },
+    {
+      "suite": "encounters",
+      "exit": 0,
+      "passed": 18,
+      "total": 18
+    },
+    {
+      "suite": "refinement",
+      "exit": 0,
+      "passed": 8,
+      "total": 8
+    }
+  ],
+  "totalPassed": 98,
+  "readability": "readability: deterministic geometry, one dusk edge, hazards delegated: passed",
+  "browser": {
+    "errors": [],
+    "natural": {
+      "time": 24.830496666666807,
+      "level": 1,
+      "kills": 15,
+      "state": "running",
+      "primary": "light"
+    },
+    "naturalChoices": 0,
+    "constructed": [
+      "field",
+      "choice primary control",
+      "debrief"
+    ],
+    "limitations": "Natural input smoke only; late-game screenshots are injected scenarios, not a human full run."
+  },
+  "humanFullRun": "not performed",
+  "release": {
+    "version": "0.22.0",
+    "releaseEntry": true,
+    "embeddedImage": true,
+    "testHookAbsent": true,
+    "dash": true,
+    "finalAt": 675,
+    "guide": true,
+    "errors": []
+  },
+  "independent": {
+    "status": "passed",
+    "constructedChecks": 5,
+    "candidateComparison": "30 seeds x 20 choices unchanged"
+  }
+}

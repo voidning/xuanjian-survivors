@@ -1,0 +1,102 @@
+[
+  {
+    "path": "index.html",
+    "before": "114561483385123c9a7ada2f7d79340c49570651afdb2b77ef6072410fc419a7",
+    "after": "bf6a7072d3d322aa744bb5b023ce02347a5f6f0c05343f6c98ff2fbdfd6b2cbf"
+  },
+  {
+    "path": "guide.html",
+    "before": "28cc0467a459d41510edaba7ae80112d38d5ef95734b1427900e9f2513d018b0",
+    "after": "ae9ccba94a0fe328a11ce5966b54e165366f31f84cd9cb435d2689c0b6f206be"
+  },
+  {
+    "path": "tests/fruit.cjs",
+    "before": "602c7b9090e7172bf897cde046ada6909d5082f89bd6d576780b59b47f157d2e",
+    "after": "761ab8935358ddf5d39fe92d1913ce7f48200f7ce5b660b9c241412b0879b8f9"
+  },
+  {
+    "path": "tests/playability.cjs",
+    "before": "1d64830fc1b514ac32c35cb25deb18fc793eafe38e61eb435ed95be008427eaf",
+    "after": "0f8bd8df1ed77451aaa724587ba0180c2bd233a828e51d8775991fee2baebce9"
+  },
+  {
+    "path": "tests/readability.cjs",
+    "before": null,
+    "after": "0009c3ee447ef5a21d66a4f723e66ae91696925006c2cf77fa89b507e63201bb"
+  },
+  {
+    "path": "docs/设定资料库.json",
+    "before": "f54a86501da74228bb2bea320fd514d0fc580392c066b7d22609e6b48a1b85d7",
+    "after": "979779373bc9cb7c6005953d1913ab572fc47732fa28282fe057a640550a1adf"
+  },
+  {
+    "path": "docs/操作说明.md",
+    "before": "15a95558e5618efb5e3ec7bec71824fb3528bd098ff39812e5a2c6ca9e086d29",
+    "after": "4814e5a03dbde91b30b009a69e98d54e15564b1c9b1e27ed00fadcd83b0a86ae"
+  },
+  {
+    "path": "docs/0.19.0-六合敕令与战场清晰度.md",
+    "before": null,
+    "after": "6b23f4ae97da37990b91064b4a93e002389a063bb5d904c2b67d84243e55ee25"
+  },
+  {
+    "path": "docs/原作设定与游戏表现对照.md",
+    "before": "c3ab5282da2946f7be553d4fdf75952627c18fcc1360ebeab8a89ed9a3807800",
+    "after": "eb966d13cdc7ef8dff0d45ae0a6aa720323dbcb9924f61ecf40924b45c42004b"
+  },
+  {
+    "path": "styles/game-finish.css",
+    "before": "4469d932edc1457981c715640103836a68107e78c63e7133f08788c76cc25981",
+    "after": "c5d3dd358257df1d61d8a80c13896b30dcf962cfcae6e5c2cd1ae052e9ba2873"
+  },
+  {
+    "path": "scripts/feedback.js",
+    "before": "2034b00c2493343bca4300858ac5f8df3841c4d7dd31f1e4cf468c1ea4ff8233",
+    "after": "2608a00aef68e9b08f0ccac501b875f2d3b154bc644ce5c0df60387622134221"
+  },
+  {
+    "path": "scripts/game.js",
+    "before": "fdfb28ea2065ea5ca2b5f29945fb60c555bc3e2cb8a8a79cdec4333eb9d531dd",
+    "after": "be0845571cec7b670402e8a0555d0fb2fa780a7ab3c542f0c1b66a5b17fa419c"
+  },
+  {
+    "path": "scripts/guide.js",
+    "before": "e35957a385861e724b70cbde88014d4114a5a9601c34f84d380e0ca3823ae0b0",
+    "after": "72a03af7b1c9dd65e45529c7ed4545ddd34cb52905e7bd39f02e9bc3b478a9a2"
+  },
+  {
+    "path": "scripts/experience-ui.js",
+    "before": "933930fa85bb3ea4eac87f79f4a3cfa409a91b4835577b247056314dd086b494",
+    "after": "8953e13bf1de662e89acfbf33139b986032d97d21ca3564b8dfede009438ffac"
+  },
+  {
+    "path": "scripts/build-release.py",
+    "before": null,
+    "after": "8f0fcc3a9c2ad5ff64b0a16c8950d790481b5f00f3bee79c01a34287ed63d483"
+  },
+  {
+    "path": "scripts/fruit-art.js",
+    "before": "99897e1fff8b7feabc41e1fb46ea06e8344ca74c8d73b9215f66c55b2f1f6320",
+    "after": "e6a289b65563dfed2136d81a8381015031dee52793fa46283dc9c340a74e1d67"
+  },
+  {
+    "path": "scripts/lore.js",
+    "before": "585f5e551dd128afd4c61f102c4cb4afab6523413d71610453ef13b76b051397",
+    "after": "053465ac2db6682b5caf8c5b82b372cd5f6470d1c27cbe0668aca363ac067d5b"
+  },
+  {
+    "path": "scripts/content.js",
+    "before": "08946588110a0eacb932cd3afdf596ae2fb366398448a88ccb7a296c9753d5aa",
+    "after": "af4a482796c5a7fa37e5ae87f07c223334a3e68513e34cad7def160b170563b1"
+  },
+  {
+    "path": "scripts/field-event.js",
+    "before": "e944144632ff3e9593b930a3b5e686c293a2b25d40495766abee37a789868c81",
+    "after": "c3ad3899c363b4bbd3364f583d2a365040aa0c25cc06154ea2a48d909bfcc458"
+  },
+  {
+    "path": "scripts/clear-art.js",
+    "before": null,
+    "after": "bccc468e07aec659ee7e04c89ced9c16ad1233b620896f8647b6ac5c6b91f90f"
+  }
+]

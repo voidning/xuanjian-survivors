@@ -1,0 +1,73 @@
+/* 青白为底，墨青立形，旧金点睛。Presentation only; game controls remain in style.css. */
+:root{--jade:#234b47;--paper:#f0ede3;--ink:#294f43;--gold:#b0a071;--line:#b9b8a5}
+button{border-radius:2px}button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}button:active{transform:translateY(1px)}
+/* Battle HUD: dark value reserved for characters and readable information. */
+header{top:18px;left:20px;min-width:284px;padding:11px 15px 12px 66px;background:#234541f5;border:1px solid #98ac92;box-shadow:inset 0 0 0 4px #234b46,inset 0 0 0 5px #75917a;pointer-events:none}
+#portraitSlot{position:absolute;left:12px;top:12px;width:42px;height:52px}.cultivator-portrait{display:block;width:100%;height:100%}
+h1{font:600 18px 'Songti SC','STSong',serif;letter-spacing:4px;color:#ede6c9;margin-bottom:8px}h1 span{font:9px system-ui;color:#c0d3c8;letter-spacing:1px}
+#bars{width:210px;gap:12px}#bars label{font-size:11px;color:#d7e6d9}#bars label b{font-size:11px;color:#f0edd5}#bars i{height:7px;background:#142e2b;border:1px solid #7d9b86;padding:1px}#mpBar{background:#79b4ba}
+#topRight{right:20px;top:18px;padding:10px 13px;background:#234541f5;border:1px solid #98ac92;box-shadow:inset 0 0 0 3px #234b46,inset 0 0 0 4px #6c8773}
+#clock{color:#f0e6c9;font-size:24px}#clock small{color:#d0dfd2}#objective{color:#cabe95}#stats{color:#cfddd0;font-size:11px;margin-bottom:10px}
+nav button{font-size:12px;color:#e0e5cf;background:#315b51;border-color:#708971}nav button:hover{background:#436c60;color:#fff}nav kbd{color:#aebfa5}
+footer{left:20px;right:20px;bottom:15px}#resources{padding:5px 8px;background:#f0ebdef2;color:#31594b;font-size:11px;border-left:2px solid #938252}
+#actions button{background:#264f47f2;color:#eae7cd;font-size:12px;border:1px solid #a59866;padding:10px 15px}#actions button:hover{background:#3e6c5c}
+#help{color:#415e50;background:#f2eee3f0}#experience{height:7px;background:#899e83;border:1px solid #6c856d;padding:1px}#experience em{background:#d3c08a}#experience span{color:#375747;background:#f2eee3;padding:3px 7px}
+.chip{color:#edf4e5;background:#274e46f5;border:1px solid #9aa779;border-bottom:2px solid #c4af70;padding:7px 9px}.chip small,.chip .cooldown,.chip span{color:#d8e6d6}#skillChips .chip{font-size:12px;position:relative;min-height:52px;padding:8px 12px 8px 47px;border:1px solid #a5b09c;border-bottom:2px solid #829584;background:#29483ff5;box-shadow:inset 0 0 0 2px #ffffff08}
+#skillChips .skill-live.rank-s{border-color:#b6a16a;border-bottom-color:#d2b878;background:#303f3ff5}
+#skillChips .skill-emblem{position:absolute;left:7px;top:7px;width:31px;height:34px;border-right:1px solid #a9ba9b42;color:#c5d2b7}
+#skillChips .skill-emblem .dao-art{position:static;display:block;width:28px;height:28px;color:inherit;opacity:1}
+#skillChips .rank-s .skill-emblem{color:#dcc38b}
+#skillChips .skill-emblem i{position:absolute;left:-2px;bottom:-5px;font:600 9px Georgia,serif;color:#ebe0b9;background:#32463e;padding:0 2px}
+#skillChips .skill-live b{font-family:'Songti SC','STSong',serif;font-size:13px;font-weight:600;letter-spacing:.5px}
+#skillChips .skill-live small{font-size:11px;line-height:1.4;opacity:1;color:#d7dfd0}
+#skillChips .just-learned{outline:1px solid #d7c48e;outline-offset:-4px}
+#skillChips .chip em,#skillChips .chip b{color:#e1e9c7}
+#notice{top:150px;background:#264e46ee;color:#ede5c8;border:1px solid #baa572;box-shadow:0 5px 18px #1c3a3026}#bossbar{top:25px;padding:10px 13px;background:#e8e8d6ef;border:1px solid #ac7e5e}#bossbar label{color:#884e3e}#bossbar i{height:7px}#skillFeedback{background:#f1ece0f2;border-color:#a5b496;color:#345a4b}
+/* Scrolls and talisman cards: one shared set for choice, pause and journal. */
+.overlay{padding:24px;background:#183b346b;backdrop-filter:blur(5px)}#panel{width:min(980px,100%);max-height:calc(100dvh - 48px);padding:30px 34px;border-radius:2px;border:1px solid #91ab9c;border-top:4px solid var(--jade);background:var(--paper);box-shadow:inset 0 0 0 5px #e0ddcf,0 18px 70px #112f3659;scrollbar-color:#899f83 #dce1ce}
+#panel:before,#panel:after{display:none}#panel h2{font:600 32px 'Songti SC','STSong',serif;letter-spacing:4px;color:#254b40}#panel p{color:#466257}#panel .eyebrow{color:#75643f;letter-spacing:3px}
+#panel .card{position:relative;padding:22px 20px;border:1px solid #9bb5a5;border-top:3px solid #6c8d71;border-radius:2px;background:#f8f4e9;box-shadow:inset 0 0 0 3px #ebe5d7;overflow:hidden;gap:12px;transition:background .15s,border-color .15s,transform .15s}
+#panel .card:hover{background:#fcfae9;border-color:#8d7d49;transform:translateY(-3px)}#panel .card strong{font:600 24px 'Songti SC','STSong',serif;letter-spacing:2px;color:#244d44}#panel .card small{color:#73663f;font-size:11px}#panel .card .desc{font-size:13px;color:#3e5a4e;line-height:1.85}#panel .card .pick{border-color:#cbd1b9;color:#6d6039;font-size:11px}
+#panel .primary{background:#28564a;color:#efe8cb;border-color:#8c845b}#panel .primary:hover{background:#3b6c5a}.dao-art{position:absolute;right:16px;top:14px;width:44px;height:44px;color:#427b6a;opacity:.7}#panel .card:has(.dao-art)>small{padding-right:45px;min-height:26px}.skill-grade{font-family:system-ui!important}
+.choice-build-details{padding:10px 12px;background:#e6e1d4;border:1px solid #b1c7b5}.preferences,.journal{border-color:#bdc8ad}.preferences>summary,.journal>summary{color:#476047}#panel .preferences small,.journal small{color:#5d745e}.score b{color:#315b4b}select{background:#f0f4eb!important;border-color:#a9b897!important;color:#365442!important}.upgrade-detail{color:#365a46!important}.equipment-art{display:block;width:100%;height:100px}
+/* Mountain gate: title-only presentation. Existing entry actions are retained. */
+.at-title>header,.at-title>#topRight,.at-title>footer{visibility:hidden}
+.at-title .overlay{padding:0;background:#e9e2d1;backdrop-filter:none;align-items:stretch}
+.at-title #panel{position:relative;width:100%;max-width:none;max-height:100dvh;min-height:100dvh;padding:0;border:0;border-radius:0;background:#eee7d7;box-shadow:none;isolation:isolate;overflow-y:auto}
+.title-scene{position:fixed;inset:0;min-height:100%;overflow:hidden;z-index:-1;pointer-events:none;background:#eee7d7}
+.mountain-frontispiece{display:block;position:absolute;width:100%;height:100%;object-fit:cover;object-position:center;inset:0}
+.scene-caption{position:absolute;right:5%;top:10%;display:flex;flex-direction:row-reverse;gap:18px;color:#56655a;writing-mode:vertical-rl;letter-spacing:5px}.scene-caption span{font-size:10px}.scene-caption b{font:500 17px 'Songti SC',serif;letter-spacing:5px}
+.title-content{position:relative;padding:5vh 6vw 20px;max-width:1100px;min-height:100dvh;box-sizing:border-box}
+.at-title #panel .eyebrow{font:12px 'Songti SC',serif;letter-spacing:6px;color:#817151}.at-title #panel h2{font-size:clamp(48px,5.3vw,76px);letter-spacing:14px;color:#283f3c;margin:18px 0 12px;text-shadow:0 2px #fff7e8;font-weight:600}.at-title #panel .title-intro{max-width:470px;font:13px/2 'Songti SC',serif;letter-spacing:2px;color:#666553;margin:0 0 20px}
+.at-title .mode-picker{display:inline-block;padding:6px 0;margin:0 0 15px;border:0;background:none}.mode-picker label{display:flex;align-items:center;gap:16px;font-size:12px;color:#72654d}.at-title .mode-picker select{font:12px 'Songti SC',serif;padding:7px 12px;background:#f5eddb!important;color:#544e3e!important;border:1px solid #b3a17e!important;border-radius:0}
+.armory-heading{display:flex;align-items:center;gap:22px;margin:18px 0 10px;max-width:660px}.armory-heading>span{font:600 17px 'Songti SC',serif;letter-spacing:5px;color:#4f493b}.armory-heading small{font-size:10px;color:#87795d}.armory-heading:after{content:'';height:1px;flex:1;background:linear-gradient(90deg,#b2a17d,transparent)}
+.at-title .itemcards{max-height:none;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scroll-snap-type:x proximity;display:flex;flex-direction:row;flex-wrap:nowrap;gap:12px;margin:0;padding:7px 5px 14px;max-width:850px}
+.at-title #panel .itemcards .card{flex:0 0 148px;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;gap:4px;min-height:216px;padding:10px 9px 12px;border:1px solid #af9b71;border-top:3px solid #897448;background:linear-gradient(110deg,#f9f1dfeF,#e5dbc3ed);box-shadow:inset 0 0 0 4px #f7eedb,inset 0 0 0 5px #c9b993,0 8px 15px #4b453317;border-radius:0;text-align:center;overflow:visible}
+.at-title #panel .itemcards .card:hover,.at-title #panel .itemcards .card:focus-visible{background:#fff5dc;border-color:#756030;transform:translateY(-5px);box-shadow:inset 0 0 0 4px #fcf3dc,inset 0 0 0 5px #a9915c,0 12px 22px #4b453329;outline:1px solid #b29a63;outline-offset:3px}
+.itemcards .equipment-art{position:static;flex:none;width:88px;height:82px;margin:0}.weapon-copy{display:flex;flex-direction:column;align-items:center;gap:8px;flex:1}.at-title #panel .itemcards strong{font:600 19px 'Songti SC',serif;letter-spacing:1px;color:#35483f}.at-title #panel .itemcards small{font-size:10px;color:#87704a}.at-title #panel .itemcards .desc{font:10px/1.8 'Songti SC',serif;color:#6f6956;max-width:160px}.at-title #panel .itemcards .pick{border:0;border-top:1px solid #cbb890;margin-top:8px;padding:7px 12px 0;color:#76603a;display:flex;align-items:center;gap:16px;font-size:12px;letter-spacing:3px}.pick b{font-size:20px;font-weight:400}
+.at-title #panel .next-goal{font-size:11px;border:0;margin:15px 0 18px;padding:0;color:#756c56}.title-records{display:flex;gap:20px;flex-wrap:wrap;max-width:700px}.title-records .journal,.title-records .preferences{margin:0;padding:0;border:0;flex:none;min-width:0}.title-records .journal>summary,.title-records .preferences>summary{font:13px 'Songti SC',serif;color:#4a5344;padding:9px 0}.title-records .journal>summary small{font-size:10px;color:#7f7b62}.title-records details[open]{flex-basis:100%;padding:14px;background:#f5eddff5;border:1px solid #bcac89}.title-help{font-size:11px;color:#6c6c56;max-width:700px;margin:4px 0}.title-help[open]{padding:14px;background:#f5eddff5;border:1px solid #bcac89}.title-help summary{cursor:pointer;padding:6px 0}.title-help label{display:flex;gap:8px;align-items:center}.title-help input{max-width:130px}.at-title #panel .fineprint{margin:7px 0;font-size:10px}.at-title .fineprint a{border:0;background:none;padding:0;color:#83765c;box-shadow:none}
+@media(max-width:1000px){header{min-width:0;padding-left:76px}#bars{width:190px}#portraitSlot{width:49px;height:59px}#bossbar{top:137px}#notice{top:172px}.title-content{padding:5vh 5vw 24px}.at-title #panel .itemcards .card{flex-basis:140px}.scene-caption{right:3%;font-size:12px}}
+@media(max-width:680px){.overlay{padding:12px}#panel{max-height:calc(100dvh - 24px);padding:24px 18px}header{left:8px;top:8px;padding:10px;max-width:47%;min-width:0}#portraitSlot{display:none}h1{font-size:16px;letter-spacing:2px}h1 span{font-size:8px}#bars{width:100%;gap:8px}#bars label,#bars label b{font-size:9px}#topRight{right:8px;top:8px;max-width:48%;padding:10px}#clock{font-size:20px}#clock small{font-size:8px}#stats{font-size:9px}nav{gap:3px}nav button{padding:6px 5px;font-size:10px}nav kbd{display:none}footer{left:9px;right:9px}#help{display:none}#actions{flex-wrap:wrap;gap:5px}#actions button{padding:8px;font-size:10px}#panel .card{padding:17px}#panel .card strong{font-size:22px}#panel .card .desc{font-size:12px}#bossbar{top:135px}#notice{top:180px;max-width:85%}.at-title #panel{padding:0;max-height:100dvh}.title-content{padding:35px 20px 20px}.at-title #panel h2{font-size:48px;letter-spacing:8px}.scene-caption{display:none}.at-title #panel .title-intro{font-size:11px;max-width:300px}.at-title .itemcards{gap:9px}.at-title #panel .itemcards .card{flex:0 0 138px;min-height:210px;padding:9px 7px}.itemcards .equipment-art{width:80px;height:86px}.at-title #panel .itemcards strong{font-size:20px;letter-spacing:1px}.at-title #panel .itemcards small{font-size:9px}.at-title #panel .itemcards .desc{font-size:9px}.at-title #panel .itemcards .pick{font-size:10px;gap:4px}.title-records{gap:10px}.title-records .journal>summary small{display:none}}
+@media(prefers-reduced-motion:reduce){button,#panel .card{transition:none!important;transform:none!important}}.reduce-effects button,.reduce-effects #panel .card{transition:none!important;transform:none!important}
+
+/* 0.14: build decisions use the existing paper-and-ink treatment. */
+.fit-note{display:block;font:12px/1.65 system-ui;padding:8px 9px;border-left:2px solid #99815b;background:#f1ebdd;color:#685633}
+.fit-good{border-color:#6a897a;background:#e8eee7;color:#3e6555}
+.mana-context{margin:10px 0;font-size:12px;color:#50645c}
+.primary-picker{margin-top:16px}.primary-help{font-size:12px;margin:8px 0 18px;color:#5d6b61}
+.event-pause{padding:10px 14px;border:1px solid #c8bea2;background:#f1eedf}.event-pause p{font-size:12px;margin:0 0 8px}
+#fieldEvent{max-width:270px;margin-top:10px;padding-top:9px;border-top:1px solid #a59d78;text-align:right;color:#ece7cc;line-height:1.5}
+#fieldEvent[hidden]{display:none}#fieldEvent b,#fieldEvent span,#fieldEvent small{display:block}#fieldEvent b{font-size:12px;font-weight:500}#fieldEvent span{font-size:11px}#fieldEvent small{font-size:10px;opacity:.85}
+.run-tactics{font-size:12px;color:#506354}
+@media(max-width:600px){#fieldEvent{max-width:175px}#fieldEvent b{font-size:11px}#fieldEvent small{font-size:9px}}
+body.has-field-event #skillFeedback{top:330px;max-height:calc(100vh - 490px)}
+#fieldEvent small{color:#e7dfc8;opacity:1}
+
+/* 0.19.0: compact, high-contrast HUD grades, separate from mastery ranks. */
+#skillChips .skill-live{padding-left:12px}
+#skillChips .skill-grade{font:700 11px/1.4 system-ui!important;padding:0 4px;margin-right:6px;background:transparent;border:0;border-right:1px solid #789487;border-radius:0;letter-spacing:0}
+#skillChips .skill-grade.grade-s{color:#f1cf7f}
+#skillChips .skill-grade.grade-a{color:#b9dce7}
+#skillChips .skill-grade.grade-b{color:#d5e2ca}
+
+#actions #fruitAction{border-color:#bfa35d;color:#f2dd9f;min-width:180px}#actions #fruitAction.action-ready{background:#6c592d;color:#fff2c6;border-color:#ebcd80;box-shadow:inset 0 -3px #c5a250}

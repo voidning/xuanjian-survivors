@@ -1,0 +1,28 @@
+{
+  "method": "offline release real input short smoke; desktop/mobile card, HUD, 19 book grades, pause, guide; no injected progression",
+  "results": [
+    {
+      "width": 1280,
+      "grades": [
+        "B级雉离行",
+        "B级清夕雨",
+        "A级镂金石"
+      ],
+      "testHook": false,
+      "version": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "grades": [
+        "B级雉离行",
+        "A级镂金石",
+        "B级清夕雨"
+      ],
+      "testHook": false,
+      "version": true,
+      "overflow": false
+    }
+  ],
+  "errors": []
+}

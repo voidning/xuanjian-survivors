@@ -1,0 +1,26 @@
+{
+  "passed": 5,
+  "total": 5,
+  "results": [
+    {
+      "name": "all five weapons dash from start, normalized distance, no mana or invulnerability or fruit damage",
+      "pass": true
+    },
+    {
+      "name": "cooldown blocks repeat, freezes in paused/choice/ended and ends in six running seconds",
+      "pass": true
+    },
+    {
+      "name": "map clamp, no-op wall preserves cooldown, invalid inputs/death rejected",
+      "pass": true
+    },
+    {
+      "name": "dusk E remains independent and universal dash does not recall allies or create damage",
+      "pass": true
+    },
+    {
+      "name": "restart resets cooldown, no target default direction remains available",
+      "pass": true
+    }
+  ]
+}
