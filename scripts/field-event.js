@@ -89,7 +89,7 @@ Run.prototype.hit=function(q,n,ignore=false){
 };
 const baseEnd=Run.prototype.end;
 Run.prototype.end=function(reason){
- if(this.state==='ended')return;baseEnd.call(this,reason);this.result.version='0.31.0';this.result.primarySkill=this.primarySkill||null;
+ if(this.state==='ended')return;baseEnd.call(this,reason);this.result.version='0.32.0';this.result.primarySkill=this.primarySkill||null;
  this.result.fieldEvent=this.fieldEvent?snapshot(this.fieldEvent):null;
  this.result.fieldHistory=[...(this.fieldHistory||[])];if(live(this.fieldEvent))this.result.fieldHistory.push(snapshot(this.fieldEvent));
 };

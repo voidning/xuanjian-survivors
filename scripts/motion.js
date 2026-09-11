@@ -1,9 +1,10 @@
 /* Visual-only brush feedback. Uses simulation time; no random draws or combat changes. */
 (function(root){'use strict';
+const handledKinds=new Set(['inkImpact','inkFall','sword','bow','mastery','fruit','bossArrival','bossDefeat']),ceremonyKinds=new Set(['mastery','fruit','bossArrival','bossDefeat']);
 function effect(c,run,f,line,oval,label,reduced){
- if(!['inkImpact','inkFall','sword','bow','mastery','fruit','bossArrival','bossDefeat'].includes(f.kind))return false;
+ if(!handledKinds.has(f.kind))return false;
  const q=Math.min(1,f.age/f.life),fade=1-q;c.save();c.globalAlpha*=fade;
- if(['mastery','fruit','bossArrival','bossDefeat'].includes(f.kind)){
+ if(ceremonyKinds.has(f.kind)){
   const hostile=f.kind==='bossArrival'||f.kind==='bossDefeat',col=hostile?'#9a6958':f.dao==='渌水'?'#648e89':'#a38c4f';
   const open=reduced?1:Math.min(1,q*4),r=f.r*(.65+.35*open),turn=reduced?0:q*.12;
   c.globalAlpha=hostile?.75*fade:Math.min(1,q*7)*fade;

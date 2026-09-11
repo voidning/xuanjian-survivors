@@ -14,6 +14,7 @@ function hud(run){const e=run?.fieldEvent;if(!FieldEvent.live(e))return '';const
  if(e.kind==='hold')task=(d<def.radius?'据守 ':'离圈暂歇 · ')+progress(e);
  if(e.kind==='trial'&&e.status==='active')task='击破旗记守卫 '+progress(e);
  if(e.kind==='chase'&&e.status==='active')task='追击旗记目标';
+ if(root.XJMobile?.matches)return `<b>${def.name} · ${Math.ceil(Math.max(0,e.deadline-run.t))}秒 ${arrow}${Math.round(d)}步</b>`;
  return `<b>${def.name} · ${Math.ceil(Math.max(0,e.deadline-run.t))} 秒</b><span>${arrow} ${Math.round(d)} 步 · ${task}</span>${['cache','hold'].includes(e.kind)?`<div class="encounter-track" aria-label="${task}"><i style="width:${100*(e.progress||0)/def.goal}%"></i></div>`:''}<small>${def.reward} · 可绕开 / P 放弃</small>`;}
 function world(c,run,line,oval,label){const e=run.fieldEvent;if(!FieldEvent.live(e))return;const def=FieldEvent.info(e),inside=dist(e,run.p)<def.radius,col=inside?'#406d5a':'#867146';c.save();
  if(e.kind==='cache'){line([[e.x-14,e.y-5],[e.x,e.y-22],[e.x+14,e.y-5],[e.x+11,e.y+6],[e.x-11,e.y+6],[e.x-14,e.y-5]],col,2.5);line([[e.x-11,e.y-4],[e.x+11,e.y-4],[e.x,e.y+6]],col,1.5);}

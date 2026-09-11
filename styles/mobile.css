@@ -1,0 +1,26 @@
+/* 0.32 · Keep the battlefield clear; full readouts are available while paused. */
+.mobile-battle header{top:calc(8px + env(safe-area-inset-top));left:calc(8px + env(safe-area-inset-left));width:calc(100% - 148px - env(safe-area-inset-left) - env(safe-area-inset-right));max-width:230px;min-width:0;padding:8px 10px;box-shadow:none;border:1px solid #8c9b81}
+.mobile-battle header:after,.mobile-battle header:before,.mobile-battle #portraitSlot,.mobile-battle header h1{display:none}
+.mobile-battle #bars{width:100%;gap:10px}.mobile-battle #bars>div{width:50%;min-width:0}
+.mobile-battle #bars label{font-size:11px;line-height:1.3}.mobile-battle #bars label b{float:none;display:block;font-size:12px;white-space:nowrap;line-height:1.5}.mobile-battle #bars i{margin-top:3px}
+.mobile-battle #topRight{top:calc(8px + env(safe-area-inset-top));right:calc(8px + env(safe-area-inset-right));width:124px;max-width:none;padding:0;background:none;border:0;box-shadow:none;display:flex;align-items:center;gap:6px}
+.mobile-battle #topRight:before,.mobile-battle #topRight:after,.mobile-battle #clock small,.mobile-battle #objective,.mobile-battle #stats,.mobile-battle nav #book,.mobile-battle nav #mute{display:none}
+.mobile-battle #clock{font:12px system-ui;color:#304b40;letter-spacing:0;white-space:nowrap;background:#f1ead9e8;padding:3px;border-radius:2px}
+.mobile-battle nav{display:block}.mobile-battle nav #pause{min-height:44px;width:76px;padding:4px;font-size:12px;white-space:normal;line-height:1.4}
+.mobile-battle #loadout,.mobile-battle #help,.mobile-battle #skillFeedback{display:none!important}
+.mobile-battle footer{left:calc(8px + env(safe-area-inset-left));right:calc(8px + env(safe-area-inset-right));bottom:calc(8px + env(safe-area-inset-bottom));max-width:none}
+.mobile-battle .footline{margin:0 0 20px;display:block}
+.mobile-battle #actions{display:flex;justify-content:flex-end;flex-wrap:nowrap;overflow-x:auto;gap:6px;max-width:100%;scrollbar-width:thin;overscroll-behavior-x:contain;touch-action:pan-x}
+.mobile-battle #actions button{flex:0 0 auto;max-width:152px;min-width:76px;min-height:48px;font-size:12px;padding:7px 10px;line-height:1.4;white-space:normal;box-shadow:none}
+.mobile-battle #experience{height:4px}.mobile-battle #experience span{font-size:11px;bottom:6px;padding:1px 4px;background:#f1ead9e8;color:#304b40}
+.mobile-battle #bossbar{top:calc(82px + env(safe-area-inset-top));width:min(240px,70vw);pointer-events:none}.mobile-battle #bossbar label{font-size:11px}
+.mobile-battle #notice{top:auto;bottom:calc(94px + env(safe-area-inset-bottom));max-width:calc(100% - 32px);width:max-content;font-size:12px;line-height:1.5;padding:6px 9px;letter-spacing:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;box-shadow:none}
+.mobile-battle #fieldEvent{position:fixed;top:calc(57px + env(safe-area-inset-top));right:calc(8px + env(safe-area-inset-right));max-width:124px;padding:3px 5px;margin:0;border:0;pointer-events:none;background:#f1ead9e8}
+.mobile-battle #fieldEvent span,.mobile-battle #fieldEvent small,.mobile-battle #fieldEvent .encounter-track{display:none}.mobile-battle #fieldEvent b{font-size:11px;line-height:1.4;color:#304b40}
+.mobile-battle .overlay{padding:10px;padding-top:calc(10px + env(safe-area-inset-top));padding-bottom:calc(10px + env(safe-area-inset-bottom));backdrop-filter:none}
+.mobile-battle #panel{max-height:calc(100dvh - 20px - env(safe-area-inset-top) - env(safe-area-inset-bottom));overscroll-behavior:contain}
+.mobile-battle.in-menu header,.mobile-battle.in-menu #topRight,.mobile-battle.in-menu footer,.mobile-battle.in-menu #bossbar,.mobile-battle.in-menu #notice{visibility:hidden}
+.mobile-battle #bars em,.mobile-battle #experience em{transition:none}
+.mobile-battle .mobile-battle-details p{font-size:13px}.mobile-battle .mobile-battle-details summary{min-height:44px;padding:12px 0;cursor:pointer}
+.mobile-battle #fieldEvent{top:calc(73px + env(safe-area-inset-top));left:calc(8px + env(safe-area-inset-left));right:auto;max-width:230px}
+.mobile-battle.has-field-event #bossbar{top:calc(103px + env(safe-area-inset-top))}

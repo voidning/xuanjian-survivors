@@ -1,13 +1,16 @@
 /* S-grade presentation only. Existing effect lifetimes/radii remain authoritative. */
 (function(root){'use strict';
 const TAU=Math.PI*2;
+const effectKinds=new Set(['light','thunder','spring','dew','anglerCast','perilRise','zhimingAwaken','zhimingStrike','zhimingSeal']);
+let crowdRun=null,crowdTime=-1,crowded=false;
+function hasCrowdedEffects(run){if(run!==crowdRun||run.t!==crowdTime){let count=0;run.fx.forEach(e=>{if(e.kind!=='zhimingSeal'&&effectKinds.has(e.kind))count++;});crowdRun=run;crowdTime=run.t;crowded=count>3;}return crowded;}
 function arc(c,x,y,r,a,b,color,w,alpha=1){c.save();c.globalAlpha*=alpha;c.strokeStyle=color;c.lineWidth=w;c.beginPath();c.arc(x,y,r,a,b);c.stroke();c.restore();}
 function facet(c,points,color,alpha=1){c.save();c.globalAlpha*=alpha;c.beginPath();points.forEach((p,i)=>i?c.lineTo(...p):c.moveTo(...p));c.closePath();c.fillStyle=color;c.fill();c.restore();}
 function flame(c,x,y,size,lean=0){c.save();c.translate(x,y);c.scale(size,size);c.beginPath();c.moveTo(-8,7);c.bezierCurveTo(-20,-7,6+lean,-19,2+lean,-42);c.bezierCurveTo(23,-23,4,-14,13,-7);c.bezierCurveTo(19,13,-3,19,-8,7);c.fillStyle='#48444f';c.fill();c.strokeStyle='#a18b62';c.lineWidth=1.4;c.stroke();c.beginPath();c.moveTo(-3,6);c.quadraticCurveTo(-8,-3,5,-22);c.quadraticCurveTo(1,-5,7,1);c.quadraticCurveTo(8,11,-3,6);c.fillStyle='#c7ad72';c.fill();c.restore();}
 function effect(c,run,f,line,oval,label,reduced){
-const kinds=['light','thunder','spring','dew','anglerCast','perilRise','zhimingAwaken','zhimingStrike','zhimingSeal'];if(!kinds.includes(f.kind))return false;
+if(!effectKinds.has(f.kind))return false;
 const q=Math.min(1,f.age/f.life),t=reduced?.45:1-Math.pow(1-q,3),fade=reduced?Math.min(1,(1-q)*3):Math.sin(Math.PI*Math.min(1,q*1.6))*.35+(1-q)*.65;
-const crowded=run.fx.list().filter(e=>kinds.includes(e.kind)&&e.kind!=='zhimingSeal').length>3;c.save();c.globalAlpha*=Math.max(0,fade)*(crowded?.72:1);const x=f.x,y=f.y,r=f.r;
+const crowded=hasCrowdedEffects(run);c.save();c.globalAlpha*=Math.max(0,fade)*(crowded?.72:1);const x=f.x,y=f.y,r=f.r;
 if(f.kind==='light'){
 // Six broken gates leave the centre open; no full-screen wash.
 for(let i=0;i<6;i++){const a=i*TAU/6,R=r*(.35+.65*t),px=x+Math.cos(a)*R,py=y+Math.sin(a)*R;c.save();c.translate(px,py);c.rotate(a+Math.PI/2);facet(c,[[-15,-16],[15,-16],[12,-9],[-12,-9]],'#b99a58',.8);facet(c,[[-12,-9],[-7,-9],[-7,10],[-12,14]],'#d4bd80',.65);facet(c,[[7,-9],[12,-9],[12,14],[7,10]],'#907446',.65);line([[-12,9],[-12,-10],[12,-10],[12,9]],'#9b834a',2);line([[-17,-14],[17,-14]],'#d6c48a',2.5);line([[-6,-7],[-6,4],[6,4],[6,-7]],'#faf0c6',1.4);c.restore();arc(c,x,y,R-5,a+.14,a+.72,'#d6ba72',reduced?3:7,.16);arc(c,x,y,R,a+.12,a+.8,'#aa9253',1.7,.75);if(!reduced)line([[x+Math.cos(a)*R*.7,y+Math.sin(a)*R*.7],[px,py]],'#d0bb7c',1,.45);}
