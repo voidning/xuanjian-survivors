@@ -3,7 +3,7 @@ from pathlib import Path
 import re,sys,base64,mimetypes
 root=Path(__file__).resolve().parents[1]
 version=re.search(r"this.result.version='([^']+)'",(root/'scripts/field-event.js').read_text()).group(1)
-assert len(list((root/'docs').glob(version+'-*.md')))==1,'A unique changelog is required outside the release'
+assert len(list((root/'docs/versions').glob(version+'-*.md')))==1,'A unique changelog is required outside the release'
 out=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else root/'发行版'
 dest=out/('玄鉴仙族·几笔长生-'+version);dest.mkdir(parents=True,exist_ok=True)
 assert all(p.name=='index.html' for p in dest.iterdir()),'Release folder must contain only index.html'
