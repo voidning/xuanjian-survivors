@@ -3,7 +3,7 @@
 const X=typeof module!=='undefined'?require('./medicine.js'):root.XJ;
 const {Run,SKILLS,TRAINING}=X;
 const routes=[{id:'mingyang',name:'明阳',ids:['gate','body','edict','dusk','light']},{id:'lushui',name:'渌水',ids:['spring','muddle','conceal','rain','dew']},{id:'lihuo',name:'离火',ids:['dali','fireNet','fireMarch','liMandate','fireWhole']},{id:'duijin',name:'兑金',ids:['metalEdge','metalCourt','metalBlades','metalHeart','metalTrust']}];
-X.Cultivation=Object.freeze({version:'0.32.0',routes:routes.map(r=>Object.freeze({...r,ids:Object.freeze(r.ids)})),requirements:Object.freeze([7,11,15,20,24])});
+X.Cultivation=Object.freeze({version:'0.33.0',routes:routes.map(r=>Object.freeze({...r,ids:Object.freeze(r.ids)})),requirements:Object.freeze([7,11,15,20,24])});
 Run.prototype.pathSkills=function(){const ids=routes.filter(r=>!this.dao||r.id===this.dao).flatMap(r=>r.ids);return ids.map(id=>SKILLS.find(s=>s.id===id));};
 Run.prototype.masteredCount=function(){return this.pathSkills().filter(s=>this.lv(s.id)===3).length;};
 Run.prototype.breakthroughNeed=function(){return X.Cultivation.requirements[Math.min(4,this.masteredCount())];};
@@ -71,6 +71,6 @@ Run.prototype.choose=function(i){const id=this.choices[i],kind=this.choiceKind,i
  if(kind==='opening')this.foundationStarter=id;this.updateRealm();return true;
 };
 const end=Run.prototype.end;
-Run.prototype.end=function(reason){if(this.state==='ended')return;end.call(this,reason);Object.assign(this.result,{dao:this.dao,realm:this.realm,masteredCount:this.masteredCount(),realmHistory:(this.realmHistory||[]).map(x=>({...x})),version:'0.32.0'});};
+Run.prototype.end=function(reason){if(this.state==='ended')return;end.call(this,reason);Object.assign(this.result,{dao:this.dao,realm:this.realm,masteredCount:this.masteredCount(),realmHistory:(this.realmHistory||[]).map(x=>({...x})),version:'0.33.0'});};
 if(typeof module!=='undefined')module.exports=X;
 })(typeof globalThis!=='undefined'?globalThis:this);
