@@ -79,7 +79,7 @@ function confirm(){if(!active||!Number.isInteger(active.selectedIndex))return fa
 function canDefer(run){return typeof run?.deferGift==='function'&&definitions().some(entry=>entry.id==='greed'&&!isAvailable(run,entry));}
 function defer(){if(!active||!canDefer(active.run))return false;const callback=active.onDefer,run=active.run;active=null;if(typeof callback==='function')callback(run);else run.deferGift();return true;}
 function pause(run){const entry=run?.gift?details(run,run.gift):null;return `<details class="gift-pause" ${entry?'open':''}><summary>箓气 · ${esc(entry?.name||'尚未受箓')}</summary>${entry?detailBody(entry,run):'<p>首次击败精英后可从所有已开放箓气中择一。</p>'}</details>`;}
-function catalog(run){return `<section class="gift-catalog" data-gift-catalog><div class="gift-catalog-head"><h3>箓气</h3><p>十箓分栏查阅；本局只能受一道，不占神通槽。</p></div><div data-gift-catalog-body></div></section>`;}
+function catalog(run){return `<section class="gift-catalog" data-gift-catalog><div class="gift-catalog-head"><h3>箓气</h3><p>六箓查阅；本局只能受一道，不占神通槽。</p></div><div data-gift-catalog-body></div></section>`;}
 function catalogStatus(run,entry){if(entry.id===run?.gift)return '已受箓';if(run?.gift)return '本局不可改换';if(entry.status!=='active')return statusText(entry.status);return isAvailable(run,entry)?'本局可选':'条件未满足';}
 function mountCatalog(container,run){
  const host=container?.querySelector?.('[data-gift-catalog]');if(!host)return false;

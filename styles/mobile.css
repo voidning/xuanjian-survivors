@@ -24,3 +24,6 @@
 .mobile-battle .mobile-battle-details p{font-size:13px}.mobile-battle .mobile-battle-details summary{min-height:44px;padding:12px 0;cursor:pointer}
 .mobile-battle #fieldEvent{top:calc(73px + env(safe-area-inset-top));left:calc(8px + env(safe-area-inset-left));right:auto;max-width:230px}
 .mobile-battle.has-field-event #bossbar{top:calc(103px + env(safe-area-inset-top))}
+/* A notice must remain content-sized when a field encounter is active. */
+body.mobile-battle #notice,body.mobile-battle.has-field-event #notice{top:auto;bottom:calc(94px + env(safe-area-inset-bottom));left:50%;right:auto;transform:translateX(-50%);height:auto;min-height:0;max-height:50px;max-width:calc(100% - 32px);padding:6px 9px}
+body.mobile-battle.has-field-event #bossbar{top:calc(103px + env(safe-area-inset-top))}

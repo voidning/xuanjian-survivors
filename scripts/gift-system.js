@@ -19,9 +19,11 @@ const baseMeta={
 for(const d of X.GIFTS){const m=baseMeta[d.id];if(m)Object.assign(d,{tier:m[0],category:m[1],fact:m[2],source:'季越人《玄鉴仙族》：'+m[3],boundary:'数值与持续时间为局内战斗抽象。'});}
 Object.assign(X.GIFTS.find(d=>d.id==='sparrow'),{role:'见血悍勇 · 腾挪',desc:'常态移速 +6%；自身受伤或对 150 范围内敌人造成有效伤害，激发 5 秒悍勇：移速 +20%、伤害 +25%。每 8 秒至多触发一次。'});
 for(const d of additions)X.GIFTS.push(d);
-const definitions=X.GIFTS.filter(d=>d.id!=='firegift');
-function available(run,d){if(typeof d==='string')d=definitions.find(x=>x.id===d);if(!d||d.pending)return false;if(d.id==='might')return ['sword','bow','spear','dasheng'].includes(run.item);if(d.id==='greed')return run.dao==='lihuo'&&run.lv('dali')===3;return true;}
-X.GiftSystem={definitions,entries:definitions,get:id=>definitions.find(d=>d.id===id),available,summary(run){if(!run.gift)return '尚未受箓 · 每局一箓';const d=this.get(run.gift);return d?d.name+' · '+d.desc:'';},stats(run){return {...(run.giftStats||{})};}};
+const retained=['whale','life','sparrow','rainbow','frostpine','greed'];
+const historical=X.GIFTS.filter(d=>d.id!=='firegift');
+const definitions=historical.filter(d=>retained.includes(d.id));
+function available(run,d){if(typeof d==='string')d=definitions.find(x=>x.id===d);if(!d||d.pending||!retained.includes(d.id))return false;if(d.id==='might')return ['sword','bow','spear','dasheng'].includes(run.item);if(d.id==='greed')return run.dao==='lihuo'&&run.lv('dali')===3;return true;}
+X.GiftSystem={definitions,entries:definitions,get:id=>historical.find(d=>d.id===id),available,summary(run){if(!run.gift)return '尚未受箓 · 每局一箓';const d=this.get(run.gift);return d?d.name+' · '+d.desc:'';},stats(run){return {...(run.giftStats||{})};}};
 Run.prototype.deferGift=function(){if(this.state!=='choice'||this.choiceKind!=='gift'||this.gift)return false;this.choices=[];this.choiceKind=null;this.giftPending=false;this.state='running';this.p.inv=Math.max(this.p.inv,.65);this.notice('暂缓受箓 · 下次击败精英或首领时再选');this.nextChoice();return true;};
 Run.prototype.giftPulse=function(id,x=this.p.x,y=this.p.y){this.effect('giftPulse',x,y,30,.45,{gift:id});};
 Run.prototype.giftCount=function(key,n=1){this.giftStats??={};this.giftStats[key]=(this.giftStats[key]||0)+n;};
