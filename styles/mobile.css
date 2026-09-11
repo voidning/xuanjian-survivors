@@ -27,3 +27,8 @@
 /* A notice must remain content-sized when a field encounter is active. */
 body.mobile-battle #notice,body.mobile-battle.has-field-event #notice{top:auto;bottom:calc(94px + env(safe-area-inset-bottom));left:50%;right:auto;transform:translateX(-50%);height:auto;min-height:0;max-height:50px;max-width:calc(100% - 32px);padding:6px 9px}
 body.mobile-battle.has-field-event #bossbar{top:calc(103px + env(safe-area-inset-top))}
+
+/* Named opponent keeps one compact cue; landscape top centre leaves the arena clear. */
+body.mobile-battle #bossbar.duel-boss{padding:7px 10px}
+body.mobile-battle #bossbar.duel-boss label{font-size:11px;letter-spacing:0;white-space:nowrap}
+@media (orientation:landscape) and (max-height:500px){body.mobile-battle #bossbar.duel-boss,body.mobile-battle.has-field-event #bossbar.duel-boss{top:calc(8px + env(safe-area-inset-top));width:230px}}

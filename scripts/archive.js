@@ -4,10 +4,13 @@ const KEY='jibichangsheng.archive.v1',items=root.XJ.ITEMS.map(i=>i.id),fruits=['
 const markIds=['firstElite','firstMastery','firstBoss','firstWin',...fruits.map(x=>'fruit:'+x),...items.map(x=>'win:'+x),...skills.map(x=>'master:'+x)];
 const fresh=()=>({schema:1,records:[],marks:[],best:{standard:{},endless:{}}});
 const number=x=>typeof x==='number'&&Number.isFinite(x)?Math.max(0,Math.min(1e10,x)):0;
+function duelDefinitions(){const all=Array.isArray(root.XJ.Duels)?root.XJ.Duels:[root.XJ.Duel];return all.filter((d,i)=>d&&typeof d.id==='string'&&all.findIndex(x=>x?.id===d.id)===i);}
 function cleanEvent(e){if(!e||!['pine','stele','creek'].includes(e.site)||!['available','active','completed','expired','abandoned'].includes(e.status))return null;
  const out={site:e.site,status:e.status,kills:Math.min(3,Math.floor(number(e.kills)))};
  if(['trial','cache','hold','chase'].includes(e.kind)){out.kind=e.kind;out.progress=Math.min(10,number(e.progress));out.at=number(e.at);}return out;}
 function cleanLoop(d){if(!d||typeof d!=='object')return null;const out={manaWait:number(d.manaWait),routes:{},formedAt:{}};for(const id of fruits){const m=d.routes?.[id];if(m&&typeof m==='object'){out.routes[id]={};for(const k of ['opportunities','trainingDeferrals','otherDeferrals','offersWithoutTarget','dry','longestDry'])out.routes[id][k]=Math.floor(number(m[k]));}if(typeof d.formedAt?.[id]==='number'&&Number.isFinite(d.formedAt[id]))out.formedAt[id]=number(d.formedAt[id]);}return out;}
+function cleanDuelHistory(history){const ids=new Set(duelDefinitions().map(d=>d.id));if(!ids.size||!Array.isArray(history))return [];const valid=history.map((e,index)=>{if(!e||!ids.has(e.id)||![1,2].includes(e.phase))return null;const at=number(e.at),defeated=typeof e.defeatedAt==='number'&&Number.isFinite(e.defeatedAt)&&e.defeatedAt>=0?number(e.defeatedAt):null;return {entry:{id:e.id,at,defeatedAt:defeated!==null&&defeated>=at?defeated:null,phase:e.phase},index};}).filter(Boolean),keep=new Set();for(const id of ids)for(const x of valid.filter(x=>x.entry.id===id).slice(-12))keep.add(x);return valid.filter(x=>keep.has(x)).map(x=>x.entry);}
+function mergeDuelHistory(a,b){const merged=[],positions=new Map();for(const e of [...cleanDuelHistory(a),...cleanDuelHistory(b)]){const key=e.id+'\n'+e.at,at=positions.get(key);if(at===undefined){positions.set(key,merged.length);merged.push(e);}else merged[at]={...merged[at],phase:Math.max(merged[at].phase,e.phase),defeatedAt:e.defeatedAt===null?merged[at].defeatedAt:e.defeatedAt};}return cleanDuelHistory(merged);}
 function cleanRecord(r){if(!r||typeof r.id!=='string'||r.id.length>80||!items.includes(r.item))return null;
  const out={id:r.id,item:r.item,time:number(r.time),kills:number(r.kills),won:r.won===true,mode:r.mode==='standard'?'standard':'endless'};
  if(Number.isInteger(r.seed)&&r.seed>=0&&r.seed<=4294967295)out.seed=r.seed;
@@ -25,6 +28,7 @@ function cleanRecord(r){if(!r||typeof r.id!=='string'||r.id.length>80||!items.in
  if(r.fieldEvent===null)out.fieldEvent=null;
  else if(cleanEvent(r.fieldEvent))out.fieldEvent=cleanEvent(r.fieldEvent);
  if(Array.isArray(r.fieldHistory))out.fieldHistory=r.fieldHistory.slice(-48).map(cleanEvent).filter(Boolean);
+ if(Array.isArray(r.duelHistory))out.duelHistory=cleanDuelHistory(r.duelHistory);
  if(r.fruits&&typeof r.fruits==='object')out.fruits=Object.fromEntries(fruits.filter(id=>r.fruits[id]===true).map(id=>[id,true]));
  for(const id of ['level','elites','bosses'])if(typeof r[id]==='number')out[id]=number(r[id]);
  if(Number.isSafeInteger(r.endedAt)&&r.endedAt>=0&&r.endedAt<=8640000000000000)out.endedAt=r.endedAt;
@@ -44,9 +48,9 @@ function record(run){const r=run.result;if(!r)return null;if(receipts.has(r))ret
  if(r.elites>0)data.marks.push('firstElite');if(r.bosses>0)data.marks.push('firstBoss');
  for(const skill of skills)if(r.skills?.[skill]===3)data.marks.push('firstMastery','master:'+skill);
  if(r.reason==='破阵功成')data.marks.push('firstWin','win:'+r.item);for(const f of fruits)if(r.fruits?.[f])data.marks.push('fruit:'+f);data.marks=[...new Set(data.marks)];
- const summary=cleanRecord({...r,id,won:r.reason==='破阵功成',endedAt:Date.now()}),old=data.records.find(x=>x.id===id);if(old)Object.assign(old,summary);else data.records.push(summary);data.records=data.records.slice(-500);write();
+ const summary=cleanRecord({...r,id,won:r.reason==='破阵功成',endedAt:Date.now()}),old=data.records.find(x=>x.id===id);if(old){const duelHistory=mergeDuelHistory(old.duelHistory,summary.duelHistory);Object.assign(old,summary);if(old.duelHistory||summary.duelHistory)old.duelHistory=duelHistory;}else data.records.push(summary);data.records=data.records.slice(-500);write();
  const receipt={marks:data.marks.filter(x=>!before.has(x)),bestTime,bestKills};receipts.set(r,receipt);return receipt;}
-function merge(raw){const other=clean(raw),map=new Map(data.records.map(r=>[r.id,r]));for(const r of other.records){const old=map.get(r.id);if(!old)map.set(r.id,r);else{const later=r.time>=old.time?r:old,earlier=later===r?old:r;map.set(r.id,{...earlier,...later,kills:Math.max(old.kills,r.kills),won:old.won||r.won});}}
+function merge(raw){const other=clean(raw),map=new Map(data.records.map(r=>[r.id,r]));for(const r of other.records){const old=map.get(r.id);if(!old)map.set(r.id,r);else{const later=r.time>=old.time?r:old,earlier=later===r?old:r,duelHistory=mergeDuelHistory(earlier.duelHistory,later.duelHistory),combined={...earlier,...later,kills:Math.max(old.kills,r.kills),won:old.won||r.won};if(old.duelHistory||r.duelHistory)combined.duelHistory=duelHistory;map.set(r.id,combined);}}
  data.records=[...map.values()].sort((a,b)=>(a.endedAt||0)-(b.endedAt||0)).slice(-500);data.marks=[...new Set([...data.marks,...other.marks])];
  for(const mode of ['standard','endless'])for(const item of items){const a=data.best[mode][item]||{time:0,kills:0},b=other.best[mode][item]||{time:0,kills:0};data.best[mode][item]={time:Math.max(a.time,b.time),kills:Math.max(a.kills,b.kills)};}write();}
 function exportFile(){const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='几笔长生-修行录.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}

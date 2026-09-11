@@ -51,7 +51,7 @@ for(const dao of daos)for(const item of ITEMS.filter(x=>x.id!=='screen'&&(!proce
   }
   r.step(.05,input);
  }
- runs.push({dao,realm:r.realm,realmHistory:r.realmHistory,item:item.id,seed,time:+r.t.toFixed(1),reason:r.result?.reason||'time limit',kills:r.kills,level:r.level,maxSkills,skills:r.skills,training:r.trainingSnapshot(),fruits:r.fruits,damageTaken:r.damageTaken,healed:r.healed,casts:r.skillCasts||{},manaWait:r.loopSummary().manaWait,damageLog:r.damageLog,metrics:r.audit,decisions});
+ runs.push({dao,realm:r.realm,realmHistory:r.realmHistory,item:item.id,seed,time:+r.t.toFixed(1),reason:r.result?.reason||'time limit',kills:r.kills,level:r.level,maxSkills,skills:r.skills,training:r.trainingSnapshot(),fruits:r.fruits,damageTaken:r.damageTaken,healed:r.healed,casts:r.skillCasts||{},manaWait:r.loopSummary().manaWait,damageLog:r.damageLog,duelHistory:r.duelHistory||[],duelCasts:r.telemetry.duelCasts||{},metrics:r.audit,decisions});
  process.stderr.write(dao+' '+item.id+' '+seed+': '+r.t.toFixed(1)+'s '+(r.result?.reason||'limit')+' skills='+maxSkills+'\n');
 }
 assert(runs.every(r=>r.maxSkills<=5&&Object.keys(r.fruits).length===0));

@@ -1,0 +1,845 @@
+{
+  "version": "0.35.0",
+  "date": "2026-09-11",
+  "contracts": {
+    "contracts": {
+      "passed": 12,
+      "total": 12
+    },
+    "yehui-regression": {
+      "passed": 11,
+      "total": 11
+    },
+    "cultivation": {
+      "passed": 8,
+      "total": 8
+    },
+    "dash": {
+      "passed": 5,
+      "total": 5
+    },
+    "medicine": {
+      "passed": 8,
+      "total": 8
+    },
+    "dasheng": {
+      "passed": 6,
+      "total": 6
+    },
+    "gifts": {
+      "passed": 12,
+      "total": 12
+    }
+  },
+  "journalAndArt": "passed; mixed IDs, legacy entries, per-opponent retention, escaping, geometry and read-only drawing",
+  "naturalInput": {
+    "method": "Input-only deterministic simulation with natural health, XP, offers and scheduling. Four routes; bow seeds42/907 plus sword/spear seed42. Not browser or human E2E.",
+    "runs": [
+      {
+        "dao": "mingyang",
+        "item": "bow",
+        "seed": 42,
+        "reason": "破阵功成",
+        "time": 710.1,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 82.29999999999747,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 309.70000000003614,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 504.3000000000804,
+            "count": 4
+          },
+          {
+            "realm": "五法圆满",
+            "at": 669.6499999999387,
+            "count": 5
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 44.6999999999996,
+            "defeatedAt": 81.8499999999975,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 382.30000000005265,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "mingyang",
+        "item": "bow",
+        "seed": 907,
+        "reason": "破阵功成",
+        "time": 707.6,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 99.49999999999649,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 316.80000000003776,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 501.85000000007983,
+            "count": 4
+          },
+          {
+            "realm": "五法圆满",
+            "at": 660.7499999999468,
+            "count": 5
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 44.84999999999959,
+            "defeatedAt": 98.79999999999653,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 369.7000000000498,
+            "phase": 1
+          }
+        ]
+      },
+      {
+        "dao": "lushui",
+        "item": "bow",
+        "seed": 42,
+        "reason": "破阵功成",
+        "time": 717.6,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 82.99999999999743,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 314.9000000000373,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 499.0000000000792,
+            "count": 4
+          },
+          {
+            "realm": "五法圆满",
+            "at": 654.3499999999526,
+            "count": 5
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 42.099999999999746,
+            "defeatedAt": 82.44999999999746,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 383.15000000005284,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "lushui",
+        "item": "bow",
+        "seed": 907,
+        "reason": "身死道消",
+        "time": 636.4,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 86.8999999999972,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 318.7000000000382,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 546.0500000000511,
+            "count": 4
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 43.499999999999666,
+            "defeatedAt": 85.74999999999727,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 419.4000000000611,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "lihuo",
+        "item": "bow",
+        "seed": 42,
+        "reason": "身死道消",
+        "time": 312.1,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 86.44999999999723,
+            "count": 1
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 42.14999999999974,
+            "defeatedAt": 85.74999999999727,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "lihuo",
+        "item": "bow",
+        "seed": 907,
+        "reason": "身死道消",
+        "time": 561.1,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 99.09999999999651,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 342.5000000000436,
+            "count": 3
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 43.349999999999675,
+            "defeatedAt": 102.7999999999963,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 432.40000000006404,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "duijin",
+        "item": "bow",
+        "seed": 42,
+        "reason": "身死道消",
+        "time": 555.6,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 78.84999999999766,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 324.9500000000396,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 537.7000000000587,
+            "count": 4
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 42.8999999999997,
+            "defeatedAt": 78.34999999999769,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 408.20000000005854,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "duijin",
+        "item": "bow",
+        "seed": 907,
+        "reason": "破阵功成",
+        "time": 746.3,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 90.94999999999698,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 316.5000000000377,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 536.4500000000598,
+            "count": 4
+          },
+          {
+            "realm": "五法圆满",
+            "at": 681.5999999999278,
+            "count": 5
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 44.34999999999962,
+            "defeatedAt": 88.99999999999709,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 420.3500000000613,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "mingyang",
+        "item": "sword",
+        "seed": 42,
+        "reason": "破阵功成",
+        "time": 705.8,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 92.84999999999687,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 314.55000000003724,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 516.550000000078,
+            "count": 4
+          },
+          {
+            "realm": "五法圆满",
+            "at": 672.9999999999357,
+            "count": 5
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 42.9499999999997,
+            "defeatedAt": 92.59999999999688,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 412.20000000005945,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "mingyang",
+        "item": "spear",
+        "seed": 42,
+        "reason": "破阵功成",
+        "time": 710.1,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 95.34999999999673,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 314.9000000000373,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 503.60000000008023,
+            "count": 4
+          },
+          {
+            "realm": "五法圆满",
+            "at": 663.6999999999441,
+            "count": 5
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 43.44999999999967,
+            "defeatedAt": 95.04999999999674,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 392.35000000005493,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "lushui",
+        "item": "sword",
+        "seed": 42,
+        "reason": "破阵功成",
+        "time": 730.7,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 94.29999999999679,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 312.9500000000369,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 545.2500000000518,
+            "count": 4
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 42.14999999999974,
+            "defeatedAt": 93.9499999999968,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 442.4000000000663,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "lushui",
+        "item": "spear",
+        "seed": 42,
+        "reason": "破阵功成",
+        "time": 727.4,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 107.89999999999601,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 329.55000000004065,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 510.25000000008174,
+            "count": 4
+          },
+          {
+            "realm": "五法圆满",
+            "at": 671.499999999937,
+            "count": 5
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 43.54999999999966,
+            "defeatedAt": 107.59999999999603,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 397.65000000005614,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "lihuo",
+        "item": "sword",
+        "seed": 42,
+        "reason": "身死道消",
+        "time": 526.2,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 77.24999999999775,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 314.60000000003726,
+            "count": 3
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 42.099999999999746,
+            "defeatedAt": 76.89999999999777,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 422.5000000000618,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "lihuo",
+        "item": "spear",
+        "seed": 42,
+        "reason": "身死道消",
+        "time": 557.6,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 96.14999999999668,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 319.2500000000383,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 514.4000000000799,
+            "count": 4
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 42.8499999999997,
+            "defeatedAt": 95.94999999999669,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 404.80000000005776,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "duijin",
+        "item": "sword",
+        "seed": 42,
+        "reason": "破阵功成",
+        "time": 751.2,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 83.04999999999742,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 359.7500000000475,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 523.8000000000713,
+            "count": 4
+          },
+          {
+            "realm": "五法圆满",
+            "at": 684.4999999999252,
+            "count": 5
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 43.64999999999966,
+            "defeatedAt": 82.69999999999744,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 413.6500000000598,
+            "phase": 2
+          }
+        ]
+      },
+      {
+        "dao": "duijin",
+        "item": "spear",
+        "seed": 42,
+        "reason": "破阵功成",
+        "time": 741.4,
+        "realmHistory": [
+          {
+            "realm": "紫府",
+            "at": 83.4499999999974,
+            "count": 1
+          },
+          {
+            "realm": "紫府中期",
+            "at": 320.75000000003865,
+            "count": 3
+          },
+          {
+            "realm": "大真人",
+            "at": 545.5000000000516,
+            "count": 4
+          },
+          {
+            "realm": "五法圆满",
+            "at": 730.6999999998832,
+            "count": 5
+          }
+        ],
+        "duelHistory": [
+          {
+            "id": "yumuxian",
+            "at": 42.449999999999726,
+            "defeatedAt": 83.04999999999742,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360.0000000000476,
+            "defeatedAt": 418.85000000006096,
+            "phase": 2
+          }
+        ]
+      }
+    ],
+    "foundationEncounters": 16,
+    "foundationDefeats": 16,
+    "wins": 10,
+    "total": 16,
+    "baselineComparison": "0.34 archived same-policy bow7/8 and melee5/8 wins; 0.35 bow4/8 and melee6/8. Small deterministic samples and changed random sequence do not establish human balance; late-game balance remains unverified."
+  },
+  "browser": {
+    "method": "Real UI startup, then injected foundation and yehui encounters; Chromium four viewports, not real device or normal complete run.",
+    "reports": [
+      {
+        "w": 320,
+        "h": 568,
+        "dimensions": {
+          "overflow": false,
+          "boss": {
+            "x": 48,
+            "y": 103,
+            "w": 224,
+            "h": 44
+          },
+          "noticeHeight": 32
+        },
+        "lotus": {
+          "hp": 270,
+          "max": 560,
+          "shield": 96,
+          "phase": 2,
+          "bar": "郁慕仙 · 金莲 96 · 收势·追击"
+        },
+        "history": [
+          {
+            "id": "yumuxian",
+            "at": 60,
+            "defeatedAt": 60.20023999982833,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360,
+            "defeatedAt": 360,
+            "phase": 1
+          }
+        ],
+        "errors": []
+      },
+      {
+        "w": 390,
+        "h": 844,
+        "dimensions": {
+          "overflow": false,
+          "boss": {
+            "x": 75,
+            "y": 103,
+            "w": 240,
+            "h": 44
+          },
+          "noticeHeight": 32
+        },
+        "lotus": {
+          "hp": 270,
+          "max": 560,
+          "shield": 96,
+          "phase": 2,
+          "bar": "郁慕仙 · 金莲 96 · 收势·追击"
+        },
+        "history": [
+          {
+            "id": "yumuxian",
+            "at": 60,
+            "defeatedAt": 60.216216466728646,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360,
+            "defeatedAt": 360,
+            "phase": 1
+          }
+        ],
+        "errors": []
+      },
+      {
+        "w": 844,
+        "h": 390,
+        "dimensions": {
+          "overflow": false,
+          "boss": {
+            "x": 307,
+            "y": 8,
+            "w": 230,
+            "h": 44
+          },
+          "noticeHeight": 32
+        },
+        "lotus": {
+          "hp": 270,
+          "max": 560,
+          "shield": 96,
+          "phase": 2,
+          "bar": "郁慕仙 · 金莲 96 · 收势·追击"
+        },
+        "history": [
+          {
+            "id": "yumuxian",
+            "at": 60,
+            "defeatedAt": 60.200895466437785,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360,
+            "defeatedAt": 360,
+            "phase": 1
+          }
+        ],
+        "errors": []
+      },
+      {
+        "w": 1280,
+        "h": 800,
+        "dimensions": {
+          "overflow": false,
+          "boss": {
+            "x": 505,
+            "y": 25,
+            "w": 270,
+            "h": 66
+          },
+          "noticeHeight": 42.390625
+        },
+        "lotus": {
+          "hp": 270,
+          "max": 560,
+          "shield": 96,
+          "phase": 2,
+          "bar": "郁慕仙 · 金莲 96 · 收势·追击 · 270"
+        },
+        "history": [
+          {
+            "id": "yumuxian",
+            "at": 60,
+            "defeatedAt": 60.221938400505444,
+            "phase": 2
+          },
+          {
+            "id": "yehui",
+            "at": 360,
+            "defeatedAt": 360,
+            "phase": 1
+          }
+        ],
+        "errors": []
+      }
+    ]
+  },
+  "offline": {
+    "version": "0.35.0",
+    "completed": 4,
+    "offline": true,
+    "reducedMotion": true,
+    "scenarioInjection": false,
+    "method": "Offline single-file: real UI start, four route selection, short combat, pause, enemy guide, end; not full-run E2E or a real device."
+  },
+  "review": {
+    "core": "Independent Astra/high read-only review: no confirmed major issue; 80 additional shield combinations passed. Mixed cast-count NaN found, reproduced by a failing regression, fixed and regression passed.",
+    "visual": "Independent Sol/high viewed five original screenshots. Final result: no blocking or important visual issues. Two initial readings were withdrawn after checking HP270/560 versus shield96 and the actual 邺桧 name in source/DOM."
+  },
+  "limitations": [
+    "No real mobile device or complete human-played run.",
+    "Natural simulation results precede telemetry-only repair; combat code unchanged by that repair.",
+    "Historical fruit encounter assertion remains a prior known failure; this release does not restore old fruit rules."
+  ],
+  "hashes": {
+    "scripts/duel.js": "cfdd32bac527e51a41038aa4fe87825d6966aa1bd2cb383162134696c3170d6a",
+    "scripts/duel-art.js": "9a9413e39f192ca68919929af444ecbc8304726e6be59b8fcb7d2e45a46855d7",
+    "scripts/archive.js": "08b0ef732895a9f5670eff163fedd1834522d9bd0610cb5bfe4389d50136cfa2",
+    "scripts/journal-ui.js": "e08cacc58731f2fe8bdffcf59bb4a5747326b79ad25e9f07bea9f74a53fd1bbe",
+    "发行版/玄鉴仙族·几笔长生-0.35.0/index.html": "b20a09ee4190dbcde71b01e423a027ee849d6d7707a6656c1e9ce2e5e15ef360"
+  }
+}

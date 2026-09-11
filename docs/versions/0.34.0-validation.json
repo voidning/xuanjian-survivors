@@ -1,0 +1,446 @@
+{
+  "version": "0.34.0",
+  "method": "Input-only deterministic simulation; natural HP/XP/choices. No injected progression. Not human or browser E2E.",
+  "before": [
+    {
+      "dao": "mingyang",
+      "item": "bow",
+      "seed": 42,
+      "time": 713.5,
+      "reason": "破阵功成",
+      "realm": "五法圆满"
+    },
+    {
+      "dao": "mingyang",
+      "item": "bow",
+      "seed": 907,
+      "time": 703.2,
+      "reason": "破阵功成",
+      "realm": "五法圆满"
+    },
+    {
+      "dao": "lushui",
+      "item": "bow",
+      "seed": 42,
+      "time": 722.6,
+      "reason": "破阵功成",
+      "realm": "五法圆满"
+    },
+    {
+      "dao": "lushui",
+      "item": "bow",
+      "seed": 907,
+      "time": 717.2,
+      "reason": "破阵功成",
+      "realm": "五法圆满"
+    },
+    {
+      "dao": "lihuo",
+      "item": "bow",
+      "seed": 42,
+      "time": 383,
+      "reason": "身死道消",
+      "realm": "紫府中期"
+    },
+    {
+      "dao": "lihuo",
+      "item": "bow",
+      "seed": 907,
+      "time": 430.3,
+      "reason": "身死道消",
+      "realm": "紫府中期"
+    },
+    {
+      "dao": "duijin",
+      "item": "bow",
+      "seed": 42,
+      "time": 423.6,
+      "reason": "身死道消",
+      "realm": "紫府中期"
+    },
+    {
+      "dao": "duijin",
+      "item": "bow",
+      "seed": 907,
+      "time": 731,
+      "reason": "破阵功成",
+      "realm": "五法圆满"
+    }
+  ],
+  "after": [
+    {
+      "dao": "mingyang",
+      "item": "bow",
+      "seed": 42,
+      "time": 695.3,
+      "reason": "破阵功成",
+      "realm": "五法圆满"
+    },
+    {
+      "dao": "mingyang",
+      "item": "bow",
+      "seed": 907,
+      "time": 705.4,
+      "reason": "破阵功成",
+      "realm": "五法圆满"
+    },
+    {
+      "dao": "lushui",
+      "item": "bow",
+      "seed": 42,
+      "time": 720.7,
+      "reason": "破阵功成",
+      "realm": "五法圆满"
+    },
+    {
+      "dao": "lushui",
+      "item": "bow",
+      "seed": 907,
+      "time": 722.1,
+      "reason": "破阵功成",
+      "realm": "五法圆满"
+    },
+    {
+      "dao": "lihuo",
+      "item": "bow",
+      "seed": 42,
+      "time": 741.1,
+      "reason": "破阵功成",
+      "realm": "五法圆满"
+    },
+    {
+      "dao": "lihuo",
+      "item": "bow",
+      "seed": 907,
+      "time": 676.2,
+      "reason": "身死道消",
+      "realm": "大真人"
+    },
+    {
+      "dao": "duijin",
+      "item": "bow",
+      "seed": 42,
+      "time": 748.5,
+      "reason": "破阵功成",
+      "realm": "大真人"
+    },
+    {
+      "dao": "duijin",
+      "item": "bow",
+      "seed": 907,
+      "time": 743.2,
+      "reason": "破阵功成",
+      "realm": "大真人"
+    }
+  ],
+  "melee": [
+    {
+      "dao": "mingyang",
+      "item": "sword",
+      "seed": 42,
+      "time": 700.6,
+      "reason": "破阵功成",
+      "realm": "五法圆满",
+      "duelHistory": [
+        {
+          "id": "yehui",
+          "at": 360.0000000000476,
+          "defeatedAt": 376.9000000000514,
+          "phase": 2
+        }
+      ],
+      "duelCasts": {
+        "mountain": 1,
+        "water": 1
+      }
+    },
+    {
+      "dao": "mingyang",
+      "item": "spear",
+      "seed": 42,
+      "time": 717.2,
+      "reason": "破阵功成",
+      "realm": "五法圆满",
+      "duelHistory": [
+        {
+          "id": "yehui",
+          "at": 360.0000000000476,
+          "defeatedAt": 380.8000000000523,
+          "phase": 2
+        }
+      ],
+      "duelCasts": {
+        "mountain": 1,
+        "water": 1
+      }
+    },
+    {
+      "dao": "lushui",
+      "item": "sword",
+      "seed": 42,
+      "time": 728.8,
+      "reason": "破阵功成",
+      "realm": "五法圆满",
+      "duelHistory": [
+        {
+          "id": "yehui",
+          "at": 360.0000000000476,
+          "defeatedAt": 406.95000000005825,
+          "phase": 2
+        }
+      ],
+      "duelCasts": {
+        "mountain": 4,
+        "water": 4
+      }
+    },
+    {
+      "dao": "lushui",
+      "item": "spear",
+      "seed": 42,
+      "time": 602.9,
+      "reason": "身死道消",
+      "realm": "大真人",
+      "duelHistory": [
+        {
+          "id": "yehui",
+          "at": 360.0000000000476,
+          "defeatedAt": 403.5500000000575,
+          "phase": 2
+        }
+      ],
+      "duelCasts": {
+        "mountain": 5,
+        "water": 3
+      }
+    },
+    {
+      "dao": "lihuo",
+      "item": "sword",
+      "seed": 42,
+      "time": 760.5,
+      "reason": "破阵功成",
+      "realm": "五法圆满",
+      "duelHistory": [
+        {
+          "id": "yehui",
+          "at": 360.0000000000476,
+          "defeatedAt": 434.60000000006454,
+          "phase": 2
+        }
+      ],
+      "duelCasts": {
+        "mountain": 8,
+        "water": 7
+      }
+    },
+    {
+      "dao": "lihuo",
+      "item": "spear",
+      "seed": 42,
+      "time": 584.8,
+      "reason": "身死道消",
+      "realm": "大真人",
+      "duelHistory": [
+        {
+          "id": "yehui",
+          "at": 360.0000000000476,
+          "defeatedAt": 450.10000000006806,
+          "phase": 2
+        }
+      ],
+      "duelCasts": {
+        "mountain": 11,
+        "water": 8
+      }
+    },
+    {
+      "dao": "duijin",
+      "item": "sword",
+      "seed": 42,
+      "time": 572.4,
+      "reason": "身死道消",
+      "realm": "大真人",
+      "duelHistory": [
+        {
+          "id": "yehui",
+          "at": 360.0000000000476,
+          "defeatedAt": 407.5500000000584,
+          "phase": 2
+        }
+      ],
+      "duelCasts": {
+        "mountain": 6,
+        "water": 5
+      }
+    },
+    {
+      "dao": "duijin",
+      "item": "spear",
+      "seed": 42,
+      "time": 750.6,
+      "reason": "破阵功成",
+      "realm": "大真人",
+      "duelHistory": [
+        {
+          "id": "yehui",
+          "at": 360.0000000000476,
+          "defeatedAt": 447.9500000000676,
+          "phase": 2
+        }
+      ],
+      "duelCasts": {
+        "mountain": 9,
+        "water": 11
+      }
+    }
+  ],
+  "browser": [
+    {
+      "w": 320,
+      "h": 568,
+      "dimensions": {
+        "overflow": false,
+        "boss": {
+          "x": 48,
+          "y": 82,
+          "width": 224,
+          "height": 44
+        },
+        "notice": {
+          "x": 36.84375,
+          "y": 442,
+          "width": 246.3125,
+          "height": 32
+        }
+      },
+      "errors": []
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "dimensions": {
+        "overflow": false,
+        "boss": {
+          "x": 75,
+          "y": 82,
+          "width": 240,
+          "height": 44
+        },
+        "notice": {
+          "x": 71.84375,
+          "y": 718,
+          "width": 246.3125,
+          "height": 32
+        }
+      },
+      "errors": []
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "dimensions": {
+        "overflow": false,
+        "boss": {
+          "x": 307,
+          "y": 8,
+          "width": 230,
+          "height": 44
+        },
+        "notice": {
+          "x": 298.84375,
+          "y": 264,
+          "width": 246.3125,
+          "height": 32
+        }
+      },
+      "errors": []
+    },
+    {
+      "w": 1280,
+      "h": 800,
+      "dimensions": {
+        "overflow": false,
+        "boss": {
+          "x": 505,
+          "y": 25,
+          "width": 270,
+          "height": 51
+        },
+        "notice": {
+          "x": 482.703125,
+          "y": 166,
+          "width": 314.59375,
+          "height": 42.390625
+        }
+      },
+      "errors": []
+    }
+  ],
+  "baselineCommit": "53e432f209c44dff6be5b4b776e24dc91e5d45f2",
+  "offlineRelease": {
+    "version": "0.34.0",
+    "completed": 4,
+    "offline": true,
+    "reducedMotion": true,
+    "scenarioInjection": false,
+    "method": "Offline single-file: real UI start, four route selection, short combat, pause, enemy guide, end; not full-run E2E or a real device."
+  },
+  "releaseSha256": "9ba0674e6d49966d6b2031655e74460b388ec21ad8bf3f82c51f12579c2ee57c",
+  "contracts": {
+    "suite": "duel constructed contracts",
+    "passed": 11,
+    "total": 11,
+    "results": [
+      {
+        "name": "six-minute boss requires a manifested power, occurs once, uses a real boss slot",
+        "pass": true
+      },
+      {
+        "name": "normal scheduled spawning configures the boss and respects an occupied slot",
+        "pass": true
+      },
+      {
+        "name": "mountain telegraph locks position and cannot hit before warning completes",
+        "pass": true
+      },
+      {
+        "name": "fish cast has locked direction and source; existing dispelling removes it",
+        "pass": true
+      },
+      {
+        "name": "half HP changes cadence once, cancels old tell, leaves a vulnerable recovery",
+        "pass": true
+      },
+      {
+        "name": "existing muddle interrupt cancels pending mountain without phantom hit",
+        "pass": true
+      },
+      {
+        "name": "pause and choice freeze warning, phase, history, and projectiles",
+        "pass": true
+      },
+      {
+        "name": "defeat cleans only own spells, rewards once and snapshots do not mutate on continuation",
+        "pass": true
+      },
+      {
+        "name": "terminal retires undefeated named opponent without false victory or leaking spells",
+        "pass": true
+      },
+      {
+        "name": "two replacement formations are bounded and identifiable; duel suppresses extra elites",
+        "pass": true
+      },
+      {
+        "name": "all four paths can walk out of mountain and fish with no defensive powers or dash",
+        "pass": true
+      }
+    ]
+  },
+  "existingEncounterCheck": {
+    "passed": 17,
+    "total": 18,
+    "preExistingFailure": "事件选卡复用缺项保底、重抽以及有效候选：旧果位配方已移除"
+  }
+}

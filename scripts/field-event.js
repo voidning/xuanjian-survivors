@@ -1,6 +1,6 @@
 /* Optional mountain encounters: game scenarios, never new canonical abilities. */
 (function(root){'use strict';
-const X=typeof module!=='undefined'?require('./gift-system.js'):root.XJ;
+const X=typeof module!=='undefined'?require('./duel.js'):root.XJ;
 const {Run,dist}=X;
 const sites=Object.freeze([{id:'pine',name:'松亭',x:1250,y:1100},{id:'stele',name:'残碑',x:1840,y:940},{id:'creek',name:'溪岸',x:1650,y:1515}]);
 const kinds=Object.freeze({
@@ -89,7 +89,7 @@ Run.prototype.hit=function(q,n,ignore=false){
 };
 const baseEnd=Run.prototype.end;
 Run.prototype.end=function(reason){
- if(this.state==='ended')return;baseEnd.call(this,reason);this.result.version='0.33.1';this.result.primarySkill=this.primarySkill||null;
+ if(this.state==='ended')return;baseEnd.call(this,reason);this.result.version='0.35.0';this.result.primarySkill=this.primarySkill||null;
  this.result.fieldEvent=this.fieldEvent?snapshot(this.fieldEvent):null;
  this.result.fieldHistory=[...(this.fieldHistory||[])];if(live(this.fieldEvent))this.result.fieldHistory.push(snapshot(this.fieldEvent));
 };
